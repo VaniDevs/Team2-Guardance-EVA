@@ -25,11 +25,10 @@ class HomeViewController: EVViewController {
     }
 
     @IBAction func alertTapped(sender: AnyObject) {
-        // if !alertMode start recording
-        // Send message to api
+        stateMachine.enterState(AlarmState)
     }
     
     @IBAction func standbyTapped(sender: AnyObject) {
-        // Enter alert mode: start GPS, recording
+        stateMachine.enterState(StandbyState)
     }
 }

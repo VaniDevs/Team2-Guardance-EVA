@@ -141,9 +141,9 @@
 		B0EB9E7B1C8B8F06004219E3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */,
 				B0EB9E7C1C8B8FA2004219E3 /* AlertManager.swift */,
 				B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */,
-				B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";

@@ -21,22 +21,22 @@ class StateMachine: GKStateMachine {
 
 class InactiveState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
-        //Stop all monitoring
+        alertManager.stopAllMonitoring()
     }
 }
 
 class StandbyState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
-        //Start all monitoring
+        alertManager.beginStandbyMonitoring()
     }
 }
 
 class AlarmState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         if previousState is InactiveState {
-            //Start all monitoring
+            alertManager.beginStandbyMonitoring()
         }
-        //Send
+        alertManager.beginSendingAlarm()
     }
 }
 
