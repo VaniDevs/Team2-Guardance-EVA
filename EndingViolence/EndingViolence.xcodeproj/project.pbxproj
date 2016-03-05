@@ -16,10 +16,13 @@
 		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
 		B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47B1C8B661400E47E3F /* AppDelegate.swift */; };
-		B045C47E1C8B661400E47E3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47D1C8B661400E47E3F /* ViewController.swift */; };
+		B045C47E1C8B661400E47E3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47D1C8B661400E47E3F /* HomeViewController.swift */; };
 		B045C4811C8B661400E47E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C47F1C8B661400E47E3F /* Main.storyboard */; };
 		B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B045C4821C8B661400E47E3F /* Assets.xcassets */; };
 		B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */; };
+		B045C48E1C8B781D00E47E3F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C48D1C8B781D00E47E3F /* SettingsViewController.swift */; };
+		B045C4901C8B782900E47E3F /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C48F1C8B782900E47E3F /* ResourcesViewController.swift */; };
+		B045C4921C8B78AF00E47E3F /* EVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C4911C8B78AF00E47E3F /* EVViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +36,14 @@
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
 		B045C4781C8B661400E47E3F /* EndingViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndingViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045C47B1C8B661400E47E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B045C47D1C8B661400E47E3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B045C47D1C8B661400E47E3F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B045C4801C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B045C4821C8B661400E47E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B045C4851C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B045C4871C8B661400E47E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B045C48D1C8B781D00E47E3F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		B045C48F1C8B782900E47E3F /* ResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
+		B045C4911C8B78AF00E47E3F /* EVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVViewController.swift; sourceTree = "<group>"; };
 		C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.release.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.release.xcconfig"; sourceTree = "<group>"; };
 		EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndingViolence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -95,7 +101,10 @@
 			isa = PBXGroup;
 			children = (
 				B045C47B1C8B661400E47E3F /* AppDelegate.swift */,
-				B045C47D1C8B661400E47E3F /* ViewController.swift */,
+				B045C4911C8B78AF00E47E3F /* EVViewController.swift */,
+				B045C47D1C8B661400E47E3F /* HomeViewController.swift */,
+				B045C48D1C8B781D00E47E3F /* SettingsViewController.swift */,
+				B045C48F1C8B782900E47E3F /* ResourcesViewController.swift */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
 				B045C4821C8B661400E47E3F /* Assets.xcassets */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
@@ -243,11 +252,15 @@
 				41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */,
 				B045C47E1C8B661400E47E3F /* ViewController.swift in Sources */,
 				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,
+				B045C4901C8B782900E47E3F /* ResourcesViewController.swift in Sources */,
+				B045C47E1C8B661400E47E3F /* HomeViewController.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
 				41825B6B1C8B822100641A1E /* Types.swift in Sources */,
 				41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */,
 				41B158101C8B6F530076AF50 /* MSession.swift in Sources */,
+				B045C48E1C8B781D00E47E3F /* SettingsViewController.swift in Sources */,
+				B045C4921C8B78AF00E47E3F /* EVViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
