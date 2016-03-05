@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */; };
+		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
 		B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47B1C8B661400E47E3F /* AppDelegate.swift */; };
 		B045C47E1C8B661400E47E3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47D1C8B661400E47E3F /* HomeViewController.swift */; };
 		B045C4811C8B661400E47E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C47F1C8B661400E47E3F /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMgr.swift; sourceTree = "<group>"; };
+		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
 		B045C4781C8B661400E47E3F /* EndingViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndingViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045C47B1C8B661400E47E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B045C47D1C8B661400E47E3F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		B045C4821C8B661400E47E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B045C4851C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B045C4871C8B661400E47E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.release.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.release.xcconfig"; sourceTree = "<group>"; };
+		EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndingViolence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		56A2E6D0FFF0A3A0E40CE855 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B045C46F1C8B661400E47E3F = {
 			isa = PBXGroup;
 			children = (
 				B045C47A1C8B661400E47E3F /* EndingViolence */,
 				B045C4791C8B661400E47E3F /* Products */,
+				B075EACFEF1916327BA17E5F /* Pods */,
+				56A2E6D0FFF0A3A0E40CE855 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +77,18 @@
 				B045C4821C8B661400E47E3F /* Assets.xcassets */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
+				41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */,
 			);
 			path = EndingViolence;
+			sourceTree = "<group>";
+		};
+		B075EACFEF1916327BA17E5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */,
+				C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B045C48A1C8B661400E47E3F /* Build configuration list for PBXNativeTarget "EndingViolence" */;
 			buildPhases = (
+				41584D707C127D9026100CE4 /* Check Pods Manifest.lock */,
 				B045C4741C8B661400E47E3F /* Sources */,
 				B045C4751C8B661400E47E3F /* Frameworks */,
 				B045C4761C8B661400E47E3F /* Resources */,
+				4172B64733941C0874462C14 /* Embed Pods Frameworks */,
+				3A92695712133EDFD1C280F2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +160,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A92695712133EDFD1C280F2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41584D707C127D9026100CE4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4172B64733941C0874462C14 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B045C4741C8B661400E47E3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +215,7 @@
 			files = (
 				B045C47E1C8B661400E47E3F /* HomeViewController.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
+				41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +324,7 @@
 		};
 		B045C48B1C8B661400E47E3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EndingViolence/Info.plist;
@@ -256,6 +336,7 @@
 		};
 		B045C48C1C8B661400E47E3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EndingViolence/Info.plist;
