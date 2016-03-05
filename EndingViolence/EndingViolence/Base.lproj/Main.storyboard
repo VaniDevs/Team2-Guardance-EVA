@@ -104,11 +104,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dWP-VH-FwK"/>
                     <connections>
-                        <outlet property="alertButton" destination="YF6-he-qIr" id="iAW-l6-4ep"/>
-                        <outlet property="connectionButton" destination="3u4-hl-sMu" id="zVC-FC-lbq"/>
-                        <outlet property="locationButton" destination="mvB-ag-wvn" id="hSv-25-rBB"/>
-                        <outlet property="microphoneButton" destination="SsO-5N-iJ5" id="cr3-b4-CdZ"/>
-                        <outlet property="standbyButton" destination="sJn-Qf-gl2" id="xWE-ft-gvK"/>
+                        <outlet property="alertButton" destination="YF6-he-qIr" id="iqQ-Ek-dZ3"/>
+                        <outlet property="connectionButton" destination="3u4-hl-sMu" id="h21-O3-Flo"/>
+                        <outlet property="locationButton" destination="mvB-ag-wvn" id="adt-5D-zZN"/>
+                        <outlet property="microphoneButton" destination="SsO-5N-iJ5" id="j5y-Cd-erJ"/>
+                        <outlet property="standbyButton" destination="sJn-Qf-gl2" id="gOz-WI-iLg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
