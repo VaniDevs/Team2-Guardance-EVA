@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
 		B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47B1C8B661400E47E3F /* AppDelegate.swift */; };
 		B045C47E1C8B661400E47E3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47D1C8B661400E47E3F /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMgr.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
 		B045C4781C8B661400E47E3F /* EndingViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndingViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045C47B1C8B661400E47E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				B045C4821C8B661400E47E3F /* Assets.xcassets */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
+				41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */,
 			);
 			path = EndingViolence;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				B045C47E1C8B661400E47E3F /* ViewController.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
+				41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
