@@ -3,9 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="EndingViolence" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,11 +17,185 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
+                                <rect key="frame" x="235" y="20" width="130" height="40"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="723-location-arrow-toolbar" translatesAutoresizingMaskIntoConstraints="NO" id="xDb-wW-WgS">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1Ef-3U-a1d"/>
+                                            <constraint firstAttribute="width" constant="40" id="eBg-kU-EUC"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="937-wifi-signal-toolbar" translatesAutoresizingMaskIntoConstraints="NO" id="VTJ-BI-KZ6">
+                                        <rect key="frame" x="45" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="5th-z2-0up"/>
+                                            <constraint firstAttribute="height" constant="40" id="bKu-Zw-heb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="946-microphone-toolbar" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-XH-dJR">
+                                        <rect key="frame" x="90" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="0GQ-JS-ul0"/>
+                                            <constraint firstAttribute="width" constant="40" id="2gS-3w-SQo"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
+                                <rect key="frame" x="220" y="126" width="160" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BzG-1P-7tS"/>
+                                    <constraint firstAttribute="width" constant="160" id="Egk-Zt-H1X"/>
+                                </constraints>
+                                <state key="normal" title="Standby" backgroundImage="redsquare">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="standbyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9f-ba-16d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF6-he-qIr">
+                                <rect key="frame" x="250" y="351" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2m3-gA-HQ4"/>
+                                    <constraint firstAttribute="height" constant="100" id="zhB-Va-8UJ"/>
+                                </constraints>
+                                <state key="normal" title="Alert" backgroundImage="redsquare">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5P-d5-YSc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-wG-4d8">
+                                <rect key="frame" x="523" y="20" width="57" height="30"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="vEz-fS-Yo2" kind="presentation" id="MYn-iW-fcc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-ct-ogA">
+                                <rect key="frame" x="20" y="20" width="72" height="30"/>
+                                <state key="normal" title="Resources"/>
+                                <connections>
+                                    <segue destination="4bo-ji-2w5" kind="presentation" id="BHR-Ug-JY4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4v1-8l-6kw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EPk-S3-LNp"/>
+                            <constraint firstItem="sJn-Qf-gl2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EaG-oE-VMf"/>
+                            <constraint firstItem="DnO-ct-ogA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Gzt-Kt-rDJ"/>
+                            <constraint firstItem="Nwz-wG-4d8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ICt-aR-5qf"/>
+                            <constraint firstItem="DnO-ct-ogA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KMQ-HU-45M"/>
+                            <constraint firstItem="Nwz-wG-4d8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZE5-oj-7lr"/>
+                            <constraint firstItem="YF6-he-qIr" firstAttribute="centerX" secondItem="sJn-Qf-gl2" secondAttribute="centerX" id="a9L-k6-oay"/>
+                            <constraint firstItem="4v1-8l-6kw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g6y-LN-e2t"/>
+                            <constraint firstItem="sJn-Qf-gl2" firstAttribute="top" secondItem="4v1-8l-6kw" secondAttribute="bottom" constant="66" id="o1h-Rh-yVq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YF6-he-qIr" secondAttribute="bottom" constant="149" id="rtQ-Lx-9Vg"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="dWP-VH-FwK"/>
+                    <connections>
+                        <outlet property="alertButton" destination="YF6-he-qIr" id="iAW-l6-4ep"/>
+                        <outlet property="standbyButton" destination="sJn-Qf-gl2" id="xWE-ft-gvK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="395" y="117"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="KQu-Y8-Ba3">
+            <objects>
+                <viewController id="vEz-fS-Yo2" customClass="SettingsViewController" customModule="EndingViolence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7tg-ki-L9b"/>
+                        <viewControllerLayoutGuide type="bottom" id="5dD-Wv-V0G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LMl-1q-eVm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-wM-rWE">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Settings" id="FDQ-5M-Q7e">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="aSH-17-VwA">
+                                            <connections>
+                                                <action selector="callDismissOnPresentingController" destination="vEz-fS-Yo2" id="HvU-Af-PhN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AFv-wM-rWE" firstAttribute="leading" secondItem="LMl-1q-eVm" secondAttribute="leading" id="4XS-of-Sjr"/>
+                            <constraint firstItem="AFv-wM-rWE" firstAttribute="top" secondItem="7tg-ki-L9b" secondAttribute="bottom" id="Fx3-cA-YP3"/>
+                            <constraint firstAttribute="trailing" secondItem="AFv-wM-rWE" secondAttribute="trailing" id="GmK-2a-wx1"/>
+                            <constraint firstItem="AFv-wM-rWE" firstAttribute="top" secondItem="LMl-1q-eVm" secondAttribute="topMargin" id="jId-gk-dN0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jId-gk-dN0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xz0-Sl-n77" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1157" y="-348"/>
+        </scene>
+        <!--Resources View Controller-->
+        <scene sceneID="nEx-tE-Lmk">
+            <objects>
+                <viewController id="4bo-ji-2w5" customClass="ResourcesViewController" customModule="EndingViolence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MiH-AB-jgK"/>
+                        <viewControllerLayoutGuide type="bottom" id="1eq-Xq-q1k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S1P-an-mno">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBA-pc-3yO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <navigationItem title="Resources" id="Rqq-3V-1jj">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="U71-ll-pjg">
+                                            <connections>
+                                                <action selector="callDismissOnPresentingController" destination="4bo-ji-2w5" id="nLH-4f-V5e"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZBA-pc-3yO" firstAttribute="top" secondItem="MiH-AB-jgK" secondAttribute="bottom" id="AOv-2J-i8r"/>
+                            <constraint firstAttribute="trailing" secondItem="ZBA-pc-3yO" secondAttribute="trailing" id="KNs-n4-TEO"/>
+                            <constraint firstItem="ZBA-pc-3yO" firstAttribute="leading" secondItem="S1P-an-mno" secondAttribute="leading" id="RKU-jb-xpQ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2X-c1-vMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="453"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="723-location-arrow-toolbar" width="22" height="22"/>
+        <image name="937-wifi-signal-toolbar" width="22" height="16"/>
+        <image name="946-microphone-toolbar" width="14" height="22"/>
+        <image name="redsquare" width="10" height="10"/>
+    </resources>
 </document>

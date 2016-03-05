@@ -8,18 +8,22 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: EVViewController {
+    @IBOutlet weak var alertButton: UIButton!
+    @IBOutlet weak var standbyButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func alertTapped(sender: AnyObject) {
+        // if !alertMode start recording
+        // Send message to api
     }
-
-
+    
+    @IBAction func standbyTapped(sender: AnyObject) {
+        // Enter alert mode: start GPS, recording
+    }
 }
 
