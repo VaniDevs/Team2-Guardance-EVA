@@ -17,18 +17,7 @@ class MSession: Object {
     dynamic var rIsCurrentSession = false
     
     let locations = List<MLocation>()
-
-    //    dynamic var owner: Person? // to-one relationships must be optional
-//    let children = List<<#Child#>>()
-//    
-//    override static func primaryKey() -> String? {
-//        return "<#id#>"
-//    }
-//    
-//    override class func ignoredProperties() -> [String] {
-//        return [<#propertyname1#>,<#propertyname2#>]
-//    }
-    
+    let imgs = List<MImage>()
 }
 
 extension MSession {
@@ -40,6 +29,18 @@ extension MSession {
         let location = MLocation()
         try! realm.write {
             realm.add(location)
+        }
+    }
+
+    func addImage(image: UIImage) {
+        
+        guard let realm = self.realm else { return }
+        
+        let newImg = MImage()
+        newImg.rImage = image
+        
+        try! realm.write {
+            realm.add(newImg)
         }
     }
 }
