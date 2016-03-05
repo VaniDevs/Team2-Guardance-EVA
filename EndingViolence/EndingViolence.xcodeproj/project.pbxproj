@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B641C8B74C600641A1E /* ModelMgr.swift */; };
+		41825B671C8B79B900641A1E /* Object+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B661C8B79B900641A1E /* Object+Extensions.swift */; };
+		41825B691C8B7C0400641A1E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B681C8B7C0400641A1E /* Config.swift */; };
+		41825B6B1C8B822100641A1E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B6A1C8B822100641A1E /* Types.swift */; };
+		41B158101C8B6F530076AF50 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B1580F1C8B6F530076AF50 /* MSession.swift */; };
 		41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */; };
+		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
 		B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47B1C8B661400E47E3F /* AppDelegate.swift */; };
 		B045C47E1C8B661400E47E3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47D1C8B661400E47E3F /* ViewController.swift */; };
@@ -17,7 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41825B641C8B74C600641A1E /* ModelMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelMgr.swift; path = Model/ModelMgr.swift; sourceTree = "<group>"; };
+		41825B661C8B79B900641A1E /* Object+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Object+Extensions.swift"; path = "Model/Object+Extensions.swift"; sourceTree = "<group>"; };
+		41825B681C8B7C0400641A1E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		41825B6A1C8B822100641A1E /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		41B1580F1C8B6F530076AF50 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSession.swift; path = Model/MSession.swift; sourceTree = "<group>"; };
 		41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMgr.swift; sourceTree = "<group>"; };
+		41DFAF671C8B6CEA00706E68 /* MLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MLocation.swift; path = Model/MLocation.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
 		B045C4781C8B661400E47E3F /* EndingViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndingViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045C47B1C8B661400E47E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +54,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41825B631C8B73D300641A1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41825B661C8B79B900641A1E /* Object+Extensions.swift */,
+				41DFAF671C8B6CEA00706E68 /* MLocation.swift */,
+				41B1580F1C8B6F530076AF50 /* MSession.swift */,
+				41825B641C8B74C600641A1E /* ModelMgr.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		56A2E6D0FFF0A3A0E40CE855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +101,9 @@
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
 				41DFAF651C8B6B1B00706E68 /* LocationMgr.swift */,
+				41825B681C8B7C0400641A1E /* Config.swift */,
+				41825B631C8B73D300641A1E /* Model */,
+				41825B6A1C8B822100641A1E /* Types.swift */,
 			);
 			path = EndingViolence;
 			sourceTree = "<group>";
@@ -213,9 +239,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41825B671C8B79B900641A1E /* Object+Extensions.swift in Sources */,
+				41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */,
 				B045C47E1C8B661400E47E3F /* ViewController.swift in Sources */,
+				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
+				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
+				41825B6B1C8B822100641A1E /* Types.swift in Sources */,
 				41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */,
+				41B158101C8B6F530076AF50 /* MSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

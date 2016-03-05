@@ -1,5 +1,5 @@
 //
-//  MPosition.swift
+//  MLocation.swift
 //  EndingViolence
 //
 //  Created by Paul Wadsworth on 05/03/2016.
@@ -9,13 +9,13 @@
 import RealmSwift
 import CoreLocation
 
-class MPosition: Object {
+class MLocation: Object {
     
-    dynamic var rTimeStamp = NSDate()
     var rLocation: CLLocation {
         set {
             _rLatitude = rLocation.coordinate.latitude
             _rLongitude = rLocation.coordinate.longitude
+            _rTimeStamp = rLocation.timestamp
         }
         get {
             return CLLocation(
@@ -23,11 +23,12 @@ class MPosition: Object {
                 altitude: 0,
                 horizontalAccuracy: 0,
                 verticalAccuracy: 0,
-                timestamp: rTimeStamp
+                timestamp: _rTimeStamp
             )
         }
     }
     
+    dynamic var _rTimeStamp = NSDate()
     dynamic var _rLatitude: Double = 0
     dynamic var _rLongitude: Double = 0
     
