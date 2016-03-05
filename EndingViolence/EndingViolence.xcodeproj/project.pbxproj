@@ -17,6 +17,8 @@
 		B045C48E1C8B781D00E47E3F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C48D1C8B781D00E47E3F /* SettingsViewController.swift */; };
 		B045C4901C8B782900E47E3F /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C48F1C8B782900E47E3F /* ResourcesViewController.swift */; };
 		B045C4921C8B78AF00E47E3F /* EVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C4911C8B78AF00E47E3F /* EVViewController.swift */; };
+		B0EB9E761C8B7FF3004219E3 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E751C8B7FF3004219E3 /* StateMachine.swift */; };
+		B0EB9E781C8B8268004219E3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E771C8B8268004219E3 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		B045C48D1C8B781D00E47E3F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		B045C48F1C8B782900E47E3F /* ResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		B045C4911C8B78AF00E47E3F /* EVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVViewController.swift; sourceTree = "<group>"; };
+		B0EB9E751C8B7FF3004219E3 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
+		B0EB9E771C8B8268004219E3 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.release.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.release.xcconfig"; sourceTree = "<group>"; };
 		EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndingViolence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +86,8 @@
 				B045C47D1C8B661400E47E3F /* HomeViewController.swift */,
 				B045C48D1C8B781D00E47E3F /* SettingsViewController.swift */,
 				B045C48F1C8B782900E47E3F /* ResourcesViewController.swift */,
+				B0EB9E751C8B7FF3004219E3 /* StateMachine.swift */,
+				B0EB9E771C8B8268004219E3 /* AlertManager.swift */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
 				B045C4821C8B661400E47E3F /* Assets.xcassets */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
@@ -222,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EB9E781C8B8268004219E3 /* AlertManager.swift in Sources */,
 				B045C4901C8B782900E47E3F /* ResourcesViewController.swift in Sources */,
 				B045C47E1C8B661400E47E3F /* HomeViewController.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
+				B0EB9E761C8B7FF3004219E3 /* StateMachine.swift in Sources */,
 				41DFAF661C8B6B1B00706E68 /* LocationMgr.swift in Sources */,
 				B045C48E1C8B781D00E47E3F /* SettingsViewController.swift in Sources */,
 				B045C4921C8B78AF00E47E3F /* EVViewController.swift in Sources */,
