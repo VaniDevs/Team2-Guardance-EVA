@@ -7,15 +7,27 @@
 //
 
 import UIKit
+import ReachabilitySwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var reachability = try? Reachability.reachabilityForInternetConnection()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        ///// Reachability
+        NSNotificationCenter.defaultCenter()
+            .addObserver(self,
+                selector: "reachabilityChanged:",
+                name: ReachabilityChangedNotification,
+                object: reachability
+        )
+        
+        // NOTE: Call this AFTER setting up notification handlers
+        startReachability()
+
         return true
     }
 
@@ -39,8 +51,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+
+        reachability?.stopNotifier()
+        NSNotificationCenter.defaultCenter()
+            .removeObserver(self,
+                name: ReachabilityChangedNotification,
+                object: reachability
+        )
+    }
+    
+    // MARK: Reachability
+    func reachabilityChanged(note: NSNotification) {
+        
+        let reachability = note.object as! Reachability
+        
+        if reachability.isReachable() {
+            if reachability.isReachableViaWiFi() {
+                print("Reachable via WiFi")
+            } else {
+                print("Reachable via Cellular")
+            }
+        } else {
+            print("Not reachable")
+        }
     }
 
+    private func startReachability() {
+        do {
+            try reachability?.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
 
 }
 

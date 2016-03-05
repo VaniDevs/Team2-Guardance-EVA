@@ -16,7 +16,6 @@
 		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
 		B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47B1C8B661400E47E3F /* AppDelegate.swift */; };
-		B045C47E1C8B661400E47E3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47D1C8B661400E47E3F /* HomeViewController.swift */; };
 		B045C4811C8B661400E47E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C47F1C8B661400E47E3F /* Main.storyboard */; };
 		B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B045C4821C8B661400E47E3F /* Assets.xcassets */; };
 		B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */; };
@@ -250,10 +249,8 @@
 			files = (
 				41825B671C8B79B900641A1E /* Object+Extensions.swift in Sources */,
 				41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */,
-				B045C47E1C8B661400E47E3F /* ViewController.swift in Sources */,
 				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,
 				B045C4901C8B782900E47E3F /* ResourcesViewController.swift in Sources */,
-				B045C47E1C8B661400E47E3F /* HomeViewController.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
 				41825B6B1C8B822100641A1E /* Types.swift in Sources */,
