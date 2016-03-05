@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlertManager: NSObject {
+class AlertManager: NSObject {    
     func beginStandbyMonitoring() {}
     func beginSendingAlarm() {}
     func stopAllMonitoring() {}

@@ -11,39 +11,59 @@ import GameplayKit
 
 class StateMachine: GKStateMachine {
     let alertManager: AlertManager
-    
-    init(alertManager: AlertManager) {
+    let homeViewController: HomeViewController
+
+    init(alertManager: AlertManager, homeViewController: HomeViewController) {
         self.alertManager = alertManager
-        super.init(states: [InactiveState(alertManager: alertManager), StandbyState(alertManager: alertManager), AlarmState(alertManager: alertManager)])
+        self.homeViewController = homeViewController
+        
+        super.init(states: [InactiveState(alertManager: alertManager, homeViewController: homeViewController), StandbyState(alertManager: alertManager, homeViewController: homeViewController), AlarmState(alertManager: alertManager, homeViewController: homeViewController)])
     }
 }
 
 
 class InactiveState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
+        super.didEnterWithPreviousState(previousState)
+
         alertManager.stopAllMonitoring()
+        homeViewController.enterInactiveState()
     }
 }
 
 class StandbyState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
+        super.didEnterWithPreviousState(previousState)
+
         alertManager.beginStandbyMonitoring()
+        homeViewController.enterStandbyState()
     }
 }
 
 class AlarmState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
+        super.didEnterWithPreviousState(previousState)
+        
         if previousState is InactiveState {
             alertManager.beginStandbyMonitoring()
         }
         alertManager.beginSendingAlarm()
+        homeViewController.enterAlarmState()
     }
 }
 
 class EVState: GKState {
     let alertManager: AlertManager
-    
-    init(alertManager: AlertManager) {
+    let homeViewController: HomeViewController
+
+    init(alertManager: AlertManager, homeViewController: HomeViewController) {
+        self.homeViewController = homeViewController
         self.alertManager = alertManager
+    }
+    
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        super.didEnterWithPreviousState(previousState)
+
+        NSLog("")
     }
 }

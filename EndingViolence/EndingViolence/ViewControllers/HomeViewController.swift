@@ -16,19 +16,35 @@ class HomeViewController: EVViewController {
     @IBOutlet weak var connectionButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
     
-    let stateMachine = StateMachine(alertManager: AlertManager())
+    var stateMachine: StateMachine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        stateMachine = StateMachine(alertManager: AlertManager(), homeViewController: self)
     }
 
     @IBAction func alertTapped(sender: AnyObject) {
-        stateMachine.enterState(AlarmState)
+        if let sm = stateMachine {
+            sm.enterState(AlarmState)
+        }
     }
     
     @IBAction func standbyTapped(sender: AnyObject) {
-        stateMachine.enterState(StandbyState)
+        if let sm = stateMachine {
+            sm.enterState(StandbyState)
+        }
+    }
+    
+    func enterInactiveState() {
+        
+    }
+
+    func enterStandbyState() {
+        
+    }
+
+    func enterAlarmState() {
+        
     }
 }
