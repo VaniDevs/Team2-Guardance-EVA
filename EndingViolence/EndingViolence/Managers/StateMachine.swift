@@ -50,6 +50,14 @@ class AlarmState: EVState {
         alertManager.beginSendingAlarm()
         homeViewController.enterAlarmState()
     }
+    
+    override func isValidNextState(stateClass: AnyClass) -> Bool {
+        if stateClass is StandbyState.Type {
+            return false
+        }
+        
+        return true
+    }
 }
 
 class EVState: GKState {
@@ -64,6 +72,6 @@ class EVState: GKState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
 
-        NSLog("")
+        NSLog("Entered \(self) from \(previousState)")
     }
 }

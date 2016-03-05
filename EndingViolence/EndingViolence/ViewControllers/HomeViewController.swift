@@ -26,25 +26,33 @@ class HomeViewController: EVViewController {
 
     @IBAction func alertTapped(sender: AnyObject) {
         if let sm = stateMachine {
-            sm.enterState(AlarmState)
+            if sm.currentState is AlarmState {
+                sm.enterState(InactiveState)
+            } else {
+                sm.enterState(AlarmState)
+            }
         }
     }
     
     @IBAction func standbyTapped(sender: AnyObject) {
         if let sm = stateMachine {
-            sm.enterState(StandbyState)
+            if sm.currentState is StandbyState {
+                sm.enterState(InactiveState)
+            } else {
+                sm.enterState(StandbyState)
+            }
         }
     }
     
     func enterInactiveState() {
-        
+        view.backgroundColor = .whiteColor()
     }
 
     func enterStandbyState() {
-        
+        view.backgroundColor = .orangeColor()
     }
 
     func enterAlarmState() {
-        
+        view.backgroundColor = .redColor()
     }
 }
