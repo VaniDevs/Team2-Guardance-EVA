@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -21,27 +21,30 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
                                 <rect key="frame" x="235" y="20" width="130" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="723-location-arrow-toolbar" translatesAutoresizingMaskIntoConstraints="NO" id="xDb-wW-WgS">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvB-ag-wvn">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="1Ef-3U-a1d"/>
-                                            <constraint firstAttribute="width" constant="40" id="eBg-kU-EUC"/>
+                                            <constraint firstAttribute="height" constant="40" id="AAm-fT-LL7"/>
+                                            <constraint firstAttribute="width" constant="40" id="lSz-hH-GhD"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="937-wifi-signal-toolbar" translatesAutoresizingMaskIntoConstraints="NO" id="VTJ-BI-KZ6">
+                                        <state key="normal" image="723-location-arrow-toolbar"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-hl-sMu">
                                         <rect key="frame" x="45" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="5th-z2-0up"/>
-                                            <constraint firstAttribute="height" constant="40" id="bKu-Zw-heb"/>
+                                            <constraint firstAttribute="height" constant="40" id="2Mw-Hw-vU2"/>
+                                            <constraint firstAttribute="width" constant="40" id="3yH-sg-w0T"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="946-microphone-toolbar" translatesAutoresizingMaskIntoConstraints="NO" id="dqY-XH-dJR">
+                                        <state key="normal" image="937-wifi-signal-toolbar"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsO-5N-iJ5">
                                         <rect key="frame" x="90" y="0.0" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="0GQ-JS-ul0"/>
-                                            <constraint firstAttribute="width" constant="40" id="2gS-3w-SQo"/>
+                                            <constraint firstAttribute="width" constant="40" id="L7L-lJ-bsi"/>
+                                            <constraint firstAttribute="height" constant="40" id="xof-dF-W1L"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="946-microphone-toolbar"/>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
@@ -101,8 +104,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dWP-VH-FwK"/>
                     <connections>
-                        <outlet property="alertButton" destination="YF6-he-qIr" id="iAW-l6-4ep"/>
-                        <outlet property="standbyButton" destination="sJn-Qf-gl2" id="xWE-ft-gvK"/>
+                        <outlet property="alertButton" destination="YF6-he-qIr" id="iqQ-Ek-dZ3"/>
+                        <outlet property="connectionButton" destination="3u4-hl-sMu" id="h21-O3-Flo"/>
+                        <outlet property="locationButton" destination="mvB-ag-wvn" id="adt-5D-zZN"/>
+                        <outlet property="microphoneButton" destination="SsO-5N-iJ5" id="j5y-Cd-erJ"/>
+                        <outlet property="standbyButton" destination="sJn-Qf-gl2" id="gOz-WI-iLg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
