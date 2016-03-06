@@ -61,7 +61,7 @@ class StandbyState: EVState {
         imageManager.begin()
 
         SM.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
-        sm.timer?.fire()
+        SM.timer?.fire()
         
         homeViewController.enterStandbyState()
     }
@@ -75,7 +75,7 @@ class AlarmState: EVState {
             imageManager.begin()
 
             SM.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
-            sm.timer?.fire()
+            SM.timer?.fire()
         }
         homeViewController.enterAlarmState()
         
