@@ -196,7 +196,7 @@ class HomeViewController: UIViewController {
         
         switch stateMachine.currentState {
         case is StandbyState:
-            stateMachine.enterState(InactiveState)
+            // stateMachine.enterState(InactiveState)
             // prompt to disable )
             alertManager.promptDisable()
         default:

@@ -47,11 +47,15 @@ class StateMachine: GKStateMachine {
     
     func countdown(){
         self.remainingSeconds--
-        print("Time remaining: \(self.remainingSeconds)")
         
         let timeString = self.setTime(self.remainingSeconds)
         // homeViewController.countdownTimer.text = timeString
         // add formatting?
+        
+        if (self.remainingSeconds < 60){
+            // BUZZ BUZZ BUZZ
+            // BEEP BEEP BEEP
+        }
         
         if (self.remainingSeconds == 0){
             homeViewController.stateMachine.enterState(AlarmState)

@@ -54,12 +54,21 @@ public class AlertManager {
         let enteredPassword = self.passwordField.text
         if (isPasswordCorrect(enteredPassword))
         {
+            print("Correct password")
             switch homeViewController.stateMachine.currentState {
             case is AlarmState:
-                disableAlarm()
+                let alert = disableAlarm()
+                homeViewController.presentViewController(alert, animated: true, completion: {})
+                break
             case is StandbyState:
-                extendOrDisable()
+                print("Leaving standby")
+                let alert = extendOrDisable()
+                homeViewController.presentViewController(alert, animated: true, completion: {})
+                break
             default:
+//                print("Leaving standby")
+//                let alert = extendOrDisable()
+//                homeViewController.presentViewController(alert, animated: true, completion: {})
                 break
             }
         }
@@ -90,24 +99,25 @@ public class AlertManager {
         
     }
     
-    func disableAlarm()
+    func disableAlarm() -> UIAlertController
     {
         let alert = UIAlertController(title: "Password Correct", message: "We have stopped collecting information, and your security company has been notified that you have deactivated your alarms. Note that they may still call to confirm your safety.", preferredStyle:UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in }))
-        homeViewController.presentViewController(alert, animated: true, completion: {})
         homeViewController.stateMachine.enterState(InactiveState)
+        return alert
     }
     
-    func extendOrDisable()
+    func extendOrDisable() -> UIAlertController
     {
         let alert = UIAlertController(title: "Password Correct", message: "Would you like to disable or extend the timer?", preferredStyle:UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "Disable", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
+            self.homeViewController.stateMachine.standbyCountdown?.invalidate()
             self.homeViewController.stateMachine.enterState(InactiveState)}))
-        alert.addAction(UIAlertAction(title: "Extend", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: "Restart", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
             self.homeViewController.stateMachine.enterState(StandbyState)}))
-        
-        homeViewController.presentViewController(alert, animated: true, completion: {})
+    
+        return alert
     }
 
     func isPasswordCorrect(enteredPassword: String!) -> Bool
