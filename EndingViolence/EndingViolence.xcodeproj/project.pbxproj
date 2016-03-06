@@ -23,6 +23,10 @@
 		B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B045C4821C8B661400E47E3F /* Assets.xcassets */; };
 		B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */; };
 		B0E886311C8BBEEA000EA442 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E886301C8BBEEA000EA442 /* LocationManager.swift */; };
+		B0E886371C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886331C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf */; };
+		B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */; };
+		B0E886391C8BD816000EA442 /* leaguegothic-italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886351C8BD816000EA442 /* leaguegothic-italic-webfont.ttf */; };
+		B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */; };
 		B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */; };
 		B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */; };
 		B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */; };
@@ -51,6 +55,10 @@
 		B045C4851C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B045C4871C8B661400E47E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E886301C8BBEEA000EA442 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B0E886331C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-condensed-italic-webfont.ttf"; sourceTree = "<group>"; };
+		B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-condensed-regular-webfont.ttf"; sourceTree = "<group>"; };
+		B0E886351C8BD816000EA442 /* leaguegothic-italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-italic-webfont.ttf"; sourceTree = "<group>"; };
+		B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-regular-webfont.ttf"; sourceTree = "<group>"; };
 		B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationMgr.swift; path = Managers/LocationMgr.swift; sourceTree = "<group>"; };
 		B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = Managers/StateMachine.swift; sourceTree = "<group>"; };
 		B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVViewController.swift; path = ViewControllers/EVViewController.swift; sourceTree = "<group>"; };
@@ -123,8 +131,8 @@
 				B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */,
 				B0EB9E7B1C8B8F06004219E3 /* Managers */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
-				B045C4821C8B661400E47E3F /* Assets.xcassets */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
+				B0E886321C8BD807000EA442 /* Resources */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
 				41825B631C8B73D300641A1E /* Model */,
 			);
@@ -138,6 +146,18 @@
 				C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B0E886321C8BD807000EA442 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B0E886331C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf */,
+				B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */,
+				B0E886351C8BD816000EA442 /* leaguegothic-italic-webfont.ttf */,
+				B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */,
+				B045C4821C8B661400E47E3F /* Assets.xcassets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */ = {
@@ -226,8 +246,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */,
+				B0E886391C8BD816000EA442 /* leaguegothic-italic-webfont.ttf in Resources */,
+				B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */,
+				B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */,
 				B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */,
 				B045C4811C8B661400E47E3F /* Main.storyboard in Resources */,
+				B0E886371C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

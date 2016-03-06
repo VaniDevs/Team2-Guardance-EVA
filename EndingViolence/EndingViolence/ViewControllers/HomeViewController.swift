@@ -12,9 +12,10 @@ class HomeViewController: EVViewController {
     @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var standbyButton: UIButton!
     
-    @IBOutlet weak var microphoneButton: UIButton!
-    @IBOutlet weak var connectionButton: UIButton!
-    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var micIV: UIImageView!
+    @IBOutlet weak var cameraIV: UIImageView!
+    @IBOutlet weak var locationIV: UIImageView!
+    @IBOutlet weak var signalIV: UIImageView!
     
     var stateMachine: StateMachine!
 
@@ -23,19 +24,29 @@ class HomeViewController: EVViewController {
         // Do any additional setup after loading the view, typically from a nib.
         stateMachine = StateMachine(homeViewController: self)
         stateMachine?.enterState(InactiveState)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         configureView()
     }
     
     func configureView() {
-        alertButton.setTitle("Activate Alarm", forState: .Normal)
+        alertButton.titleLabel?.font = UIFont.LeagueGothic(48.0)
+        alertButton.titleLabel?.numberOfLines = 0
+        alertButton.titleLabel?.textAlignment = .Center
+        
+        alertButton.setTitle("Activate\nAlarm", forState: .Normal)
         alertButton.setTitleColor(.whiteColor(), forState: .Normal)
         
-        alertButton.setTitle("Activate Alarm", forState: .Highlighted)
-        alertButton.setTitleColor(.evaRed(), forState: .Highlighted)
+//        alertButton.setTitle("Activate\nAlarm", forState: .Highlighted)
+//        alertButton.setTitleColor(.evaRed(), forState: .Highlighted)
 
-        alertButton.setTitle("Disable Alarm", forState: .Selected)
+        alertButton.setTitle("Disable\nAlarm", forState: .Selected)
         alertButton.setTitleColor(.evaRed(), forState: .Selected)
+        
+        
     }
 
     @IBAction func alertTapped(sender: AnyObject) {

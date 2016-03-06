@@ -50,6 +50,8 @@ class InactiveState: EVState {
         SM.timer?.invalidate()
         SM.timer = nil
         
+        SM.modelManager.clearActiveSession()
+        
         imageManager.stop()
         homeViewController.enterInactiveState()
     }
