@@ -35,7 +35,7 @@ class StateMachine: GKStateMachine {
     
     func capture() {
         imageManager.captureImage {image in
-            
+    
             let ses = self.session
             ses.addImage(image)
             ses.logLocation(self.coreLocationController.requestLocation())
@@ -68,6 +68,14 @@ class StandbyState: EVState {
         startCapturing()
         startRecordingAudio()
         homeViewController.enterStandbyState()
+        
+        // nextState  = prompt login
+        
+        // start timer
+        // after X minutes, prompt user
+        // if correct password, prompt again
+        // have option to enter
+        // if incorrect, switch to alarm.
     }
 }
 

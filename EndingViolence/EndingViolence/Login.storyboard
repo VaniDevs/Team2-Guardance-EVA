@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6bR-Cf-f2n">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tpP-dC-QkF">
+            <objects>
+                <viewController id="6bR-Cf-f2n" customClass="LoginViewController" customModule="EndingViolence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JNH-qg-BOX"/>
+                        <viewControllerLayoutGuide type="bottom" id="vag-j3-CTJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ViU-3E-hhS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugC-vH-BML">
+                                <rect key="frame" x="281" y="550" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="6bR-Cf-f2n" eventType="touchUpInside" id="gtj-z8-9bO"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="c2V-df-dui">
+                                <rect key="frame" x="227" y="235" width="146" height="130"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWl-9m-I7n" userLabel="Camera Permission">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="30"/>
+                                        <state key="normal" title="Camera Permissions"/>
+                                        <connections>
+                                            <action selector="askForCameraPermission:" destination="6bR-Cf-f2n" eventType="touchUpInside" id="cUm-z5-uKe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uO0-XJ-udu">
+                                        <rect key="frame" x="0.0" y="50" width="146" height="30"/>
+                                        <state key="normal" title="Audio Permissions"/>
+                                        <connections>
+                                            <action selector="askForAudioPermission:" destination="6bR-Cf-f2n" eventType="touchUpInside" id="6rt-rL-CkC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzD-y4-h0m" userLabel="GPS Permission">
+                                        <rect key="frame" x="0.0" y="100" width="146" height="30"/>
+                                        <state key="normal" title="Location Permissions"/>
+                                        <connections>
+                                            <action selector="askForGPSPermission:" destination="6bR-Cf-f2n" eventType="touchUpInside" id="l5a-fg-LDM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vag-j3-CTJ" firstAttribute="top" secondItem="ugC-vH-BML" secondAttribute="bottom" constant="20" id="7tJ-5k-Jek"/>
+                            <constraint firstItem="c2V-df-dui" firstAttribute="centerX" secondItem="ViU-3E-hhS" secondAttribute="centerX" id="8OI-wy-NhE"/>
+                            <constraint firstItem="ugC-vH-BML" firstAttribute="centerX" secondItem="ViU-3E-hhS" secondAttribute="centerX" id="FmL-bk-BIt"/>
+                            <constraint firstItem="c2V-df-dui" firstAttribute="centerY" secondItem="ViU-3E-hhS" secondAttribute="centerY" id="zPe-kS-SZ3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZD6-bP-7aq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="307"/>
+        </scene>
+    </scenes>
+</document>

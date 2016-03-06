@@ -8,6 +8,8 @@
 
 import UIKit
 
+public let UserLoggedIn = "UserLoggedIn"
+
 extension UIFont {
     class func LeagueGothic(size: CGFloat) -> UIFont {
         return UIFont(name: "LeagueGothic-Regular", size: size)!

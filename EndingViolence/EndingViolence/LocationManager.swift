@@ -32,6 +32,10 @@ class CoreLocationController : NSObject {
         print("Location returned")
         return locationManager.location!
     }
+    
+    class func isAuthorized() -> Bool {
+        return CLLocationManager.authorizationStatus() == .AuthorizedAlways
+    }
 }
 
 extension CoreLocationController : CLLocationManagerDelegate {

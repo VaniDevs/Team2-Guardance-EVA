@@ -3,7 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Item-->
@@ -18,66 +20,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
-                                <rect key="frame" x="175" y="20" width="250" height="40"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
+                                <rect key="frame" x="175" y="40" width="250" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="vNB-LB-euk">
+                                    <imageView tag="104" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singal_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-gW-wbO">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="GuG-CZ-35Y"/>
-                                            <constraint firstAttribute="height" constant="40" id="om4-H4-ff6"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cam_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="AFb-Qk-b6a">
-                                        <rect key="frame" x="70" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Pc5-dT-0Vq"/>
-                                            <constraint firstAttribute="width" constant="40" id="mpD-Yx-VVx"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gps_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="2FU-T1-3Yr">
-                                        <rect key="frame" x="140" y="0.0" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="GAI-37-OLO"/>
-                                            <constraint firstAttribute="height" constant="40" id="NXA-87-7Vf"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singal_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-gW-wbO">
-                                        <rect key="frame" x="210" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="6aD-1o-1mY"/>
                                             <constraint firstAttribute="height" constant="40" id="Rhj-91-fUO"/>
                                         </constraints>
                                     </imageView>
+                                    <imageView tag="103" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gps_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="2FU-T1-3Yr">
+                                        <rect key="frame" x="70" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="GAI-37-OLO"/>
+                                            <constraint firstAttribute="height" constant="40" id="NXA-87-7Vf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView tag="102" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cam_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="AFb-Qk-b6a">
+                                        <rect key="frame" x="140" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Pc5-dT-0Vq"/>
+                                            <constraint firstAttribute="width" constant="40" id="mpD-Yx-VVx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView tag="101" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="vNB-LB-euk">
+                                        <rect key="frame" x="210" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="GuG-CZ-35Y"/>
+                                            <constraint firstAttribute="height" constant="40" id="om4-H4-ff6"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
-                                <rect key="frame" x="220" y="126" width="160" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
+                                <rect key="frame" x="200" y="146" width="200" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="BzG-1P-7tS"/>
-                                    <constraint firstAttribute="width" constant="160" id="Egk-Zt-H1X"/>
+                                    <constraint firstAttribute="width" constant="200" id="Egk-Zt-H1X"/>
                                 </constraints>
-                                <state key="normal" title="Standby" backgroundImage="redsquare">
+                                <state key="normal" title="Enter High Alert" backgroundImage="alert_normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" backgroundImage="alert_pressed"/>
+                                <state key="highlighted" backgroundImage="alert_pressed"/>
                                 <connections>
                                     <action selector="standbyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9f-ba-16d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-wG-4d8">
-                                <rect key="frame" x="523" y="20" width="57" height="30"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="vEz-fS-Yo2" kind="presentation" id="MYn-iW-fcc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-ct-ogA">
-                                <rect key="frame" x="20" y="20" width="72" height="30"/>
-                                <state key="normal" title="Resources"/>
-                                <connections>
-                                    <segue destination="4bo-ji-2w5" kind="presentation" id="BHR-Ug-JY4"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animation_alarm_1" translatesAutoresizingMaskIntoConstraints="NO" id="Sny-uX-KAp">
+                                <rect key="frame" x="140" y="315" width="320" height="159"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Url-2y-ej3"/>
+                                    <constraint firstAttribute="height" constant="159" id="X3e-Yk-S7f"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF6-he-qIr">
                                 <rect key="frame" x="202" y="296" width="197" height="197"/>
                                 <constraints>
@@ -93,27 +91,61 @@
                                     <action selector="alertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5P-d5-YSc"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2lp-1n-BZR">
+                                <rect key="frame" x="0.0" y="-120" width="600" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are offline. Connect to a wifi or cellular connection to be able to send an alarm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9av-bT-Omb" userLabel="You are offline. Connect to a wifi or cellular connection to be able to send an alarm.">
+                                        <rect key="frame" x="20" y="8" width="560" height="104"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="9av-bT-Omb" secondAttribute="bottom" constant="8" id="Pzr-iu-d7P"/>
+                                    <constraint firstItem="9av-bT-Omb" firstAttribute="leading" secondItem="2lp-1n-BZR" secondAttribute="leading" constant="20" id="QUx-b9-utz"/>
+                                    <constraint firstAttribute="trailing" secondItem="9av-bT-Omb" secondAttribute="trailing" constant="20" id="YAx-PV-SOL"/>
+                                    <constraint firstItem="9av-bT-Omb" firstAttribute="top" secondItem="2lp-1n-BZR" secondAttribute="top" constant="8" id="bYH-BO-FL4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adM-As-H7d">
+                                <rect key="frame" x="516" y="516" width="64" height="64"/>
+                                <state key="normal" image="setting-icon"/>
+                                <connections>
+                                    <segue destination="Aap-WT-bGF" kind="presentation" id="y0P-Fc-m0H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Sny-uX-KAp" firstAttribute="centerX" secondItem="YF6-he-qIr" secondAttribute="centerX" id="8RB-eU-xpd"/>
+                            <constraint firstItem="2lp-1n-BZR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" priority="250" id="DV5-r9-3AV"/>
                             <constraint firstItem="4v1-8l-6kw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EPk-S3-LNp"/>
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EaG-oE-VMf"/>
-                            <constraint firstItem="DnO-ct-ogA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Gzt-Kt-rDJ"/>
-                            <constraint firstItem="Nwz-wG-4d8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ICt-aR-5qf"/>
-                            <constraint firstItem="DnO-ct-ogA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KMQ-HU-45M"/>
+                            <constraint firstItem="2lp-1n-BZR" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" priority="750" id="ExM-iH-8j8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YF6-he-qIr" secondAttribute="bottom" constant="107" id="Kz6-k8-LcK"/>
-                            <constraint firstItem="Nwz-wG-4d8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZE5-oj-7lr"/>
-                            <constraint firstItem="4v1-8l-6kw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g6y-LN-e2t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adM-As-H7d" secondAttribute="bottom" constant="20" id="axK-sf-5FL"/>
+                            <constraint firstItem="4v1-8l-6kw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="g6y-LN-e2t"/>
+                            <constraint firstAttribute="trailing" secondItem="adM-As-H7d" secondAttribute="trailing" constant="20" id="hfb-by-EEx"/>
+                            <constraint firstAttribute="trailing" secondItem="2lp-1n-BZR" secondAttribute="trailing" id="l92-4Z-mh5"/>
+                            <constraint firstItem="2lp-1n-BZR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nAH-Zk-jxF"/>
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="top" secondItem="4v1-8l-6kw" secondAttribute="bottom" constant="66" id="o1h-Rh-yVq"/>
                             <constraint firstItem="YF6-he-qIr" firstAttribute="centerX" secondItem="sJn-Qf-gl2" secondAttribute="centerX" id="sQ3-cF-cD3"/>
+                            <constraint firstItem="2lp-1n-BZR" firstAttribute="height" secondItem="4v1-8l-6kw" secondAttribute="height" multiplier="3" id="uHE-hT-N80"/>
+                            <constraint firstItem="Sny-uX-KAp" firstAttribute="centerY" secondItem="YF6-he-qIr" secondAttribute="centerY" id="xeB-hQ-MSP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dWP-VH-FwK"/>
                     <connections>
+                        <outlet property="alarmWaves" destination="Sny-uX-KAp" id="cds-KO-DbE"/>
                         <outlet property="alertButton" destination="YF6-he-qIr" id="iqQ-Ek-dZ3"/>
                         <outlet property="cameraIV" destination="AFb-Qk-b6a" id="8xk-p8-wuF"/>
+                        <outlet property="hideOfflineViewConstrain" destination="ExM-iH-8j8" id="6wg-b4-XBS"/>
                         <outlet property="locationIV" destination="2FU-T1-3Yr" id="ntp-KM-8Df"/>
                         <outlet property="micIV" destination="vNB-LB-euk" id="z5Y-hr-Wp8"/>
+                        <outlet property="offlineView" destination="2lp-1n-BZR" id="pXd-je-B9t"/>
+                        <outlet property="showOfflineViewConstrain" destination="DV5-r9-3AV" id="uA0-H9-wo8"/>
                         <outlet property="signalIV" destination="f1w-gW-wbO" id="EhB-Gk-2D5"/>
                         <outlet property="standbyButton" destination="sJn-Qf-gl2" id="gOz-WI-iLg"/>
                     </connections>
@@ -121,6 +153,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="117"/>
+        </scene>
+        <!--DataBrowser-->
+        <scene sceneID="3Bf-m1-QiA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DataBrowser" id="Aap-WT-bGF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOH-ce-ie7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612.5" y="562"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="KQu-Y8-Ba3">
@@ -208,10 +248,13 @@
     <resources>
         <image name="alarm_normal" width="387" height="387"/>
         <image name="alarm_pressed" width="387" height="387"/>
+        <image name="alert_normal" width="1517" height="445"/>
+        <image name="alert_pressed" width="1525" height="453"/>
+        <image name="animation_alarm_1" width="620" height="310"/>
         <image name="cam_inactive" width="223" height="194"/>
         <image name="gps_inactive" width="187" height="187"/>
         <image name="mic_inactive" width="127" height="180"/>
-        <image name="redsquare" width="10" height="10"/>
+        <image name="setting-icon" width="64" height="64"/>
         <image name="singal_inactive" width="214" height="190"/>
     </resources>
 </document>

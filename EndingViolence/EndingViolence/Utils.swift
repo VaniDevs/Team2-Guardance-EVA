@@ -6,6 +6,7 @@
 //  Copyright © 2016 teamteamtwo. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 func dispatchAsync(block: () -> ()) {
@@ -71,3 +72,10 @@ func fullPathForFilenameInTmpDir(filename: String) -> String {
 }
 
 
+extension UIViewController {
+    @IBAction func callDismissOnPresentingController() {
+        if let vc = presentingViewController {
+            vc.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+}
