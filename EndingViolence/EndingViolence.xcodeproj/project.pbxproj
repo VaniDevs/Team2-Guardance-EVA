@@ -12,6 +12,7 @@
 		41825B691C8B7C0400641A1E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B681C8B7C0400641A1E /* Config.swift */; };
 		41825B6B1C8B822100641A1E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B6A1C8B822100641A1E /* Types.swift */; };
 		41825B6F1C8B953B00641A1E /* MImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B6E1C8B953B00641A1E /* MImage.swift */; };
+		41825B711C8BA05B00641A1E /* ClientMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B701C8BA05B00641A1E /* ClientMgr.swift */; };
 		41B158101C8B6F530076AF50 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B1580F1C8B6F530076AF50 /* MSession.swift */; };
 		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
@@ -34,6 +35,7 @@
 		41825B681C8B7C0400641A1E /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		41825B6A1C8B822100641A1E /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		41825B6E1C8B953B00641A1E /* MImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MImage.swift; path = Model/MImage.swift; sourceTree = "<group>"; };
+		41825B701C8BA05B00641A1E /* ClientMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientMgr.swift; path = Managers/ClientMgr.swift; sourceTree = "<group>"; };
 		41B1580F1C8B6F530076AF50 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSession.swift; path = Model/MSession.swift; sourceTree = "<group>"; };
 		41DFAF671C8B6CEA00706E68 /* MLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MLocation.swift; path = Model/MLocation.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */,
+				41825B701C8BA05B00641A1E /* ClientMgr.swift */,
 				B0EB9E7C1C8B8FA2004219E3 /* AlertManager.swift */,
 				B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */,
 			);
@@ -289,6 +292,7 @@
 				B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */,
 				41B158101C8B6F530076AF50 /* MSession.swift in Sources */,
 				B0EB9E871C8B8FB0004219E3 /* HomeViewController.swift in Sources */,
+				41825B711C8BA05B00641A1E /* ClientMgr.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
