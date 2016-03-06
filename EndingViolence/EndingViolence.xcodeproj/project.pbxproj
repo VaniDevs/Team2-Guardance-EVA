@@ -130,11 +130,11 @@
 				B045C47B1C8B661400E47E3F /* AppDelegate.swift */,
 				B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */,
 				B0EB9E7B1C8B8F06004219E3 /* Managers */,
+				41825B631C8B73D300641A1E /* Model */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
 				B0E886321C8BD807000EA442 /* Resources */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
-				41825B631C8B73D300641A1E /* Model */,
 			);
 			path = EndingViolence;
 			sourceTree = "<group>";
