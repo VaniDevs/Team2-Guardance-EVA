@@ -69,7 +69,7 @@
 		41F4C03D1C8C994400BFC6E6 /* AudioRecorderMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorderMgr.swift; path = Managers/AudioRecorderMgr.swift; sourceTree = "<group>"; };
 		41F4C03F1C8CB37A00BFC6E6 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = Managers/AudioPlayer.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
-		B045C4781C8B661400E47E3F /* EndingViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndingViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B045C4781C8B661400E47E3F /* Guardance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Guardance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045C47B1C8B661400E47E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B045C4801C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B045C4821C8B661400E47E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -156,7 +156,7 @@
 		B045C4791C8B661400E47E3F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B045C4781C8B661400E47E3F /* EndingViolence.app */,
+				B045C4781C8B661400E47E3F /* Guardance.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			);
 			name = EndingViolence;
 			productName = EndingViolence;
-			productReference = B045C4781C8B661400E47E3F /* EndingViolence.app */;
+			productReference = B045C4781C8B661400E47E3F /* Guardance.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -540,7 +540,7 @@
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Guardance;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -555,7 +555,7 @@
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Guardance;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
