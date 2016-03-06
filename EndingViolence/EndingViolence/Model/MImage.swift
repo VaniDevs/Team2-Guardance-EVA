@@ -28,7 +28,5 @@ class MImage: Object {
     override class func ignoredProperties() -> [String] {
         return ["rImage"]
     }
-    
 }
-
 

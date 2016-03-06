@@ -82,6 +82,8 @@ class AlarmState: EVState {
             sm.timer?.fire()
         }
         homeViewController.enterAlarmState()
+        
+        
     }
     
     override func isValidNextState(stateClass: AnyClass) -> Bool {

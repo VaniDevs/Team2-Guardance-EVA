@@ -8,16 +8,22 @@
 
 import RealmSwift
 import CoreLocation
+import ObjectMapper
 
-class MSession: Object {
+class MSession: Object, Mappable {
 
     dynamic var uuid = 0
     dynamic var rUser: User = ""
     dynamic var rStartTime = NSDate()
     dynamic var rIsCurrentSession = false
     
-    let locations = List<MLocation>()
+    var locations = List<MLocation>()
     let imgs = List<MImage>()
+
+    // MARK: > ObjectMapper
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
 }
 
 extension MSession {
@@ -46,3 +52,20 @@ extension MSession {
         }
     }
 }
+
+
+extension MSession {
+    
+    // MARK: > Mappable
+    func mapping(map: Map) {
+        
+        xUpdate {
+            self.rUser <- map["user"]
+            self.rStartTime <- map["startTime"]
+            self.locations <- map["locations"]
+        }
+    }
+}
+
+
+
