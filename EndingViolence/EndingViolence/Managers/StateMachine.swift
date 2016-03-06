@@ -12,7 +12,8 @@ import GameplayKit
 class StateMachine: GKStateMachine {
     let imageManager = ImageCaptureManager()
     var modelManager = ModelMgr()
-    
+    var coreLocationController = CoreLocationController()
+
     let homeViewController: HomeViewController
     
     var timer: NSTimer?
@@ -21,15 +22,20 @@ class StateMachine: GKStateMachine {
         self.homeViewController = homeViewController
         
         super.init(states: [InactiveState(imageManager: imageManager, homeViewController: homeViewController), StandbyState(imageManager: imageManager, homeViewController: homeViewController), AlarmState(imageManager: imageManager, homeViewController: homeViewController)])
+        
+        self.imageManager.setup()
+        self.coreLocationController.start()
     }
     
     func capture() {
         imageManager.captureImage {image in
             if let ses = self.modelManager.currentSession {
                 ses.addImage(image)
+                ses.logLocation(self.coreLocationController.requestLocation())
             } else {
                 let ses = self.modelManager.newSession("teamteamdev")
                 ses.addImage(image)
+                ses.logLocation(self.coreLocationController.requestLocation())
             }
         }
         NSLog("Captured media")
@@ -66,7 +72,7 @@ class AlarmState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
         
-        if let prev = previousState where prev is InactiveState {
+        if previousState is InactiveState {
             let sm = stateMachine as! StateMachine
             sm.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
 

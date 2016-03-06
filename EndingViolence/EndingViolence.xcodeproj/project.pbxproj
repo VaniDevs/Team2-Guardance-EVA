@@ -19,6 +19,7 @@
 		B045C4811C8B661400E47E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C47F1C8B661400E47E3F /* Main.storyboard */; };
 		B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B045C4821C8B661400E47E3F /* Assets.xcassets */; };
 		B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */; };
+		B0E886311C8BBEEA000EA442 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E886301C8BBEEA000EA442 /* LocationManager.swift */; };
 		B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */; };
 		B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */; };
 		B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */; };
@@ -43,6 +44,7 @@
 		B045C4821C8B661400E47E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B045C4851C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B045C4871C8B661400E47E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E886301C8BBEEA000EA442 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationMgr.swift; path = Managers/LocationMgr.swift; sourceTree = "<group>"; };
 		B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = Managers/StateMachine.swift; sourceTree = "<group>"; };
 		B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVViewController.swift; path = ViewControllers/EVViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		B0EB9E7B1C8B8F06004219E3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				B0E886301C8BBEEA000EA442 /* LocationManager.swift */,
 				B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */,
 				B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */,
 				B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */,
@@ -277,6 +280,7 @@
 				41825B671C8B79B900641A1E /* Object+Extensions.swift in Sources */,
 				41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */,
 				B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */,
+				B0E886311C8BBEEA000EA442 /* LocationManager.swift in Sources */,
 				B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */,
 				B0EB9E8B1C8BA04B004219E3 /* ImageCaptureManager.swift in Sources */,
 				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,

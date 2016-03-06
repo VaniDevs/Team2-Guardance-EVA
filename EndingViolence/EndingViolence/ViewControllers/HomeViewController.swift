@@ -17,13 +17,12 @@ class HomeViewController: EVViewController {
     @IBOutlet weak var locationButton: UIButton!
     
     var stateMachine: StateMachine?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         stateMachine = StateMachine(homeViewController: self)
-        
-        
+        stateMachine?.enterState(InactiveState)
     }
 
     @IBAction func alertTapped(sender: AnyObject) {

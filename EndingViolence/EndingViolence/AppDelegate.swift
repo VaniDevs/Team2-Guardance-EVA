@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // NOTE: Call this AFTER setting up notification handlers
         startReachability()
-
+        
         return true
     }
 

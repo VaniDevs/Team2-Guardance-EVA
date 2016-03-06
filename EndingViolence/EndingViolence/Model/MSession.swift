@@ -26,9 +26,11 @@ extension MSession {
         
         guard let realm = self.realm else { return }
         
-        let location = MLocation()
+        let newlocation = MLocation()
+        newlocation.rLocation = location
+        
         try! realm.write {
-            realm.add(location)
+            realm.add(newlocation)
         }
     }
 
