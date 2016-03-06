@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var reachability = try? Reachability.reachabilityForInternetConnection()
+    var coreLocationController:CoreLocationController?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
@@ -27,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // NOTE: Call this AFTER setting up notification handlers
         startReachability()
+        
+        self.coreLocationController = CoreLocationController()
 
         return true
     }
