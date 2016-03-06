@@ -139,9 +139,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bpc-tN-H7Y">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="PXe-pU-VP5">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PXe-pU-VP5" secondAttribute="bottom" id="3zC-Bu-AkI"/>
+                                    <constraint firstItem="PXe-pU-VP5" firstAttribute="top" secondItem="bpc-tN-H7Y" secondAttribute="top" id="KdT-rF-rMJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="PXe-pU-VP5" secondAttribute="trailing" id="bDU-jQ-TZn"/>
+                                    <constraint firstItem="PXe-pU-VP5" firstAttribute="leading" secondItem="bpc-tN-H7Y" secondAttribute="leading" id="o7a-w0-yfe"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bpc-tN-H7Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1Ye-Kc-aw7"/>
                             <constraint firstItem="yfD-jX-mmW" firstAttribute="top" secondItem="sJn-Qf-gl2" secondAttribute="bottom" constant="8" id="3RA-SO-KOI"/>
                             <constraint firstItem="Sny-uX-KAp" firstAttribute="centerX" secondItem="YF6-he-qIr" secondAttribute="centerX" id="8RB-eU-xpd"/>
                             <constraint firstItem="2lp-1n-BZR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" priority="250" id="DV5-r9-3AV"/>
@@ -149,13 +165,16 @@
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EaG-oE-VMf"/>
                             <constraint firstItem="2lp-1n-BZR" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" priority="750" id="ExM-iH-8j8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YF6-he-qIr" secondAttribute="bottom" constant="107" id="Kz6-k8-LcK"/>
+                            <constraint firstAttribute="trailing" secondItem="bpc-tN-H7Y" secondAttribute="trailing" id="RDz-aS-Yvg"/>
                             <constraint firstItem="yfD-jX-mmW" firstAttribute="centerX" secondItem="sJn-Qf-gl2" secondAttribute="centerX" id="aYi-7t-JBf"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adM-As-H7d" secondAttribute="bottom" constant="20" id="axK-sf-5FL"/>
+                            <constraint firstItem="bpc-tN-H7Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="baf-3G-MEr"/>
                             <constraint firstItem="4v1-8l-6kw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="g6y-LN-e2t"/>
                             <constraint firstAttribute="trailing" secondItem="adM-As-H7d" secondAttribute="trailing" constant="20" id="hfb-by-EEx"/>
                             <constraint firstAttribute="trailing" secondItem="2lp-1n-BZR" secondAttribute="trailing" id="l92-4Z-mh5"/>
                             <constraint firstItem="2lp-1n-BZR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nAH-Zk-jxF"/>
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="top" secondItem="4v1-8l-6kw" secondAttribute="bottom" constant="66" id="o1h-Rh-yVq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bpc-tN-H7Y" secondAttribute="bottom" id="qhB-fx-G3k"/>
                             <constraint firstItem="YF6-he-qIr" firstAttribute="centerX" secondItem="sJn-Qf-gl2" secondAttribute="centerX" id="sQ3-cF-cD3"/>
                             <constraint firstItem="2lp-1n-BZR" firstAttribute="height" secondItem="4v1-8l-6kw" secondAttribute="height" multiplier="3" id="uHE-hT-N80"/>
                             <constraint firstItem="Sny-uX-KAp" firstAttribute="centerY" secondItem="YF6-he-qIr" secondAttribute="centerY" id="xeB-hQ-MSP"/>
@@ -171,6 +190,8 @@
                         <outlet property="locationIV" destination="2FU-T1-3Yr" id="ntp-KM-8Df"/>
                         <outlet property="micIV" destination="vNB-LB-euk" id="z5Y-hr-Wp8"/>
                         <outlet property="offlineView" destination="2lp-1n-BZR" id="pXd-je-B9t"/>
+                        <outlet property="onboardImageView" destination="PXe-pU-VP5" id="ogO-sU-qf1"/>
+                        <outlet property="onboardingView" destination="bpc-tN-H7Y" id="1SN-mV-Nb5"/>
                         <outlet property="showOfflineViewConstrain" destination="DV5-r9-3AV" id="uA0-H9-wo8"/>
                         <outlet property="signalIV" destination="f1w-gW-wbO" id="EhB-Gk-2D5"/>
                         <outlet property="standbyButton" destination="sJn-Qf-gl2" id="gOz-WI-iLg"/>
@@ -280,6 +301,7 @@
         <image name="cam_inactive" width="223" height="194"/>
         <image name="gps_inactive" width="187" height="187"/>
         <image name="mic_inactive" width="127" height="180"/>
+        <image name="onboard1" width="640" height="1136"/>
         <image name="setting-icon" width="64" height="64"/>
         <image name="singal_disabled" width="251" height="185"/>
         <image name="singal_inactive" width="214" height="190"/>

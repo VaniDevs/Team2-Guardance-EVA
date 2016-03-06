@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var offlineView: UIView!
     @IBOutlet weak var countdownTimer: UILabel!
     
+    @IBOutlet weak var onboardingView: UIView!
+    
     @IBOutlet weak var hideOfflineViewConstrain: NSLayoutConstraint!
     @IBOutlet weak var showOfflineViewConstrain: NSLayoutConstraint!
 
@@ -53,7 +55,12 @@ class HomeViewController: UIViewController {
     let locManager = CLLocationManager()
     
     var reachability = try? Reachability.reachabilityForInternetConnection()
-
+    
+    let onboardImages: [UIImage] = [UIImage(named: "onboard1")!, UIImage(named: "onboard2")!, UIImage(named: "onboard3")!, UIImage(named: "onboard4")!, UIImage(named: "onboard5")!, UIImage(named: "onboard6")!, ]
+    var onboardIndex: Int = 0
+    
+    @IBOutlet weak var onboardImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -70,7 +77,7 @@ class HomeViewController: UIViewController {
         
         alertManager = AlertManager(homeViewController: self)
         stateMachine = StateMachine(homeViewController: self)
-        stateMachine?.enterState(InactiveState)
+        stateMachine?.enterState(OnboardState)
         
         configureView()
         
@@ -231,6 +238,8 @@ class HomeViewController: UIViewController {
 
     //MARK: State config
     func enterInactiveState() {
+        onboardingView.hidden = true
+        
         view.backgroundColor = .whiteColor()
         alertButton.selected = false
         standbyButton.selected = false
@@ -292,4 +301,48 @@ class HomeViewController: UIViewController {
         }
     }
 
+    func startOnboarding() {
+        onboardImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "nextOnboard"))
+        onboardImageView.userInteractionEnabled = true
+    }
+    
+    
+    //MARK: Onboarding
+    func nextOnboard() {
+        onboardIndex += 1
+        if 0..<onboardImages.count ~= onboardIndex {
+            onboardImageView.image = onboardImages[onboardIndex]
+            switch onboardIndex {
+            case 2:
+                askForGPSPermission()
+            case 3:
+                askForAudioPermission()
+            case 4:
+                askForCameraPermission()
+            case 5,6:
+                onboardingView.alpha = 0.8
+                onboardImageView.alpha = 0.8
+            default:
+                break
+            }
+        } else {
+            stateMachine.enterState(InactiveState)
+        }
+    }
+    
+    @IBAction func askForCameraPermission() {
+        AVCaptureDevice.requestAccessForMediaType(AVMediaTypeVideo, completionHandler: { (success) -> Void in
+            print("AVCaptureDevice permission: \(success)")
+        })
+    }
+    
+    @IBAction func askForAudioPermission() {
+        AVAudioSession.sharedInstance().requestRecordPermission { (perm) in
+            print("AVAudioSession permission: \(perm)")
+        }
+    }
+    
+    @IBAction func askForGPSPermission() {
+        locManager.requestAlwaysAuthorization()
+    }
 }
