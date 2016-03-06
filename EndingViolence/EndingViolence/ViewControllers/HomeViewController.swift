@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var standbyButton: UIButton!
     @IBOutlet weak var alarmWaves: UIImageView!
     @IBOutlet weak var offlineView: UIView!
+    @IBOutlet weak var countdownTimer: UILabel!
     
     @IBOutlet weak var hideOfflineViewConstrain: NSLayoutConstraint!
     @IBOutlet weak var showOfflineViewConstrain: NSLayoutConstraint!
@@ -56,6 +57,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        countdownTimer = UILabel()
         
         NSNotificationCenter.defaultCenter()
             .addObserver(self,
@@ -194,7 +196,7 @@ class HomeViewController: UIViewController {
         
         switch stateMachine.currentState {
         case is StandbyState:
-            stateMachine.enterState(InactiveState)
+            // stateMachine.enterState(InactiveState)
             // prompt to disable )
             alertManager.promptDisable()
         default:
