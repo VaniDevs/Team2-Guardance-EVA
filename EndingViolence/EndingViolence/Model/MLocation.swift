@@ -13,9 +13,9 @@ class MLocation: Object {
     
     var rLocation: CLLocation {
         set {
-            _rLatitude = rLocation.coordinate.latitude
-            _rLongitude = rLocation.coordinate.longitude
-            _rTimeStamp = rLocation.timestamp
+            _rLatitude = newValue.coordinate.latitude
+            _rLongitude = newValue.coordinate.longitude
+            _rTimeStamp = newValue.timestamp
         }
         get {
             return CLLocation(
