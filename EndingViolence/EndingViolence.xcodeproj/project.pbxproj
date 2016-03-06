@@ -121,6 +121,9 @@
 		B045C47A1C8B661400E47E3F /* EndingViolence */ = {
 			isa = PBXGroup;
 			children = (
+				41825B721C8BA8C300641A1E /* Utils.swift */,
+				41825B6A1C8B822100641A1E /* Types.swift */,
+				41825B681C8B7C0400641A1E /* Config.swift */,
 				B045C47B1C8B661400E47E3F /* AppDelegate.swift */,
 				B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */,
 				B0EB9E7B1C8B8F06004219E3 /* Managers */,
@@ -128,10 +131,7 @@
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
 				B0E886321C8BD807000EA442 /* Resources */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
-				41825B681C8B7C0400641A1E /* Config.swift */,
 				41825B631C8B73D300641A1E /* Model */,
-				41825B6A1C8B822100641A1E /* Types.swift */,
-				41825B721C8BA8C300641A1E /* Utils.swift */,
 			);
 			path = EndingViolence;
 			sourceTree = "<group>";
