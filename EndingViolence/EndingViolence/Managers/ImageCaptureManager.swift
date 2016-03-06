@@ -13,7 +13,10 @@ class ImageCaptureManager: NSObject {
     let session: AVCaptureSession = AVCaptureSession()
     var device: AVCaptureDevice?
     var input: AVCaptureDeviceInput?
+    var output: AVCaptureStillImageOutput?
     var sessionQueue: dispatch_queue_t?
+    
+    var currentImage: UIImage?
     
     private func setup() {
         switch AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo) {
@@ -38,6 +41,8 @@ class ImageCaptureManager: NSObject {
             session.beginConfiguration()
             input = try AVCaptureDeviceInput.init(device: device)
             session.addInput(input)
+            output = AVCaptureStillImageOutput()
+            session.addOutput(output)
             session.commitConfiguration()
             
             NSLog("ImageCaptureManager started capturing images")
@@ -47,11 +52,19 @@ class ImageCaptureManager: NSObject {
     func begin() {
         setup()
         session.startRunning()
-        
-        
     }
     
     func stop() {
         session.stopRunning()
+    }
+    
+    func captureImage(completion: (image: UIImage) -> Void) {
+        let connection = output?.connectionWithMediaType(AVMediaTypeVideo)
+        output?.captureStillImageAsynchronouslyFromConnection(connection, completionHandler: { (buffer, error) in
+            let data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(buffer)
+            if let image = UIImage(data: data) {
+                completion(image: image)
+            }
+        })
     }
 }

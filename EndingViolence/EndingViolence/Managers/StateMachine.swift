@@ -11,12 +11,28 @@ import GameplayKit
 
 class StateMachine: GKStateMachine {
     let imageManager = ImageCaptureManager()
+    var modelManager = ModelMgr()
+    
     let homeViewController: HomeViewController
+    
+    var timer: NSTimer?
 
     init(homeViewController: HomeViewController) {
         self.homeViewController = homeViewController
         
         super.init(states: [InactiveState(imageManager: imageManager, homeViewController: homeViewController), StandbyState(imageManager: imageManager, homeViewController: homeViewController), AlarmState(imageManager: imageManager, homeViewController: homeViewController)])
+    }
+    
+    func capture() {
+        imageManager.captureImage {image in
+            if let ses = self.modelManager.currentSession {
+                ses.addImage(image)
+            } else {
+                let ses = self.modelManager.newSession("teamteamdev")
+                ses.addImage(image)
+            }
+        }
+        NSLog("Captured media")
     }
 }
 
@@ -24,7 +40,11 @@ class StateMachine: GKStateMachine {
 class InactiveState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
-
+        
+        let sm = stateMachine as! StateMachine
+        sm.timer?.invalidate()
+        sm.timer = nil
+        
         imageManager.stop()
         homeViewController.enterInactiveState()
     }
@@ -34,6 +54,9 @@ class StandbyState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
 
+        let sm = stateMachine as! StateMachine
+        sm.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
+        
         imageManager.begin()
         homeViewController.enterStandbyState()
     }
@@ -44,6 +67,9 @@ class AlarmState: EVState {
         super.didEnterWithPreviousState(previousState)
         
         if let prev = previousState where prev is InactiveState {
+            let sm = stateMachine as! StateMachine
+            sm.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
+
             imageManager.begin()
         }
         homeViewController.enterAlarmState()
