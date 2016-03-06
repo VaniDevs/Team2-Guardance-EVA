@@ -14,7 +14,11 @@ class HomeViewController: EVViewController {
     @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var standbyButton: UIButton!
     @IBOutlet weak var alarmWaves: UIImageView!
+    @IBOutlet weak var offlineView: UIView!
     
+    @IBOutlet weak var hideOfflineViewConstrain: NSLayoutConstraint!
+    @IBOutlet weak var showOfflineViewConstrain: NSLayoutConstraint!
+
     @IBOutlet weak var micIV: UIImageView!
     var micAuthorized: Bool {
         return AVAudioSession.sharedInstance().recordPermission() == .Granted
@@ -40,9 +44,18 @@ class HomeViewController: EVViewController {
     var stateMachine: StateMachine!
     var alertManager: AlertManager!
 
+    var reachability = try? Reachability.reachabilityForInternetConnection()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        NSNotificationCenter.defaultCenter()
+            .addObserver(self,
+                         selector: "reachabilityChanged:",
+                         name: ReachabilityChangedNotification,
+                         object: reachability
+        )
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -53,6 +66,8 @@ class HomeViewController: EVViewController {
         stateMachine?.enterState(InactiveState)
         
         configureView()
+        
+        startReachability()
     }
     
     func configureView() {
@@ -91,8 +106,62 @@ class HomeViewController: EVViewController {
         if !cameraAuthorized {
             cameraIV.image = UIImage(named: "cam_disabled")
         }
+        
+        showOfflineView((reachability?.isReachable())!)
+        dispatchAsyncAfterOn(dispatch_get_main_queue(), timeInSecs: 3.0) {
+            self.showOfflineView(true)
+        }
     }
     
+    func setIconsActive() {
+        // I am ashamed at how much rewritten code is here
+        if micAuthorized {
+            micIV.image = UIImage(named: "mic_active")
+            micIV.tintColor = .whiteColor()
+        }
+        if signalAuthorized {
+            signalIV.image = UIImage(named: "singal_active")
+            signalIV.tintColor = .whiteColor()
+        }
+        if locationAuthorized {
+            locationIV.image = UIImage(named: "gps_active")
+            locationIV.tintColor = .whiteColor()
+        }
+        if cameraAuthorized {
+            cameraIV.image = UIImage(named: "cam_active")
+            cameraIV.tintColor = .whiteColor()
+        }
+    }
+
+    func showOfflineView(hidden: Bool) {
+        UIView.animateWithDuration(0.4) {
+            if hidden {
+                self.hideOfflineViewConstrain.priority = UILayoutPriorityDefaultHigh
+                self.showOfflineViewConstrain.priority = UILayoutPriorityDefaultLow
+            } else {
+                self.hideOfflineViewConstrain.priority = UILayoutPriorityDefaultLow
+                self.showOfflineViewConstrain.priority = UILayoutPriorityDefaultHigh
+            }
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    // Reachability
+    func reachabilityChanged(note: NSNotification) {
+        let reachability = note.object as! Reachability
+        
+        showOfflineView(reachability.isReachable())
+    }
+    
+    private func startReachability() {
+        do {
+            try reachability?.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+    
+    //MARK: IBActions
     @IBAction func alertTapped(sender: AnyObject) {
 
         switch stateMachine.currentState {
@@ -116,6 +185,7 @@ class HomeViewController: EVViewController {
         }
     }
     
+    //MARK: State config
     func enterInactiveState() {
         view.backgroundColor = .whiteColor()
         alertButton.selected = false
@@ -169,25 +239,5 @@ class HomeViewController: EVViewController {
         
         setIconsActive()
     }
-    
-    func setIconsActive() {
-        // I am ashamed at how much rewritten code is here
-        if micAuthorized {
-            micIV.image = UIImage(named: "mic_active")
-            micIV.tintColor = .whiteColor()
-        }
-        if signalAuthorized {
-            signalIV.image = UIImage(named: "singal_active")
-            signalIV.tintColor = .whiteColor()
-        }
-        if locationAuthorized {
-            locationIV.image = UIImage(named: "gps_active")
-            locationIV.tintColor = .whiteColor()
-        }
-        if cameraAuthorized {
-            cameraIV.image = UIImage(named: "cam_active")
-            cameraIV.tintColor = .whiteColor()
-        }
-    }
-    
+
 }
