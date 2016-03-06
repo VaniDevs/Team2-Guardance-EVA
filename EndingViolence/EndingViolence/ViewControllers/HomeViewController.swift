@@ -9,6 +9,11 @@
 import UIKit
 import ReachabilitySwift
 import AVFoundation
+import CoreLocation
+
+enum IVtag: Int {
+    case Mic = 101, Camera, Location, Signal
+}
 
 class HomeViewController: EVViewController {
     @IBOutlet weak var alertButton: UIButton!
@@ -44,6 +49,8 @@ class HomeViewController: EVViewController {
     var stateMachine: StateMachine!
     var alertManager: AlertManager!
 
+    let locManager = CLLocationManager()
+    
     var reachability = try? Reachability.reachabilityForInternetConnection()
 
     override func viewDidLoad() {
@@ -96,15 +103,21 @@ class HomeViewController: EVViewController {
         
         if !micAuthorized {
             micIV.image = UIImage(named: "mic_disabled")
+            let gr = UITapGestureRecognizer(target: self, action: "tapMicButton")
+            micIV.addGestureRecognizer(gr)
         }
         if !signalAuthorized {
             signalIV.image = UIImage(named: "singal_disabled")
         }
         if !locationAuthorized {
             locationIV.image = UIImage(named: "gps_disabled")
+            let gr = UITapGestureRecognizer(target: self, action: "tapLocButton")
+            locationIV.addGestureRecognizer(gr)
         }
         if !cameraAuthorized {
             cameraIV.image = UIImage(named: "cam_disabled")
+            let gr = UITapGestureRecognizer(target: self, action: "tapCamButton")
+            cameraIV.addGestureRecognizer(gr)
         }
         
         showOfflineView((reachability?.isReachable())!)
@@ -115,21 +128,25 @@ class HomeViewController: EVViewController {
     
     func setIconsActive() {
         // I am ashamed at how much rewritten code is here
-        if micAuthorized {
-            micIV.image = UIImage(named: "mic_active")
-            micIV.tintColor = .whiteColor()
+        if self.micAuthorized {
+            self.micIV.image = UIImage(named: "mic_active")
+            self.micIV.tintColor = .whiteColor()
+            self.micIV.gestureRecognizers = nil
         }
-        if signalAuthorized {
-            signalIV.image = UIImage(named: "singal_active")
-            signalIV.tintColor = .whiteColor()
+        if self.signalAuthorized {
+            self.signalIV.image = UIImage(named: "singal_active")
+            self.signalIV.tintColor = .whiteColor()
+            self.signalIV.gestureRecognizers = nil
         }
-        if locationAuthorized {
-            locationIV.image = UIImage(named: "gps_active")
-            locationIV.tintColor = .whiteColor()
+        if self.locationAuthorized {
+            self.locationIV.image = UIImage(named: "gps_active")
+            self.locationIV.tintColor = .whiteColor()
+            self.locationIV.gestureRecognizers = nil
         }
-        if cameraAuthorized {
-            cameraIV.image = UIImage(named: "cam_active")
-            cameraIV.tintColor = .whiteColor()
+        if self.cameraAuthorized {
+            self.cameraIV.image = UIImage(named: "cam_active")
+            self.cameraIV.tintColor = .whiteColor()
+            self.cameraIV.gestureRecognizers = nil
         }
     }
 
@@ -185,6 +202,29 @@ class HomeViewController: EVViewController {
         }
     }
     
+    func tapCamButton() {
+        presentPermissionsAlert("Camera")
+    }
+    
+    func tapLocButton() {
+        presentPermissionsAlert("Location")
+    }
+
+    func tapMicButton() {
+        presentPermissionsAlert("Microphone")
+    }
+    
+    func presentPermissionsAlert(type: String) {
+        let alert = UIAlertController(title: "\(type) Not Authorized", message: "Please grant \(type.lowercaseString) permissions in settings", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Settings", style: .Default, handler: { (_) in
+            if let url = NSURL(string: UIApplicationOpenSettingsURLString) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
     //MARK: State config
     func enterInactiveState() {
         view.backgroundColor = .whiteColor()

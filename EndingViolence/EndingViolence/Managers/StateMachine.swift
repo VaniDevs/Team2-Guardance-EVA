@@ -33,7 +33,7 @@ class StateMachine: GKStateMachine {
     
     func capture() {
         imageManager.captureImage {image in
-            
+    
             let ses = self.session
             ses.addImage(image)
             ses.logLocation(self.coreLocationController.requestLocation())
