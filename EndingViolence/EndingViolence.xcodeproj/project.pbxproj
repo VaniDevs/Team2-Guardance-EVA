@@ -15,6 +15,7 @@
 		41825B711C8BA05B00641A1E /* ClientMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B701C8BA05B00641A1E /* ClientMgr.swift */; };
 		41825B731C8BA8C300641A1E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B721C8BA8C300641A1E /* Utils.swift */; };
 		41825B751C8BE51300641A1E /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B741C8BE51300641A1E /* DateConverter.swift */; };
+		41825B781C8BF87200641A1E /* FilenameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B771C8BF87200641A1E /* FilenameGenerator.swift */; };
 		41B158101C8B6F530076AF50 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B1580F1C8B6F530076AF50 /* MSession.swift */; };
 		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
@@ -45,6 +46,7 @@
 		41825B701C8BA05B00641A1E /* ClientMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientMgr.swift; path = Managers/ClientMgr.swift; sourceTree = "<group>"; };
 		41825B721C8BA8C300641A1E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		41825B741C8BE51300641A1E /* DateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateConverter.swift; path = Model/DateConverter.swift; sourceTree = "<group>"; };
+		41825B771C8BF87200641A1E /* FilenameGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilenameGenerator.swift; sourceTree = "<group>"; };
 		41B1580F1C8B6F530076AF50 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSession.swift; path = Model/MSession.swift; sourceTree = "<group>"; };
 		41DFAF671C8B6CEA00706E68 /* MLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MLocation.swift; path = Model/MLocation.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				41825B721C8BA8C300641A1E /* Utils.swift */,
+				41825B771C8BF87200641A1E /* FilenameGenerator.swift */,
 				41825B6A1C8B822100641A1E /* Types.swift */,
 				41825B681C8B7C0400641A1E /* Config.swift */,
 				B045C47B1C8B661400E47E3F /* AppDelegate.swift */,
@@ -338,6 +341,7 @@
 				41825B731C8BA8C300641A1E /* Utils.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
 				B0EB9E891C8B8FB0004219E3 /* SettingsViewController.swift in Sources */,
+				41825B781C8BF87200641A1E /* FilenameGenerator.swift in Sources */,
 				41825B6B1C8B822100641A1E /* Types.swift in Sources */,
 				B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */,
 				41B158101C8B6F530076AF50 /* MSession.swift in Sources */,
