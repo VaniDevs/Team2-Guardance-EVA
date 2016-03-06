@@ -26,6 +26,10 @@ class MSession: Object, Mappable {
     var rLocations = List<MLocation>()
     let rImgs = List<MImage>()
 
+    var images: [UIImage] {
+        return rImgs.lazy.map {$0.rImage}
+    }
+    
     // MARK: > ObjectMapper
     required convenience init?(_ map: Map) {
         self.init()

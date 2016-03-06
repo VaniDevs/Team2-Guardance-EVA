@@ -281,5 +281,13 @@ class HomeViewController: UIViewController {
         
         setIconsActive()
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DataBrowser" {
+            let nav = segue.destinationViewController as! UINavigationController
+            let vc = nav.viewControllers.first as! HistoryViewController
+            vc.modelManager = stateMachine.modelManager
+        }
+    }
 
 }

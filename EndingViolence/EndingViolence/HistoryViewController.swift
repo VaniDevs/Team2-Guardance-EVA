@@ -11,6 +11,8 @@ import UIKit
 let HistoryTableViewCellIdentifier = "HistoryTableViewCell"
 
 class HistoryViewController: UITableViewController {
+    var modelManager: ModelMgr!
+    
     var formatter: NSDateFormatter {
         let form = NSDateFormatter()
         form.dateFormat = "E, MMM d yyyy hh:mm:ss a"
@@ -37,8 +39,7 @@ class HistoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //TODO: ModelMgr sessions.count
-        return 10
+        return modelManager.sessions.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -50,14 +51,14 @@ class HistoryViewController: UITableViewController {
 
     
     func sessionForIndexPath(indexPath: NSIndexPath) -> MSession {
-        return MSession()
+        return modelManager.sessions[indexPath.row]
     }
 }
 
 extension HistoryViewController: HistoryTableViewCellDelegate {
     func showImages(session: MSession) {
-        //        let browser = SKPhotoBrowser(photos: session.images)
-        //        navigationController?.showViewController(browser, sender: nil)
+        let browser = SKPhotoBrowser(photos: session.images)
+        navigationController?.showViewController(browser, sender: nil)
     }
     
     func showMap(session: MSession) {

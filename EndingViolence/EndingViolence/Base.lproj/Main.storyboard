@@ -113,7 +113,7 @@
                                 <rect key="frame" x="516" y="516" width="64" height="64"/>
                                 <state key="normal" image="setting-icon"/>
                                 <connections>
-                                    <segue destination="Aap-WT-bGF" kind="presentation" id="y0P-Fc-m0H"/>
+                                    <segue destination="Aap-WT-bGF" kind="presentation" identifier="DataBrowser" id="y0P-Fc-m0H"/>
                                 </connections>
                             </button>
                         </subviews>
