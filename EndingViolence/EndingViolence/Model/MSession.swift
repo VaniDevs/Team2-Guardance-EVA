@@ -13,6 +13,10 @@ import ObjectMapper
 
 class MSession: Object, Mappable {
 
+    enum Properties : String {
+        case StartTime = "rStartTime"
+    }
+    
     dynamic var uuid = NSUUID().UUIDString
     dynamic var rUser: User = ""
     dynamic var rStartTime = NSDate()
@@ -28,6 +32,14 @@ class MSession: Object, Mappable {
 }
 
 extension MSession {
+    
+    var latestImage: MImage? {
+        return rImgs.last
+    }
+    
+    var latestCoordinate: MLocation? {
+        return rLocations.last
+    }
     
     func logLocation(location: CLLocation) {
         
@@ -47,6 +59,13 @@ extension MSession {
         xUpdate {
             self.rImgs.append(newImg)
         }
+    }
+
+    func imageDataForIndex(index: Int) -> NSData? {
+        
+        guard !rImgs.isEmpty else { return nil }
+        
+        return rImgs[clamp(index, 0, rImgs.count-1)]._rImgData
     }
 }
 
