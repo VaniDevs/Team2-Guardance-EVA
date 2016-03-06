@@ -12,7 +12,7 @@ class MImage: Object {
     
     var rImage: UIImage {
         set {
-            _rImgData = UIImagePNGRepresentation(rImage)
+            _rImgData = UIImageJPEGRepresentation(newValue, 0.8)
         }
         get {
             guard let imgData = _rImgData, let img = UIImage(data: imgData) else {
@@ -23,11 +23,10 @@ class MImage: Object {
     }
     
     dynamic var _rImgData: NSData?
+    dynamic var rImageUploaded = false
     
     override class func ignoredProperties() -> [String] {
         return ["rImage"]
     }
-    
 }
-
 

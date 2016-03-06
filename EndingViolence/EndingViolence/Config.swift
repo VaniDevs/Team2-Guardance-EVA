@@ -8,6 +8,12 @@
 
 import UIKit
 
+extension UIFont {
+    class func LeagueGothic(size: CGFloat) -> UIFont {
+        return UIFont(name: "LeagueGothic-Regular", size: size)!
+    }
+}
+
 // Convenience class method on UIColor for using hex strings
 extension UIColor {
     class func evaRed() -> UIColor {

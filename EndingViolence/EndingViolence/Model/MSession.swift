@@ -8,39 +8,63 @@
 
 import RealmSwift
 import CoreLocation
+import ObjectMapper
 
-class MSession: Object {
 
-    dynamic var uuid = 0
+class MSession: Object, Mappable {
+
+    dynamic var uuid = NSUUID().UUIDString
     dynamic var rUser: User = ""
     dynamic var rStartTime = NSDate()
     dynamic var rIsCurrentSession = false
     
-    let locations = List<MLocation>()
-    let imgs = List<MImage>()
+    var rLocations = List<MLocation>()
+    let rImgs = List<MImage>()
+
+    // MARK: > ObjectMapper
+    required convenience init?(_ map: Map) {
+        self.init()
+    }
 }
 
 extension MSession {
     
     func logLocation(location: CLLocation) {
         
-        guard let realm = self.realm else { return }
+        print(self, __FUNCTION__)
         
-        let location = MLocation()
-        try! realm.write {
-            realm.add(location)
+        let newlocation = MLocation()
+        newlocation.rLocation = location
+        
+        xUpdate {
+            self.rLocations.append(newlocation)
         }
     }
 
     func addImage(image: UIImage) {
         
-        guard let realm = self.realm else { return }
-        
         let newImg = MImage()
         newImg.rImage = image
         
-        try! realm.write {
-            realm.add(newImg)
+        xUpdate {
+            self.rImgs.append(newImg)
         }
     }
 }
+
+
+extension MSession {
+    
+    // MARK: > Mappable
+    func mapping(map: Map) {
+        
+        xUpdate {
+            self.rUser <- map["user"]
+            self.rStartTime <- map["startTime"]
+            self.rLocations <- map["locations"]
+        }
+    }
+}
+
+
+

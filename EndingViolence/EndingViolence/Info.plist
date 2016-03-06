@@ -30,11 +30,20 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location services allows for accurate reporting of your location to security to be able to respond. </string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>leaguegothic-condensed-italic-webfont.ttf</string>
+		<string>leaguegothic-condensed-regular-webfont.ttf</string>
+		<string>leaguegothic-italic-webfont.ttf</string>
+		<string>leaguegothic-regular-webfont.ttf</string>
 	</array>
 </dict>
 </plist>

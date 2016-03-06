@@ -8,14 +8,15 @@
 
 import RealmSwift
 import CoreLocation
+import ObjectMapper
 
-class MLocation: Object {
+class MLocation: Object, Mappable {
     
     var rLocation: CLLocation {
         set {
-            _rLatitude = rLocation.coordinate.latitude
-            _rLongitude = rLocation.coordinate.longitude
-            _rTimeStamp = rLocation.timestamp
+            _rLatitude = newValue.coordinate.latitude
+            _rLongitude = newValue.coordinate.longitude
+            _rTimeStamp = newValue.timestamp
         }
         get {
             return CLLocation(
@@ -36,6 +37,24 @@ class MLocation: Object {
         return ["rLocation"]
     }
     
+    // MARK: > ObjectMapper
+    required convenience init?(_ map: Map) {
+        self.init()
+    }    
 }
+
+extension MLocation {
+    
+    // MARK: > Mappable
+    func mapping(map: Map) {
+        
+        xUpdate {
+            self._rLatitude <- map["latitude"]
+            self._rLongitude <- map["longitude"]
+            self._rTimeStamp <- map["timestamp"]
+        }
+    }
+}
+
 
 
