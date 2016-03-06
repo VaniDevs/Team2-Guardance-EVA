@@ -22,6 +22,10 @@
 		B045C4811C8B661400E47E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C47F1C8B661400E47E3F /* Main.storyboard */; };
 		B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B045C4821C8B661400E47E3F /* Assets.xcassets */; };
 		B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */; };
+		B06192F91C8C956F00CE1D7B /* DataBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06192F81C8C956F00CE1D7B /* DataBrowser.storyboard */; };
+		B06192FB1C8CA66B00CE1D7B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06192FA1C8CA66B00CE1D7B /* HistoryViewController.swift */; };
+		B06192FD1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06192FC1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib */; };
+		B06192FF1C8CABA300CE1D7B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06192FE1C8CABA300CE1D7B /* HistoryTableViewCell.swift */; };
 		B0E886311C8BBEEA000EA442 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E886301C8BBEEA000EA442 /* LocationManager.swift */; };
 		B0E886371C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886331C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf */; };
 		B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */; };
@@ -31,7 +35,6 @@
 		B0E8863E1C8BFF73000EA442 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */; };
 		B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */; };
 		B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */; };
-		B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */; };
 		B0EB9E871C8B8FB0004219E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */; };
 		B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */; };
 		B0EB9E891C8B8FB0004219E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */; };
@@ -57,6 +60,10 @@
 		B045C4821C8B661400E47E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B045C4851C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B045C4871C8B661400E47E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B06192F81C8C956F00CE1D7B /* DataBrowser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataBrowser.storyboard; sourceTree = "<group>"; };
+		B06192FA1C8CA66B00CE1D7B /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B06192FC1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		B06192FE1C8CABA300CE1D7B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		B0E886301C8BBEEA000EA442 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B0E886331C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-condensed-italic-webfont.ttf"; sourceTree = "<group>"; };
 		B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-condensed-regular-webfont.ttf"; sourceTree = "<group>"; };
@@ -66,7 +73,6 @@
 		B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationMgr.swift; path = Managers/LocationMgr.swift; sourceTree = "<group>"; };
 		B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = Managers/StateMachine.swift; sourceTree = "<group>"; };
-		B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVViewController.swift; path = ViewControllers/EVViewController.swift; sourceTree = "<group>"; };
 		B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesViewController.swift; path = ViewControllers/ResourcesViewController.swift; sourceTree = "<group>"; };
 		B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ViewControllers/SettingsViewController.swift; sourceTree = "<group>"; };
@@ -134,12 +140,15 @@
 				41825B6A1C8B822100641A1E /* Types.swift */,
 				41825B681C8B7C0400641A1E /* Config.swift */,
 				B045C47B1C8B661400E47E3F /* AppDelegate.swift */,
+				B06192FE1C8CABA300CE1D7B /* HistoryTableViewCell.swift */,
 				B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */,
 				B0EB9E7B1C8B8F06004219E3 /* Managers */,
 				41825B631C8B73D300641A1E /* Model */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
 				B0E8863B1C8BFEC9000EA442 /* Login.storyboard */,
+				B06192F81C8C956F00CE1D7B /* DataBrowser.storyboard */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
+				B06192FC1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib */,
 				B0E886321C8BD807000EA442 /* Resources */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
 			);
@@ -170,11 +179,11 @@
 		B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */,
 				B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */,
 				B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */,
 				B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */,
 				B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */,
+				B06192FA1C8CA66B00CE1D7B /* HistoryViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -260,8 +269,10 @@
 				B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */,
 				B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */,
 				B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */,
+				B06192FD1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib in Resources */,
 				B045C4811C8B661400E47E3F /* Main.storyboard in Resources */,
 				B0E886371C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf in Resources */,
+				B06192F91C8C956F00CE1D7B /* DataBrowser.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,19 +349,20 @@
 				41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */,
 				B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */,
 				B0E886311C8BBEEA000EA442 /* LocationManager.swift in Sources */,
+				B06192FB1C8CA66B00CE1D7B /* HistoryViewController.swift in Sources */,
 				B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */,
 				B0EB9E8B1C8BA04B004219E3 /* ImageCaptureManager.swift in Sources */,
+				B06192FF1C8CABA300CE1D7B /* HistoryTableViewCell.swift in Sources */,
 				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,
 				B0E8863E1C8BFF73000EA442 /* LoginViewController.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
-  				FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */,
+				FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */,
 				41825B751C8BE51300641A1E /* DateConverter.swift in Sources */,
 				B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */,
 				41825B731C8BA8C300641A1E /* Utils.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
 				B0EB9E891C8B8FB0004219E3 /* SettingsViewController.swift in Sources */,
 				41825B6B1C8B822100641A1E /* Types.swift in Sources */,
-				B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */,
 				41B158101C8B6F530076AF50 /* MSession.swift in Sources */,
 				B0EB9E871C8B8FB0004219E3 /* HomeViewController.swift in Sources */,
 				41825B711C8BA05B00641A1E /* ClientMgr.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 func dispatchAsync(block: () -> ()) {
     dispatchAsyncOn(dispatch_get_main_queue()) {
@@ -58,3 +59,10 @@ func saveImage(image: UIImage, ToTmpDirWithName name) {
 }
 */
 
+extension UIViewController {
+    @IBAction func callDismissOnPresentingController() {
+        if let vc = presentingViewController {
+            vc.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+}
