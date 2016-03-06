@@ -59,12 +59,12 @@ class InactiveState: EVState {
 class StandbyState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
+        imageManager.begin()
 
         let sm = stateMachine as! StateMachine
         sm.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
         sm.timer?.fire()
 
-        imageManager.begin()
         homeViewController.enterStandbyState()
     }
 }
@@ -74,11 +74,12 @@ class AlarmState: EVState {
         super.didEnterWithPreviousState(previousState)
         
         if previousState is InactiveState {
+            imageManager.begin()
+
             let sm = stateMachine as! StateMachine
             sm.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
+
             sm.timer?.fire()
-            
-            imageManager.begin()
         }
         homeViewController.enterAlarmState()
     }

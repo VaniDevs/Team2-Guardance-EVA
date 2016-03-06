@@ -75,7 +75,7 @@
                                     <segue destination="4bo-ji-2w5" kind="presentation" id="BHR-Ug-JY4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF6-he-qIr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF6-he-qIr">
                                 <rect key="frame" x="202" y="296" width="197" height="197"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="197" id="9IQ-Lt-FWE"/>
