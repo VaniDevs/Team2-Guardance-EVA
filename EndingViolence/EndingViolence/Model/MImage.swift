@@ -12,7 +12,7 @@ class MImage: Object {
     
     var rImage: UIImage {
         set {
-            _rImgData = UIImageJPEGRepresentation(rImage, 0.8)
+            _rImgData = UIImageJPEGRepresentation(newValue, 0.8)
         }
         get {
             guard let imgData = _rImgData, let img = UIImage(data: imgData) else {
