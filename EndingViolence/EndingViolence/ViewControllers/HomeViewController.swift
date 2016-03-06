@@ -22,7 +22,6 @@ class HomeViewController: EVViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         stateMachine = StateMachine(homeViewController: self)
-<<<<<<< HEAD
         stateMachine?.enterState(InactiveState)
         
         configureView()
@@ -37,9 +36,6 @@ class HomeViewController: EVViewController {
 
         alertButton.setTitle("Disable Alarm", forState: .Selected)
         alertButton.setTitleColor(.evaRed(), forState: .Selected)
-=======
-        stateMachine.enterState(InactiveState)
->>>>>>> 6b4656e8e5c159b78e4123e6a4612c08586b2551
     }
 
     @IBAction func alertTapped(sender: AnyObject) {
