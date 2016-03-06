@@ -193,6 +193,7 @@
 				41584D707C127D9026100CE4 /* Check Pods Manifest.lock */,
 				B045C4741C8B661400E47E3F /* Sources */,
 				B045C4751C8B661400E47E3F /* Frameworks */,
+				41825B761C8BE9CB00641A1E /* ShellScript */,
 				B045C4761C8B661400E47E3F /* Resources */,
 				4172B64733941C0874462C14 /* Embed Pods Frameworks */,
 				3A92695712133EDFD1C280F2 /* Copy Pods Resources */,
@@ -302,6 +303,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		41825B761C8BE9CB00641A1E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "    // Ref: https://gist.github.com/sekati/3172554#file-xcode-build-bump-sh\n# xcode-build-bump.sh\n# @desc Auto-increment the build number every time the project is run.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
