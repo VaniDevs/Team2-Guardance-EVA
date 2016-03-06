@@ -21,7 +21,9 @@ class HomeViewController: EVViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        stateMachine = StateMachine(alertManager: AlertManager(), homeViewController: self)
+        stateMachine = StateMachine(homeViewController: self)
+        
+        
     }
 
     @IBAction func alertTapped(sender: AnyObject) {

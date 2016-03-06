@@ -10,14 +10,13 @@ import UIKit
 import GameplayKit
 
 class StateMachine: GKStateMachine {
-    let alertManager: AlertManager
+    let imageManager = ImageCaptureManager()
     let homeViewController: HomeViewController
 
-    init(alertManager: AlertManager, homeViewController: HomeViewController) {
-        self.alertManager = alertManager
+    init(homeViewController: HomeViewController) {
         self.homeViewController = homeViewController
         
-        super.init(states: [InactiveState(alertManager: alertManager, homeViewController: homeViewController), StandbyState(alertManager: alertManager, homeViewController: homeViewController), AlarmState(alertManager: alertManager, homeViewController: homeViewController)])
+        super.init(states: [InactiveState(imageManager: imageManager, homeViewController: homeViewController), StandbyState(imageManager: imageManager, homeViewController: homeViewController), AlarmState(imageManager: imageManager, homeViewController: homeViewController)])
     }
 }
 
@@ -26,7 +25,7 @@ class InactiveState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
 
-        alertManager.stopAllMonitoring()
+        imageManager.stop()
         homeViewController.enterInactiveState()
     }
 }
@@ -35,7 +34,7 @@ class StandbyState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
 
-        alertManager.beginStandbyMonitoring()
+        imageManager.begin()
         homeViewController.enterStandbyState()
     }
 }
@@ -44,10 +43,9 @@ class AlarmState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
         
-        if previousState is InactiveState {
-            alertManager.beginStandbyMonitoring()
+        if let prev = previousState where prev is InactiveState {
+            imageManager.begin()
         }
-        alertManager.beginSendingAlarm()
         homeViewController.enterAlarmState()
     }
     
@@ -61,12 +59,12 @@ class AlarmState: EVState {
 }
 
 class EVState: GKState {
-    let alertManager: AlertManager
     let homeViewController: HomeViewController
+    let imageManager: ImageCaptureManager
 
-    init(alertManager: AlertManager, homeViewController: HomeViewController) {
+    init(imageManager: ImageCaptureManager, homeViewController: HomeViewController) {
+        self.imageManager = imageManager
         self.homeViewController = homeViewController
-        self.alertManager = alertManager
     }
     
     override func didEnterWithPreviousState(previousState: GKState?) {
