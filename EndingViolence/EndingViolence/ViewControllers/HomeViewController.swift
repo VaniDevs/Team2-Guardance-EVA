@@ -28,13 +28,17 @@ class HomeViewController: EVViewController {
     }
     
     func configureView() {
-        alertButton.setTitle("Activate Alarm", forState: .Normal)
+        alertButton.titleLabel?.font = UIFont.LeagueGothic(48.0)
+        alertButton.titleLabel?.numberOfLines = 0
+        alertButton.titleLabel?.textAlignment = .Center
+        
+        alertButton.setTitle("Activate\nAlarm", forState: .Normal)
         alertButton.setTitleColor(.whiteColor(), forState: .Normal)
         
-        alertButton.setTitle("Activate Alarm", forState: .Highlighted)
-        alertButton.setTitleColor(.evaRed(), forState: .Highlighted)
+//        alertButton.setTitle("Activate\nAlarm", forState: .Highlighted)
+//        alertButton.setTitleColor(.evaRed(), forState: .Highlighted)
 
-        alertButton.setTitle("Disable Alarm", forState: .Selected)
+        alertButton.setTitle("Disable\nAlarm", forState: .Selected)
         alertButton.setTitleColor(.evaRed(), forState: .Selected)
     }
 
