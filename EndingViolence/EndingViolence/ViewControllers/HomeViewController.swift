@@ -15,6 +15,7 @@ class HomeViewController: EVViewController {
     @IBOutlet weak var standbyButton: UIButton!
     @IBOutlet weak var alarmWaves: UIImageView!
     @IBOutlet weak var offlineView: UIView!
+    @IBOutlet weak var countdownTimer: UILabel!
     
     @IBOutlet weak var hideOfflineViewConstrain: NSLayoutConstraint!
     @IBOutlet weak var showOfflineViewConstrain: NSLayoutConstraint!
@@ -49,6 +50,7 @@ class HomeViewController: EVViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        countdownTimer = UILabel()
         
         NSNotificationCenter.defaultCenter()
             .addObserver(self,

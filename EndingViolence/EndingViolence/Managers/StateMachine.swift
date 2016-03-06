@@ -17,6 +17,9 @@ class StateMachine: GKStateMachine {
     let homeViewController: HomeViewController
     
     var timer: NSTimer?
+    var standbyCountdown: NSTimer?
+    let numMinutes: Int = 3
+    var remainingSeconds: Int
     
     var session: MSession {
         return self.modelManager.currentSession ?? self.modelManager.newSession("teamteamdev")
@@ -24,6 +27,7 @@ class StateMachine: GKStateMachine {
 
     init(homeViewController: HomeViewController) {
         self.homeViewController = homeViewController
+        self.remainingSeconds = (self.numMinutes * 60)
         
         super.init(states: [InactiveState(imageManager: imageManager, homeViewController: homeViewController), StandbyState(imageManager: imageManager, homeViewController: homeViewController), AlarmState(imageManager: imageManager, homeViewController: homeViewController)])
         
@@ -40,6 +44,35 @@ class StateMachine: GKStateMachine {
         }
         print("Captured media")
     }
+    
+    func countdown(){
+        self.remainingSeconds--
+        print("Time remaining: \(self.remainingSeconds)")
+        
+        let timeString = self.setTime(self.remainingSeconds)
+        // homeViewController.countdownTimer.text = timeString
+        // add formatting?
+        
+        if (self.remainingSeconds == 0){
+            homeViewController.stateMachine.enterState(AlarmState)
+            self.standbyCountdown?.invalidate()
+            self.standbyCountdown = nil
+        }
+    }
+    
+    func setTime(seconds: Int) -> String {
+        let min: Int = seconds/60
+        let sec: Int = seconds%60
+        var secStr : String = "\(sec) "
+        if (sec < 10){
+            secStr = "0\(sec)"
+        }
+        
+        let timeString = "\(min):\(secStr)"
+        print(timeString)
+        return timeString
+    }
+    
 }
 
 
@@ -61,21 +94,20 @@ class StandbyState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
         imageManager.begin()
+        
+        SM.remainingSeconds = (SM.numMinutes * 60)
 
         SM.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
         SM.timer?.fire() // session begins
         
         homeViewController.enterStandbyState()
         
-        // nextState  = prompt login
+        SM.standbyCountdown = NSTimer.scheduledTimerWithTimeInterval(1.0, target: SM, selector: Selector("countdown"), userInfo: nil, repeats: true)
+        SM.standbyCountdown?.fire() // countdown timer begins
         
-        // start timer
-        // after X minutes, prompt user
-        // if correct password, prompt again
-        // have option to enter
-        // if incorrect, switch to alarm.
     }
 }
+
 
 class AlarmState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
