@@ -14,7 +14,7 @@ struct ClientMgr {
 
     static let endpoint = "https://demo1272084.mockable.io/alarm"
     
-    static func raiseTheAlarm() {
+    static func raiseTheAlarm(session: MSession) {
         
         let params = [
             "data": "bar",

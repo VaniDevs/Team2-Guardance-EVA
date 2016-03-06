@@ -29,7 +29,7 @@ struct ModelMgr {
         }
     }
 
-    private mutating func newSession(user: User) -> MSession {
+    mutating func newSession(user: User) -> MSession {
 
         clearActiveSession()
         
