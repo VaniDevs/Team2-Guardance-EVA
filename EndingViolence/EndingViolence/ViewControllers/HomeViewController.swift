@@ -8,6 +8,7 @@
 
 import UIKit
 import ReachabilitySwift
+import AVFoundation
 
 class HomeViewController: EVViewController {
     @IBOutlet weak var alertButton: UIButton!
@@ -16,11 +17,11 @@ class HomeViewController: EVViewController {
     
     @IBOutlet weak var micIV: UIImageView!
     var micAuthorized: Bool {
-        return false
+        return AVAudioSession.sharedInstance().recordPermission() == .Granted
     }
     @IBOutlet weak var cameraIV: UIImageView!
     var cameraAuthorized: Bool {
-        return true
+        return AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo) == .Authorized
     }
     @IBOutlet weak var locationIV: UIImageView!
     var locationAuthorized: Bool {
