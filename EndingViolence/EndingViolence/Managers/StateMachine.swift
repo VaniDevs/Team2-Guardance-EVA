@@ -10,14 +10,29 @@ import UIKit
 import GameplayKit
 
 class StateMachine: GKStateMachine {
-    let alertManager: AlertManager
+    let imageManager = ImageCaptureManager()
+    var modelManager = ModelMgr()
+    
     let homeViewController: HomeViewController
+    
+    var timer: NSTimer?
 
-    init(alertManager: AlertManager, homeViewController: HomeViewController) {
-        self.alertManager = alertManager
+    init(homeViewController: HomeViewController) {
         self.homeViewController = homeViewController
         
-        super.init(states: [InactiveState(alertManager: alertManager, homeViewController: homeViewController), StandbyState(alertManager: alertManager, homeViewController: homeViewController), AlarmState(alertManager: alertManager, homeViewController: homeViewController)])
+        super.init(states: [InactiveState(imageManager: imageManager, homeViewController: homeViewController), StandbyState(imageManager: imageManager, homeViewController: homeViewController), AlarmState(imageManager: imageManager, homeViewController: homeViewController)])
+    }
+    
+    func capture() {
+        imageManager.captureImage {image in
+            if let ses = self.modelManager.currentSession {
+                ses.addImage(image)
+            } else {
+                let ses = self.modelManager.newSession("teamteamdev")
+                ses.addImage(image)
+            }
+        }
+        NSLog("Captured media")
     }
 }
 
@@ -25,8 +40,12 @@ class StateMachine: GKStateMachine {
 class InactiveState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
-
-        alertManager.stopAllMonitoring()
+        
+        let sm = stateMachine as! StateMachine
+        sm.timer?.invalidate()
+        sm.timer = nil
+        
+        imageManager.stop()
         homeViewController.enterInactiveState()
     }
 }
@@ -35,7 +54,10 @@ class StandbyState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
 
-        alertManager.beginStandbyMonitoring()
+        let sm = stateMachine as! StateMachine
+        sm.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
+        
+        imageManager.begin()
         homeViewController.enterStandbyState()
     }
 }
@@ -44,10 +66,12 @@ class AlarmState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
         
-        if previousState is InactiveState {
-            alertManager.beginStandbyMonitoring()
+        if let prev = previousState where prev is InactiveState {
+            let sm = stateMachine as! StateMachine
+            sm.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
+
+            imageManager.begin()
         }
-        alertManager.beginSendingAlarm()
         homeViewController.enterAlarmState()
     }
     
@@ -61,12 +85,12 @@ class AlarmState: EVState {
 }
 
 class EVState: GKState {
-    let alertManager: AlertManager
     let homeViewController: HomeViewController
+    let imageManager: ImageCaptureManager
 
-    init(alertManager: AlertManager, homeViewController: HomeViewController) {
+    init(imageManager: ImageCaptureManager, homeViewController: HomeViewController) {
+        self.imageManager = imageManager
         self.homeViewController = homeViewController
-        self.alertManager = alertManager
     }
     
     override func didEnterWithPreviousState(previousState: GKState?) {
