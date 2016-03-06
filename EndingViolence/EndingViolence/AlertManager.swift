@@ -29,9 +29,9 @@ public class AlertManager {
         }
     }
     
-    
     func handleCancel(alertView: UIAlertAction!)
     {
+        /*
         // just close the box.
         var message = "System is inactive"
         print("User has clicked Cancel button.")
@@ -43,8 +43,9 @@ public class AlertManager {
         default:
             break
         }
+        */
     }
-    
+
     func verifyPassword(alertView: UIAlertAction!)
     {
         // check password.
