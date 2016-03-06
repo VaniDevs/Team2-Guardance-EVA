@@ -8,6 +8,9 @@
 
 import UIKit
 import GameplayKit
+import AudioToolbox
+import AudioToolbox.AudioServices
+import AVFoundation
 
 class StateMachine: GKStateMachine {
     
@@ -20,7 +23,7 @@ class StateMachine: GKStateMachine {
     
     var timer: NSTimer?
     var standbyCountdown: NSTimer?
-    let numMinutes: Int = 3
+    let numMinutes: Int = 1
     var remainingSeconds: Int
     
     var session: MSession {
@@ -31,10 +34,9 @@ class StateMachine: GKStateMachine {
         self.homeViewController = homeViewController
         self.remainingSeconds = (self.numMinutes * 60)
         
-        super.init(states: [InactiveState(imageManager: imageManager, homeViewController: homeViewController), StandbyState(imageManager: imageManager, homeViewController: homeViewController), AlarmState(imageManager: imageManager, homeViewController: homeViewController)])
+        super.init(states: [InactiveState(imageManager: imageManager, homeViewController: homeViewController), StandbyState(imageManager: imageManager, homeViewController: homeViewController), AlarmState(imageManager: imageManager, homeViewController: homeViewController), OnboardState(imageManager: imageManager, homeViewController: homeViewController)])
         
         self.imageManager.setup()
-        self.coreLocationController.start()
     }
     
     func capture() {
@@ -50,11 +52,12 @@ class StateMachine: GKStateMachine {
     func countdown(){
         self.remainingSeconds--
         
-        let _ = self.setTime(self.remainingSeconds)
-        // homeViewController.countdownTimer.text = timeString
-        // add formatting?
+        let timeString = self.setTime(self.remainingSeconds)
+         homeViewController.countdownTimer.text = "\(timeString) until alarm activates"
         
         if (self.remainingSeconds < 60){
+            // AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, nil)
+            AudioServicesPlaySystemSoundWithCompletion(1320, nil)
             // BUZZ BUZZ BUZZ
             // BEEP BEEP BEEP
         }
@@ -90,6 +93,7 @@ class InactiveState: EVState {
         SM.timer = nil
         
         SM.modelManager.clearActiveSession()
+        SM.coreLocationController.start()
         
         imageManager.stop()
         stopRecordingAudio()
@@ -144,6 +148,14 @@ class AlarmState: EVState {
         let ses = SM.session
         ses.logLocation(SM.coreLocationController.requestLocation())
         ClientMgr.raiseTheAlarm(ses)
+    }
+}
+
+class OnboardState: EVState {
+    override func didEnterWithPreviousState(previousState: GKState?) {
+        super.didEnterWithPreviousState(previousState)
+
+        homeViewController.startOnboarding()
     }
 }
 

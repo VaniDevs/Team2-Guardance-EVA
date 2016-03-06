@@ -17,7 +17,6 @@ class CoreLocationController : NSObject {
     override init() {
         super.init()
         self.locationManager.delegate = self
-        self.locationManager.requestAlwaysAuthorization()
     }
     
     func start() {
@@ -46,7 +45,7 @@ extension CoreLocationController : CLLocationManagerDelegate {
         switch status {
         case .NotDetermined:
             print(".NotDetermined")
-            self.locationManager.requestAlwaysAuthorization()
+//            self.locationManager.requestAlwaysAuthorization()
             break
             
         case .Authorized:
