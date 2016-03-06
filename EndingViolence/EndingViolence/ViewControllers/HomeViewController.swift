@@ -23,6 +23,10 @@ class HomeViewController: EVViewController {
         // Do any additional setup after loading the view, typically from a nib.
         stateMachine = StateMachine(homeViewController: self)
         stateMachine?.enterState(InactiveState)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         configureView()
     }
