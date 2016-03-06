@@ -22,7 +22,20 @@ class HomeViewController: EVViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         stateMachine = StateMachine(homeViewController: self)
-        stateMachine.enterState(InactiveState)
+        stateMachine?.enterState(InactiveState)
+        
+        configureView()
+    }
+    
+    func configureView() {
+        alertButton.setTitle("Activate Alarm", forState: .Normal)
+        alertButton.setTitleColor(.whiteColor(), forState: .Normal)
+        
+        alertButton.setTitle("Activate Alarm", forState: .Highlighted)
+        alertButton.setTitleColor(.evaRed(), forState: .Highlighted)
+
+        alertButton.setTitle("Disable Alarm", forState: .Selected)
+        alertButton.setTitleColor(.evaRed(), forState: .Selected)
     }
 
     @IBAction func alertTapped(sender: AnyObject) {
@@ -47,13 +60,15 @@ class HomeViewController: EVViewController {
     
     func enterInactiveState() {
         view.backgroundColor = .whiteColor()
+        alertButton.selected = false
     }
 
     func enterStandbyState() {
-        view.backgroundColor = .orangeColor()
+        view.backgroundColor = .evaOrangeAlert()
     }
 
     func enterAlarmState() {
-        view.backgroundColor = .redColor()
+        view.backgroundColor = .evaRed()
+        alertButton.selected = true
     }
 }
