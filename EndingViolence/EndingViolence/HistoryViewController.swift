@@ -31,7 +31,6 @@ class HistoryViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     //MARK: TableView
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -45,12 +44,23 @@ class HistoryViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(HistoryTableViewCellIdentifier, forIndexPath: indexPath) as! HistoryTableViewCell
         
-        cell.configureWith(sessionForIndexPath(indexPath), formatter: formatter)
+        cell.configureWith(sessionForIndexPath(indexPath), historyViewController: self)
         return cell
     }
 
     
     func sessionForIndexPath(indexPath: NSIndexPath) -> MSession {
         return MSession()
+    }
+}
+
+extension HistoryViewController: HistoryTableViewCellDelegate {
+    func showImages(session: MSession) {
+        //        let browser = SKPhotoBrowser(photos: session.images)
+        //        navigationController?.showViewController(browser, sender: nil)
+    }
+    
+    func showMap(session: MSession) {
+        
     }
 }

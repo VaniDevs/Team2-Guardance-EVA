@@ -8,21 +8,28 @@
 
 import UIKit
 
+protocol HistoryTableViewCellDelegate {
+    func showImages(session: MSession)
+    func showMap(session: MSession)
+}
+
 class HistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var sessionNameLabel: UILabel!
-    
-    var session: MSession?
+    let HistoryTableViewCellIdentifier = "HistoryTableViewCell"
+    var delegate: HistoryTableViewCellDelegate!
+
+    var session: MSession!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configureWith(session: MSession, formatter: NSDateFormatter) {
+    func configureWith(session: MSession, historyViewController: HistoryViewController) {
         self.session = session
-        
-        sessionNameLabel.text = formatter.stringFromDate(session.rStartTime)
+        self.delegate = historyViewController
+        sessionNameLabel.text = historyViewController.formatter.stringFromDate(session.rStartTime)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -32,7 +39,10 @@ class HistoryTableViewCell: UITableViewCell {
     }
 
     @IBAction func imagesTapped(sender: AnyObject) {
+        delegate.showMap(session)
     }
+    
     @IBAction func mapTapped(sender: AnyObject) {
+        delegate.showImages(session)
     }
 }
