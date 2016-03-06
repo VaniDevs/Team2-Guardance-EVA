@@ -186,6 +186,7 @@
 				TargetAttributes = {
 					B045C4771C8B661400E47E3F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = K3VW22575H;
 					};
 				};
 			};
@@ -399,6 +400,7 @@
 			baseConfigurationReference = 5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
@@ -411,6 +413,7 @@
 			baseConfigurationReference = C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
