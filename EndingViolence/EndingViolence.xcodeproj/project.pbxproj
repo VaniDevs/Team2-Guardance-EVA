@@ -15,25 +15,43 @@
 		41825B711C8BA05B00641A1E /* ClientMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B701C8BA05B00641A1E /* ClientMgr.swift */; };
 		41825B731C8BA8C300641A1E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B721C8BA8C300641A1E /* Utils.swift */; };
 		41825B751C8BE51300641A1E /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B741C8BE51300641A1E /* DateConverter.swift */; };
+		41825B781C8BF87200641A1E /* FilenameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B771C8BF87200641A1E /* FilenameGenerator.swift */; };
 		41B158101C8B6F530076AF50 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B1580F1C8B6F530076AF50 /* MSession.swift */; };
 		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
+		41F4C03E1C8C994400BFC6E6 /* AudioRecorderMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F4C03D1C8C994400BFC6E6 /* AudioRecorderMgr.swift */; };
+		41F4C0401C8CB37A00BFC6E6 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F4C03F1C8CB37A00BFC6E6 /* AudioPlayer.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
 		B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47B1C8B661400E47E3F /* AppDelegate.swift */; };
 		B045C4811C8B661400E47E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C47F1C8B661400E47E3F /* Main.storyboard */; };
 		B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B045C4821C8B661400E47E3F /* Assets.xcassets */; };
 		B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */; };
+		B06192F91C8C956F00CE1D7B /* DataBrowser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06192F81C8C956F00CE1D7B /* DataBrowser.storyboard */; };
+		B06192FB1C8CA66B00CE1D7B /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06192FA1C8CA66B00CE1D7B /* HistoryViewController.swift */; };
+		B06192FD1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B06192FC1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib */; };
+		B06192FF1C8CABA300CE1D7B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06192FE1C8CABA300CE1D7B /* HistoryTableViewCell.swift */; };
 		B0E886311C8BBEEA000EA442 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E886301C8BBEEA000EA442 /* LocationManager.swift */; };
 		B0E886371C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886331C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf */; };
 		B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */; };
 		B0E886391C8BD816000EA442 /* leaguegothic-italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886351C8BD816000EA442 /* leaguegothic-italic-webfont.ttf */; };
 		B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */; };
-		B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */; };
+		B0E8863C1C8BFEC9000EA442 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E8863B1C8BFEC9000EA442 /* Login.storyboard */; };
+		B0E8863E1C8BFF73000EA442 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */; };
 		B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */; };
-		B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */; };
 		B0EB9E871C8B8FB0004219E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */; };
 		B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */; };
 		B0EB9E891C8B8FB0004219E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */; };
 		B0EB9E8B1C8BA04B004219E3 /* ImageCaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */; };
+		B0F6E13D1C8CBB21001B6F0E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0F6E1331C8CBB21001B6F0E /* Info.plist */; };
+		B0F6E13E1C8CBB21001B6F0E /* SKCaptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E1341C8CBB21001B6F0E /* SKCaptionView.swift */; };
+		B0F6E13F1C8CBB21001B6F0E /* SKDetectingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E1351C8CBB21001B6F0E /* SKDetectingImageView.swift */; };
+		B0F6E1401C8CBB21001B6F0E /* SKDetectingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E1361C8CBB21001B6F0E /* SKDetectingView.swift */; };
+		B0F6E1411C8CBB21001B6F0E /* SKIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E1371C8CBB21001B6F0E /* SKIndicatorView.swift */; };
+		B0F6E1421C8CBB21001B6F0E /* SKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E1381C8CBB21001B6F0E /* SKPhoto.swift */; };
+		B0F6E1431C8CBB21001B6F0E /* SKPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B0F6E1391C8CBB21001B6F0E /* SKPhotoBrowser.bundle */; };
+		B0F6E1441C8CBB21001B6F0E /* SKPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E13B1C8CBB21001B6F0E /* SKPhotoBrowser.swift */; };
+		B0F6E1451C8CBB21001B6F0E /* SKZoomingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E13C1C8CBB21001B6F0E /* SKZoomingScrollView.swift */; };
+		FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */; };
+		FEC6FC8F1C8CC66F00E00DB8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC6FC8E1C8CC66F00E00DB8 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,8 +63,11 @@
 		41825B701C8BA05B00641A1E /* ClientMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientMgr.swift; path = Managers/ClientMgr.swift; sourceTree = "<group>"; };
 		41825B721C8BA8C300641A1E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		41825B741C8BE51300641A1E /* DateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateConverter.swift; path = Model/DateConverter.swift; sourceTree = "<group>"; };
+		41825B771C8BF87200641A1E /* FilenameGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilenameGenerator.swift; sourceTree = "<group>"; };
 		41B1580F1C8B6F530076AF50 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSession.swift; path = Model/MSession.swift; sourceTree = "<group>"; };
 		41DFAF671C8B6CEA00706E68 /* MLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MLocation.swift; path = Model/MLocation.swift; sourceTree = "<group>"; };
+		41F4C03D1C8C994400BFC6E6 /* AudioRecorderMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorderMgr.swift; path = Managers/AudioRecorderMgr.swift; sourceTree = "<group>"; };
+		41F4C03F1C8CB37A00BFC6E6 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = Managers/AudioPlayer.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
 		B045C4781C8B661400E47E3F /* EndingViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndingViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045C47B1C8B661400E47E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,20 +75,36 @@
 		B045C4821C8B661400E47E3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B045C4851C8B661400E47E3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B045C4871C8B661400E47E3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B06192F81C8C956F00CE1D7B /* DataBrowser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DataBrowser.storyboard; sourceTree = "<group>"; };
+		B06192FA1C8CA66B00CE1D7B /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B06192FC1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		B06192FE1C8CABA300CE1D7B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		B0E886301C8BBEEA000EA442 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		B0E886331C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-condensed-italic-webfont.ttf"; sourceTree = "<group>"; };
 		B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-condensed-regular-webfont.ttf"; sourceTree = "<group>"; };
 		B0E886351C8BD816000EA442 /* leaguegothic-italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-italic-webfont.ttf"; sourceTree = "<group>"; };
 		B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-regular-webfont.ttf"; sourceTree = "<group>"; };
-		B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationMgr.swift; path = Managers/LocationMgr.swift; sourceTree = "<group>"; };
+		B0E8863B1C8BFEC9000EA442 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = Managers/StateMachine.swift; sourceTree = "<group>"; };
-		B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVViewController.swift; path = ViewControllers/EVViewController.swift; sourceTree = "<group>"; };
 		B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesViewController.swift; path = ViewControllers/ResourcesViewController.swift; sourceTree = "<group>"; };
 		B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ViewControllers/SettingsViewController.swift; sourceTree = "<group>"; };
 		B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCaptureManager.swift; path = Managers/ImageCaptureManager.swift; sourceTree = "<group>"; };
+		B0F6E1331C8CBB21001B6F0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0F6E1341C8CBB21001B6F0E /* SKCaptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKCaptionView.swift; sourceTree = "<group>"; };
+		B0F6E1351C8CBB21001B6F0E /* SKDetectingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKDetectingImageView.swift; sourceTree = "<group>"; };
+		B0F6E1361C8CBB21001B6F0E /* SKDetectingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKDetectingView.swift; sourceTree = "<group>"; };
+		B0F6E1371C8CBB21001B6F0E /* SKIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKIndicatorView.swift; sourceTree = "<group>"; };
+		B0F6E1381C8CBB21001B6F0E /* SKPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhoto.swift; sourceTree = "<group>"; };
+		B0F6E1391C8CBB21001B6F0E /* SKPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SKPhotoBrowser.bundle; sourceTree = "<group>"; };
+		B0F6E13A1C8CBB21001B6F0E /* SKPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPhotoBrowser.h; sourceTree = "<group>"; };
+		B0F6E13B1C8CBB21001B6F0E /* SKPhotoBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPhotoBrowser.swift; sourceTree = "<group>"; };
+		B0F6E13C1C8CBB21001B6F0E /* SKZoomingScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKZoomingScrollView.swift; sourceTree = "<group>"; };
 		C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.release.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.release.xcconfig"; sourceTree = "<group>"; };
 		EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndingViolence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		FEC6FC8E1C8CC66F00E00DB8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC6FC8F1C8CC66F00E00DB8 /* AudioToolbox.framework in Frameworks */,
 				86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +136,8 @@
 		56A2E6D0FFF0A3A0E40CE855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEC6FC8E1C8CC66F00E00DB8 /* AudioToolbox.framework */,
+				B0F6E1321C8CBB21001B6F0E /* SKPhotoBrowser */,
 				EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */,
 			);
 			name = Frameworks;
@@ -125,16 +165,21 @@
 			isa = PBXGroup;
 			children = (
 				41825B721C8BA8C300641A1E /* Utils.swift */,
+				41825B771C8BF87200641A1E /* FilenameGenerator.swift */,
 				41825B6A1C8B822100641A1E /* Types.swift */,
 				41825B681C8B7C0400641A1E /* Config.swift */,
 				B045C47B1C8B661400E47E3F /* AppDelegate.swift */,
+				B06192FE1C8CABA300CE1D7B /* HistoryTableViewCell.swift */,
 				B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */,
 				B0EB9E7B1C8B8F06004219E3 /* Managers */,
+				41825B631C8B73D300641A1E /* Model */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
+				B0E8863B1C8BFEC9000EA442 /* Login.storyboard */,
+				B06192F81C8C956F00CE1D7B /* DataBrowser.storyboard */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
+				B06192FC1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib */,
 				B0E886321C8BD807000EA442 /* Resources */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
-				41825B631C8B73D300641A1E /* Model */,
 			);
 			path = EndingViolence;
 			sourceTree = "<group>";
@@ -163,10 +208,11 @@
 		B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */,
 				B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */,
 				B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */,
 				B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */,
+				B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */,
+				B06192FA1C8CA66B00CE1D7B /* HistoryViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -177,10 +223,29 @@
 				B0E886301C8BBEEA000EA442 /* LocationManager.swift */,
 				B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */,
 				41825B701C8BA05B00641A1E /* ClientMgr.swift */,
-				B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */,
 				B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */,
+				41F4C03D1C8C994400BFC6E6 /* AudioRecorderMgr.swift */,
+				41F4C03F1C8CB37A00BFC6E6 /* AudioPlayer.swift */,
+				FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */,
 			);
 			name = Managers;
+			sourceTree = "<group>";
+		};
+		B0F6E1321C8CBB21001B6F0E /* SKPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				B0F6E1331C8CBB21001B6F0E /* Info.plist */,
+				B0F6E1341C8CBB21001B6F0E /* SKCaptionView.swift */,
+				B0F6E1351C8CBB21001B6F0E /* SKDetectingImageView.swift */,
+				B0F6E1361C8CBB21001B6F0E /* SKDetectingView.swift */,
+				B0F6E1371C8CBB21001B6F0E /* SKIndicatorView.swift */,
+				B0F6E1381C8CBB21001B6F0E /* SKPhoto.swift */,
+				B0F6E1391C8CBB21001B6F0E /* SKPhotoBrowser.bundle */,
+				B0F6E13A1C8CBB21001B6F0E /* SKPhotoBrowser.h */,
+				B0F6E13B1C8CBB21001B6F0E /* SKPhotoBrowser.swift */,
+				B0F6E13C1C8CBB21001B6F0E /* SKZoomingScrollView.swift */,
+			);
+			path = SKPhotoBrowser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +284,7 @@
 				TargetAttributes = {
 					B045C4771C8B661400E47E3F = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = K3VW22575H;
+						DevelopmentTeam = Q4H2V7MJS9;
 					};
 				};
 			};
@@ -246,13 +311,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E8863C1C8BFEC9000EA442 /* Login.storyboard in Resources */,
 				B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */,
 				B0E886391C8BD816000EA442 /* leaguegothic-italic-webfont.ttf in Resources */,
 				B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */,
 				B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */,
 				B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */,
+				B06192FD1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib in Resources */,
 				B045C4811C8B661400E47E3F /* Main.storyboard in Resources */,
+				B0F6E13D1C8CBB21001B6F0E /* Info.plist in Resources */,
+				B0F6E1431C8CBB21001B6F0E /* SKPhotoBrowser.bundle in Resources */,
 				B0E886371C8BD816000EA442 /* leaguegothic-condensed-italic-webfont.ttf in Resources */,
+				B06192F91C8C956F00CE1D7B /* DataBrowser.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,25 +394,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0F6E1421C8CBB21001B6F0E /* SKPhoto.swift in Sources */,
 				41825B6F1C8B953B00641A1E /* MImage.swift in Sources */,
 				41825B671C8B79B900641A1E /* Object+Extensions.swift in Sources */,
 				41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */,
 				B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */,
+				B0F6E1441C8CBB21001B6F0E /* SKPhotoBrowser.swift in Sources */,
+				B0F6E1401C8CBB21001B6F0E /* SKDetectingView.swift in Sources */,
 				B0E886311C8BBEEA000EA442 /* LocationManager.swift in Sources */,
+				B06192FB1C8CA66B00CE1D7B /* HistoryViewController.swift in Sources */,
 				B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */,
 				B0EB9E8B1C8BA04B004219E3 /* ImageCaptureManager.swift in Sources */,
+				41F4C03E1C8C994400BFC6E6 /* AudioRecorderMgr.swift in Sources */,
+				B0F6E13E1C8CBB21001B6F0E /* SKCaptionView.swift in Sources */,
+				B06192FF1C8CABA300CE1D7B /* HistoryTableViewCell.swift in Sources */,
 				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,
+				B0E8863E1C8BFF73000EA442 /* LoginViewController.swift in Sources */,
+				B0F6E13F1C8CBB21001B6F0E /* SKDetectingImageView.swift in Sources */,
+				41F4C0401C8CB37A00BFC6E6 /* AudioPlayer.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
+				FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */,
 				41825B751C8BE51300641A1E /* DateConverter.swift in Sources */,
-				B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */,
 				41825B731C8BA8C300641A1E /* Utils.swift in Sources */,
+				B0F6E1411C8CBB21001B6F0E /* SKIndicatorView.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
 				B0EB9E891C8B8FB0004219E3 /* SettingsViewController.swift in Sources */,
+				41825B781C8BF87200641A1E /* FilenameGenerator.swift in Sources */,
 				41825B6B1C8B822100641A1E /* Types.swift in Sources */,
-				B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */,
 				41B158101C8B6F530076AF50 /* MSession.swift in Sources */,
 				B0EB9E871C8B8FB0004219E3 /* HomeViewController.swift in Sources */,
 				41825B711C8BA05B00641A1E /* ClientMgr.swift in Sources */,
+				B0F6E1451C8CBB21001B6F0E /* SKZoomingScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,10 +537,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -468,10 +552,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

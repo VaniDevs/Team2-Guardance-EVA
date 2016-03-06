@@ -30,7 +30,11 @@ class CoreLocationController : NSObject {
     
     func requestLocation() -> CLLocation {
         print("Location returned")
-        return locationManager.location!
+        return locationManager.location ?? CLLocation()
+    }
+    
+    class func isAuthorized() -> Bool {
+        return CLLocationManager.authorizationStatus() == .AuthorizedAlways
     }
 }
 
@@ -66,9 +70,9 @@ extension CoreLocationController : CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         // called when the requestion location has been determined
         
-        let location = locations.last
+        //let location = locations.last
         // requestLocation()
-        print("didUpdateLocations:  \(location!.coordinate.latitude), \(location!.coordinate.longitude)")
+        //print("didUpdateLocations:  \(location!.coordinate.latitude), \(location!.coordinate.longitude)")
         
     }
 

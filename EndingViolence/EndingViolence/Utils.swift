@@ -7,11 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 func dispatchAsync(block: () -> ()) {
     dispatchAsyncOn(dispatch_get_main_queue()) {
         block()
     }
+}
+
+func clamp<T : Comparable>(value: T, _ minValue: T, _ maxValue: T) -> T {
+    return max(min(value, maxValue), minValue)
 }
 
 func dispatchAsyncAfter(timeInSecs: Double, block: () -> ()) {
@@ -47,14 +52,30 @@ func documentPath() -> String {
 func tmpPath() -> String {
     return NSTemporaryDirectory()
 }
-/*
-tmpPath()
 
-func saveImage(image: UIImage, ToTmpDirWithName name) {
-        NSData *data = UIImageJPEGRepresentation(image, 1.0);
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:name];
-        [fileManager createFileAtPath:fullPath contents:data attributes:nil];
+func saveDataToPath(data: NSData, path: String) -> Bool {
+
+    let fileMgr = NSFileManager.defaultManager()
+
+    let succeeded = fileMgr.createFileAtPath(path, contents: data, attributes: nil)
+    if succeeded {
+        print("Succeeded in saving: \(path)")
+    } else {
+        print("FAILED to save: \(path)")
+    }
+    return succeeded
 }
-*/
 
+func fullPathForFilenameInTmpDir(filename: String) -> String {
+    let tmp = tmpPath()
+    return (tmp as NSString).stringByAppendingPathComponent(filename)
+}
+
+
+extension UIViewController {
+    @IBAction func callDismissOnPresentingController() {
+        if let vc = presentingViewController {
+            vc.dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
+}

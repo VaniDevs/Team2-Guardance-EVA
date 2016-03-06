@@ -16,6 +16,10 @@ struct ModelMgr {
         return getActiveSession()
     }
     
+    var sessions: Results<MSession> {
+        return realm.objects(MSession.self).sorted(MSession.Properties.StartTime.rawValue, ascending: false)
+    }
+    
     mutating func clearActiveSession() {
         
         if let activeSession = getActiveSession() {

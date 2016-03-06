@@ -16,8 +16,8 @@ struct ClientMgr {
     
     static func raiseTheAlarm(session: MSession) {
         
-        let json = session.toJSON()
-        print(json)
+        var json = session.toJSON()
+        json["locations"] = session.locationsToDictArray() ; // print(json)
 
         Alamofire.request(.POST, ClientMgr.endpoint, parameters: json, encoding: .JSON)
             .validate()
