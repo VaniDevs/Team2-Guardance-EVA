@@ -145,11 +145,19 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="onboard1" translatesAutoresizingMaskIntoConstraints="NO" id="PXe-pU-VP5">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to continue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7B-fN-qlR">
+                                        <rect key="frame" x="228" y="536" width="144.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="PXe-pU-VP5" secondAttribute="bottom" id="3zC-Bu-AkI"/>
+                                    <constraint firstAttribute="bottom" secondItem="r7B-fN-qlR" secondAttribute="bottom" constant="40" id="5fR-sC-eVU"/>
                                     <constraint firstItem="PXe-pU-VP5" firstAttribute="top" secondItem="bpc-tN-H7Y" secondAttribute="top" id="KdT-rF-rMJ"/>
+                                    <constraint firstItem="r7B-fN-qlR" firstAttribute="centerX" secondItem="bpc-tN-H7Y" secondAttribute="centerX" id="WPz-ro-7H8"/>
                                     <constraint firstAttribute="trailing" secondItem="PXe-pU-VP5" secondAttribute="trailing" id="bDU-jQ-TZn"/>
                                     <constraint firstItem="PXe-pU-VP5" firstAttribute="leading" secondItem="bpc-tN-H7Y" secondAttribute="leading" id="o7a-w0-yfe"/>
                                 </constraints>

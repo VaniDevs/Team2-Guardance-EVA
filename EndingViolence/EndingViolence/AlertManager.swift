@@ -13,7 +13,7 @@ public class AlertManager {
     
     let homeViewController: HomeViewController
     var passwordField: UITextField = UITextField()
-    let password = "password"
+    let password = "vanhacks"
     
     init(homeViewController: HomeViewController) {
         self.homeViewController = homeViewController
@@ -110,7 +110,7 @@ public class AlertManager {
     
     func extendOrDisable() -> UIAlertController
     {
-        let alert = UIAlertController(title: "Password Correct", message: "Would you like to disable or extend the timer?", preferredStyle:UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Password Correct", message: "Would you like to disable or restart the timer?", preferredStyle:UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "Disable", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
             self.homeViewController.stateMachine.enterState(InactiveState)}))

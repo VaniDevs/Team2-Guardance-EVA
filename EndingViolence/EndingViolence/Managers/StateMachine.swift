@@ -57,7 +57,7 @@ class StateMachine: GKStateMachine {
         
         if (self.remainingSeconds < 60){
             // AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, nil)
-            AudioServicesPlaySystemSoundWithCompletion(1320, nil)
+//            AudioServicesPlaySystemSoundWithCompletion(1320, nil)
             // BUZZ BUZZ BUZZ
             // BEEP BEEP BEEP
         }
@@ -112,9 +112,19 @@ class StandbyState: EVState {
         startRecordingAudio()
         homeViewController.enterStandbyState()
         
+        homeViewController.countdownTimer.hidden = false
+
         SM.standbyCountdown = NSTimer.scheduledTimerWithTimeInterval(1.0, target: SM, selector: Selector("countdown"), userInfo: nil, repeats: true)
         SM.standbyCountdown?.fire() // countdown timer begins
+    }
+    
+    override func willExitWithNextState(nextState: GKState) {
+        super.willExitWithNextState(nextState)
         
+        SM.standbyCountdown?.invalidate()
+        SM.standbyCountdown = nil
+        
+        homeViewController.countdownTimer.hidden = true
     }
 }
 
