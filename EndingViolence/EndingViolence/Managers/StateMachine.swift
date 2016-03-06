@@ -10,9 +10,11 @@ import UIKit
 import GameplayKit
 
 class StateMachine: GKStateMachine {
+    
     let imageManager = ImageCaptureManager()
     var modelManager = ModelMgr()
     var coreLocationController = CoreLocationController()
+    var audioRecorder = AudioRecorderMgr()
 
     let homeViewController: HomeViewController
     
@@ -53,6 +55,7 @@ class InactiveState: EVState {
         SM.modelManager.clearActiveSession()
         
         imageManager.stop()
+        stopRecordingAudio()
         homeViewController.enterInactiveState()
     }
 }
@@ -62,9 +65,8 @@ class StandbyState: EVState {
         super.didEnterWithPreviousState(previousState)
         imageManager.begin()
 
-        SM.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
-        SM.timer?.fire()
-        
+        startCapturing()
+        startRecordingAudio()
         homeViewController.enterStandbyState()
     }
 }
@@ -76,12 +78,14 @@ class AlarmState: EVState {
         if previousState is InactiveState {
             imageManager.begin()
 
-            SM.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
-            SM.timer?.fire()
+            startCapturing()
         }
         homeViewController.enterAlarmState()
         
+        startRecordingAudio()
         sendAlarm()
+        
+        // TODO: Start uploading images
     }
     
     override func isValidNextState(stateClass: AnyClass) -> Bool {
@@ -119,5 +123,28 @@ extension EVState {
     
     var SM: StateMachine {
         return stateMachine as! StateMachine
+    }
+    
+    func startCapturing() {
+        SM.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
+        SM.timer?.fire()
+    }
+    
+    func startRecordingAudio() {
+    
+        if let audioFilePath = SM.audioRecorder.newRecording() {
+            print("audioFilePath: \(audioFilePath)")
+            
+            let session = SM.session
+            session.xUpdate {
+                session.rAudioFilePath = audioFilePath
+            }
+            
+            SM.audioRecorder.start()
+        }
+    }
+    
+    func stopRecordingAudio() {
+        SM.audioRecorder.finish()
     }
 }

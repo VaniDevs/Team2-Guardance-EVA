@@ -21,6 +21,7 @@ class MSession: Object, Mappable {
     dynamic var rUser: User = ""
     dynamic var rStartTime = NSDate()
     dynamic var rIsCurrentSession = false
+    dynamic var rAudioFilePath: String?
     
     var rLocations = List<MLocation>()
     let rImgs = List<MImage>()
