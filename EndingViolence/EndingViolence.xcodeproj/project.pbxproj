@@ -20,6 +20,8 @@
 		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
 		41F4C03E1C8C994400BFC6E6 /* AudioRecorderMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F4C03D1C8C994400BFC6E6 /* AudioRecorderMgr.swift */; };
 		41F4C0401C8CB37A00BFC6E6 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F4C03F1C8CB37A00BFC6E6 /* AudioPlayer.swift */; };
+		41F4C0431C8CB9AC00BFC6E6 /* MapView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F4C0411C8CB9AC00BFC6E6 /* MapView.storyboard */; };
+		41F4C0451C8CB9E500BFC6E6 /* MapViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F4C0441C8CB9E500BFC6E6 /* MapViewVC.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
 		B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B045C47B1C8B661400E47E3F /* AppDelegate.swift */; };
 		B045C4811C8B661400E47E3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B045C47F1C8B661400E47E3F /* Main.storyboard */; };
@@ -68,6 +70,8 @@
 		41DFAF671C8B6CEA00706E68 /* MLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MLocation.swift; path = Model/MLocation.swift; sourceTree = "<group>"; };
 		41F4C03D1C8C994400BFC6E6 /* AudioRecorderMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioRecorderMgr.swift; path = Managers/AudioRecorderMgr.swift; sourceTree = "<group>"; };
 		41F4C03F1C8CB37A00BFC6E6 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudioPlayer.swift; path = Managers/AudioPlayer.swift; sourceTree = "<group>"; };
+		41F4C0421C8CB9AC00BFC6E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MapView.storyboard; sourceTree = "<group>"; };
+		41F4C0441C8CB9E500BFC6E6 /* MapViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewVC.swift; path = ViewControllers/MapViewVC.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
 		B045C4781C8B661400E47E3F /* EndingViolence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EndingViolence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B045C47B1C8B661400E47E3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 				B0EB9E7B1C8B8F06004219E3 /* Managers */,
 				41825B631C8B73D300641A1E /* Model */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
+				41F4C0411C8CB9AC00BFC6E6 /* MapView.storyboard */,
 				B0E8863B1C8BFEC9000EA442 /* Login.storyboard */,
 				B06192F81C8C956F00CE1D7B /* DataBrowser.storyboard */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
@@ -211,6 +216,7 @@
 				B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */,
 				B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */,
 				B06192FA1C8CA66B00CE1D7B /* HistoryViewController.swift */,
+				41F4C0441C8CB9E500BFC6E6 /* MapViewVC.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -283,6 +289,7 @@
 				TargetAttributes = {
 					B045C4771C8B661400E47E3F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = K3VW22575H;
 					};
 				};
 			};
@@ -313,6 +320,7 @@
 				B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */,
 				B0E886391C8BD816000EA442 /* leaguegothic-italic-webfont.ttf in Resources */,
 				B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */,
+				41F4C0431C8CB9AC00BFC6E6 /* MapView.storyboard in Resources */,
 				B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */,
 				B045C4831C8B661400E47E3F /* Assets.xcassets in Resources */,
 				B06192FD1C8CAA4A00CE1D7B /* HistoryTableViewCell.xib in Resources */,
@@ -418,6 +426,7 @@
 				B0F6E1411C8CBB21001B6F0E /* SKIndicatorView.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
 				B0EB9E891C8B8FB0004219E3 /* SettingsViewController.swift in Sources */,
+				41F4C0451C8CB9E500BFC6E6 /* MapViewVC.swift in Sources */,
 				41825B781C8BF87200641A1E /* FilenameGenerator.swift in Sources */,
 				41825B6B1C8B822100641A1E /* Types.swift in Sources */,
 				41B158101C8B6F530076AF50 /* MSession.swift in Sources */,
@@ -430,6 +439,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		41F4C0411C8CB9AC00BFC6E6 /* MapView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41F4C0421C8CB9AC00BFC6E6 /* Base */,
+			);
+			name = MapView.storyboard;
+			sourceTree = "<group>";
+		};
 		B045C47F1C8B661400E47E3F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

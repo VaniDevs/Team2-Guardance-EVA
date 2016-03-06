@@ -26,7 +26,6 @@ class AudioRecorderMgr : NSObject {
         let soundFilePath = (documentPath() as NSString).stringByAppendingPathComponent(filename)
         let soundFileURL = NSURL(fileURLWithPath: soundFilePath)
         
-        
         let recordSettings: [String : AnyObject] = [
             //AVFormatIDKey: NSNumber(unsignedInt: kAudioFormatMPEG4AAC), // FIX: Can't figure how to get this to work
             AVEncoderAudioQualityKey: AVAudioQuality.Min.rawValue,

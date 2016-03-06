@@ -15,10 +15,16 @@ class AudioPlayer : NSObject {
     private var audioPlayer: AVAudioPlayer?
     private var onComplete: AudioPlayerOnCompleteHandler?
     
+    var isPlaying: Bool {
+        return audioPlayer?.playing ?? false
+    }
+    
     func loadFile(fullpath: String) {
-        
+        print(__FUNCTION__, fullpath)
         let soundFileURL = NSURL(fileURLWithPath: fullpath)
 
+        guard NSFileManager.defaultManager().fileExistsAtPath(fullpath) else { return }
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: soundFileURL)
             audioPlayer?.delegate = self

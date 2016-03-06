@@ -11,6 +11,11 @@ import UIKit
 let HistoryTableViewCellIdentifier = "HistoryTableViewCell"
 
 class HistoryViewController: UITableViewController {
+
+    enum Segues : String {
+        case toMapView = "segueToMapView"
+    }
+    
     var modelManager: ModelMgr!
     
     var formatter: NSDateFormatter {
@@ -19,12 +24,15 @@ class HistoryViewController: UITableViewController {
         return form
     }
     
+    private var selectedSession: MSession?
+    private var audioPlayer = AudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         tableView.registerNib(UINib(nibName: "HistoryTableViewCell", bundle: nil), forCellReuseIdentifier: HistoryTableViewCellIdentifier)
-        
+
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: "callDismissOnPresentingController")
     }
 
@@ -43,25 +51,52 @@ class HistoryViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(HistoryTableViewCellIdentifier, forIndexPath: indexPath) as! HistoryTableViewCell
         
+        let cell = tableView.dequeueReusableCellWithIdentifier(HistoryTableViewCellIdentifier, forIndexPath: indexPath) as! HistoryTableViewCell
         cell.configureWith(sessionForIndexPath(indexPath), historyViewController: self)
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
         return cell
     }
 
-    
     func sessionForIndexPath(indexPath: NSIndexPath) -> MSession {
         return modelManager.sessions[indexPath.row]
     }
 }
 
 extension HistoryViewController: HistoryTableViewCellDelegate {
+
+    func playAudio(session: MSession) {
+        if audioPlayer.isPlaying {
+            audioPlayer.stop()
+        } else {
+            if let path = session.rAudioFilePath {
+                audioPlayer.loadFile(path)
+                audioPlayer.play { success in
+                    print("Finished playing, success=\(success)")
+                }
+            }
+        }
+    }
+
     func showImages(session: MSession) {
         let browser = SKPhotoBrowser(photos: session.images)
         navigationController?.showViewController(browser, sender: nil)
     }
     
     func showMap(session: MSession) {
-        
+        selectedSession = session
+        performSegueWithIdentifier(Segues.toMapView.rawValue, sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segue.identifier! {
+        case Segues.toMapView.rawValue:
+            if let mapVC = segue.destinationViewController as? MapViewVC {
+                mapVC.session = selectedSession
+            }
+        default:
+            break
+        }
     }
 }

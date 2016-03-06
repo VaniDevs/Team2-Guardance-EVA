@@ -15,7 +15,7 @@ struct FilenameGenerator {
 
     private static var dateFormatter: NSDateFormatter = {
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "ddMMMyyyy-hh:mm:ss"
+        formatter.dateFormat = "ddMMMyyyyhhmmss"
         return formatter
     }()
     

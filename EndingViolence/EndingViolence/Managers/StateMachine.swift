@@ -50,7 +50,7 @@ class StateMachine: GKStateMachine {
     func countdown(){
         self.remainingSeconds--
         
-        let timeString = self.setTime(self.remainingSeconds)
+        let _ = self.setTime(self.remainingSeconds)
         // homeViewController.countdownTimer.text = timeString
         // add formatting?
         

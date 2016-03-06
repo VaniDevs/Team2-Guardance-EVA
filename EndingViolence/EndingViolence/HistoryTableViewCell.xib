@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -16,9 +17,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDl-DX-CVX">
-                        <rect key="frame" x="8" y="11" width="58" height="21"/>
+                        <rect key="frame" x="8" y="11" width="58" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLV-Zh-jbH">
@@ -28,11 +29,34 @@
                             <action selector="imagesTapped:" destination="JCT-WM-cAl" eventType="touchUpInside" id="1K6-ON-Mnw"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-ka-YPb">
-                        <rect key="frame" x="319" y="7" width="30" height="30"/>
-                        <state key="normal" title="Map"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdT-ka-YPb">
+                        <rect key="frame" x="375" y="6" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="AdT-ka-YPb" secondAttribute="height" multiplier="1:1" id="J53-Mj-M0J"/>
+                            <constraint firstAttribute="height" constant="30" id="ORF-co-eou"/>
+                        </constraints>
+                        <state key="normal" title="Map" image="gps_active"/>
                         <connections>
                             <action selector="mapTapped:" destination="JCT-WM-cAl" eventType="touchUpInside" id="mI2-lI-PeH"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yy-tB-kWU">
+                        <rect key="frame" x="330" y="6" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="1hV-ML-dP2"/>
+                            <constraint firstAttribute="height" constant="30" id="JqV-19-zEl"/>
+                            <constraint firstAttribute="width" secondItem="4yy-tB-kWU" secondAttribute="height" multiplier="136:89" id="Pd3-PY-fgr"/>
+                            <constraint firstAttribute="width" secondItem="4yy-tB-kWU" secondAttribute="height" multiplier="1:1" id="iFL-ln-Lig"/>
+                        </constraints>
+                        <state key="normal" title="Audio" image="mic_active"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1hV-ML-dP2"/>
+                                <exclude reference="Pd3-PY-fgr"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <action selector="audioTapped:" destination="JCT-WM-cAl" eventType="touchUpInside" id="H6m-Zh-R4e"/>
                         </connections>
                     </button>
                 </subviews>
@@ -40,10 +64,18 @@
                     <constraint firstItem="iLV-Zh-jbH" firstAttribute="centerY" secondItem="qqY-nj-Vhn" secondAttribute="centerY" id="CkO-jy-SWU"/>
                     <constraint firstItem="ZDl-DX-CVX" firstAttribute="centerY" secondItem="qqY-nj-Vhn" secondAttribute="centerY" id="FT6-Ml-Hu5"/>
                     <constraint firstItem="iLV-Zh-jbH" firstAttribute="trailing" secondItem="qqY-nj-Vhn" secondAttribute="trailingMargin" id="LWx-jF-GEm"/>
+                    <constraint firstItem="AdT-ka-YPb" firstAttribute="leading" secondItem="4yy-tB-kWU" secondAttribute="trailing" constant="15" id="Sd7-NW-jgG"/>
                     <constraint firstItem="ZDl-DX-CVX" firstAttribute="leading" secondItem="qqY-nj-Vhn" secondAttribute="leadingMargin" id="YfI-D9-mPM"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="AdT-ka-YPb" secondAttribute="trailing" constant="10" id="Z7j-Jt-cfw"/>
+                    <constraint firstItem="4yy-tB-kWU" firstAttribute="centerY" secondItem="qqY-nj-Vhn" secondAttribute="centerY" id="ZTs-cV-DNI"/>
                     <constraint firstItem="AdT-ka-YPb" firstAttribute="centerY" secondItem="qqY-nj-Vhn" secondAttribute="centerY" id="hEW-Sb-nBK"/>
                     <constraint firstItem="iLV-Zh-jbH" firstAttribute="leading" secondItem="AdT-ka-YPb" secondAttribute="trailing" constant="16" id="rkt-Hu-ouQ"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="iLV-Zh-jbH"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="sessionNameLabel" destination="ZDl-DX-CVX" id="Bze-jA-qvw"/>
@@ -51,4 +83,8 @@
             <point key="canvasLocation" x="527.5" y="273"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="gps_active" width="89" height="89"/>
+        <image name="mic_active" width="59" height="86"/>
+    </resources>
 </document>

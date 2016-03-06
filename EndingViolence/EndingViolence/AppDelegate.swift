@@ -33,8 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // NOTE: Call this AFTER setting up notification handlers
         startReachability()
         
-        //ClientMgr.raiseTheAlarm()
-        
         let loggedIn = true
         if loggedIn {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()

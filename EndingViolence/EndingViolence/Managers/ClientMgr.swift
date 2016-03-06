@@ -33,15 +33,12 @@ struct ClientMgr {
         }
     }
     
-    static func uploadImage(image: UIImage) {
-        
-        
-        /*
-        Alamofire.upload(
-            .POST,
+    static func uploadImageFile(fullpath: String) {
+     /*
+        Alamofire.upload(.POST,
             ClientMgr.endpoint,
             multipartFormData: { multipartFormData in
-                multipartFormData.appendBodyPart(fileURL: unicornImageURL, name: "unicorn")
+                multipartFormData.appendBodyPart(fileURL: fullpath, name: "image")
             },
             encodingCompletion: { encodingResult in
                 switch encodingResult {
@@ -56,6 +53,5 @@ struct ClientMgr {
         )
         */
     }
-    
 }
 

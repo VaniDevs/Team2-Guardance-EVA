@@ -11,6 +11,7 @@ import UIKit
 protocol HistoryTableViewCellDelegate {
     func showImages(session: MSession)
     func showMap(session: MSession)
+    func playAudio(session: MSession)
 }
 
 class HistoryTableViewCell: UITableViewCell {
@@ -46,5 +47,9 @@ class HistoryTableViewCell: UITableViewCell {
     
     @IBAction func mapTapped(sender: AnyObject) {
         delegate.showMap(session)
+    }
+
+    @IBAction func audioTapped(sender: AnyObject) {
+        delegate.playAudio(session)
     }
 }

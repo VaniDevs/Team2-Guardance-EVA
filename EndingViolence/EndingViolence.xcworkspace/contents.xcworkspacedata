@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:EndingViolence/DataBrowser.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:EndingViolence.xcodeproj">
    </FileRef>
    <FileRef
