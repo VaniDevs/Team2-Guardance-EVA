@@ -16,17 +16,10 @@ struct ClientMgr {
     
     static func raiseTheAlarm(session: MSession) {
         
-        let params = [
-            "data": "bar",
-            "baz": ["a", 1],
-            "qux": [
-                "x": 1,
-                "y": 2,
-                "z": 3
-            ]
-        ]
-        
-        Alamofire.request(.POST, ClientMgr.endpoint, parameters: params, encoding: .JSON)
+        let json = session.toJSON()
+        print(json)
+
+        Alamofire.request(.POST, ClientMgr.endpoint, parameters: json, encoding: .JSON)
             .validate()
             .responseJSON { response in
                 print(response.request)  // original URL request
@@ -65,3 +58,4 @@ struct ClientMgr {
     }
     
 }
+
