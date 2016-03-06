@@ -109,6 +109,13 @@
                                     <constraint firstItem="9av-bT-Omb" firstAttribute="top" secondItem="2lp-1n-BZR" secondAttribute="top" constant="8" id="bYH-BO-FL4"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adM-As-H7d">
+                                <rect key="frame" x="516" y="516" width="64" height="64"/>
+                                <state key="normal" image="setting-icon"/>
+                                <connections>
+                                    <segue destination="Aap-WT-bGF" kind="presentation" id="y0P-Fc-m0H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -118,7 +125,9 @@
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EaG-oE-VMf"/>
                             <constraint firstItem="2lp-1n-BZR" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" priority="750" id="ExM-iH-8j8"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YF6-he-qIr" secondAttribute="bottom" constant="107" id="Kz6-k8-LcK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="adM-As-H7d" secondAttribute="bottom" constant="20" id="axK-sf-5FL"/>
                             <constraint firstItem="4v1-8l-6kw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="g6y-LN-e2t"/>
+                            <constraint firstAttribute="trailing" secondItem="adM-As-H7d" secondAttribute="trailing" constant="20" id="hfb-by-EEx"/>
                             <constraint firstAttribute="trailing" secondItem="2lp-1n-BZR" secondAttribute="trailing" id="l92-4Z-mh5"/>
                             <constraint firstItem="2lp-1n-BZR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nAH-Zk-jxF"/>
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="top" secondItem="4v1-8l-6kw" secondAttribute="bottom" constant="66" id="o1h-Rh-yVq"/>
@@ -144,6 +153,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="395" y="117"/>
+        </scene>
+        <!--DataBrowser-->
+        <scene sceneID="3Bf-m1-QiA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DataBrowser" id="Aap-WT-bGF" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fOH-ce-ie7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="612.5" y="562"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="KQu-Y8-Ba3">
@@ -237,6 +254,7 @@
         <image name="cam_inactive" width="223" height="194"/>
         <image name="gps_inactive" width="187" height="187"/>
         <image name="mic_inactive" width="127" height="180"/>
+        <image name="setting-icon" width="64" height="64"/>
         <image name="singal_inactive" width="214" height="190"/>
     </resources>
 </document>

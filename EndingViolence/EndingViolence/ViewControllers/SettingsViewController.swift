@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SettingsViewController: EVViewController {
+class SettingsViewController: UIViewController {
 
 }

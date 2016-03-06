@@ -15,7 +15,7 @@ enum IVtag: Int {
     case Mic = 101, Camera, Location, Signal
 }
 
-class HomeViewController: EVViewController {
+class HomeViewController: UIViewController {
     @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var standbyButton: UIButton!
     @IBOutlet weak var alarmWaves: UIImageView!

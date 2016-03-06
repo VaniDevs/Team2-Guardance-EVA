@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ResourcesViewController: EVViewController {
+class ResourcesViewController: UIViewController {
 
 }
