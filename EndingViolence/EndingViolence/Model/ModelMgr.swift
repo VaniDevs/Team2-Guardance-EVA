@@ -17,7 +17,7 @@ struct ModelMgr {
     }
     
     private func getActiveSession() -> MSession? {
-        return realm.objects(MSession.self).filter("isCurrentSession == true").first
+        return realm.objects(MSession.self).filter("rIsCurrentSession == true").first
     }
     
     private mutating func clearActiveSession() {
