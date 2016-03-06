@@ -47,9 +47,8 @@ class InactiveState: EVState {
     override func didEnterWithPreviousState(previousState: GKState?) {
         super.didEnterWithPreviousState(previousState)
         
-        let sm = stateMachine as! StateMachine
-        sm.timer?.invalidate()
-        sm.timer = nil
+        SM.timer?.invalidate()
+        SM.timer = nil
         
         imageManager.stop()
         homeViewController.enterInactiveState()
@@ -61,10 +60,9 @@ class StandbyState: EVState {
         super.didEnterWithPreviousState(previousState)
         imageManager.begin()
 
-        let sm = stateMachine as! StateMachine
-        sm.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
+        SM.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
         sm.timer?.fire()
-
+        
         homeViewController.enterStandbyState()
     }
 }
@@ -76,14 +74,16 @@ class AlarmState: EVState {
         if previousState is InactiveState {
             imageManager.begin()
 
-            let sm = stateMachine as! StateMachine
-            sm.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: sm, selector: Selector("capture"), userInfo: nil, repeats: true)
-
+            SM.timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
             sm.timer?.fire()
         }
         homeViewController.enterAlarmState()
         
-        
+        if let session = SM.modelManager.currentSession {
+            dispatchAsyncAfter(8) {
+                ClientMgr.raiseTheAlarm(session)
+            }
+        }
     }
     
     override func isValidNextState(stateClass: AnyClass) -> Bool {
@@ -108,5 +108,12 @@ class EVState: GKState {
         super.didEnterWithPreviousState(previousState)
 
         NSLog("Entered \(self) from \(previousState)")
+    }
+}
+
+extension EVState {
+    
+    var SM: StateMachine {
+        return stateMachine as! StateMachine
     }
 }

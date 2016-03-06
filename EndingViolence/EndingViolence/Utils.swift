@@ -8,6 +8,26 @@
 
 import Foundation
 
+func dispatchAsync(block: () -> ()) {
+    dispatchAsyncOn(dispatch_get_main_queue()) {
+        block()
+    }
+}
+
+func dispatchAsyncAfter(timeInSecs: Double, block: () -> ()) {
+    dispatchAsyncAfterOn(dispatch_get_main_queue(), timeInSecs: timeInSecs, block: block)
+}
+
+func dispatchAsyncOn(queue: dispatch_queue_t, block: ()->()) {
+    dispatch_async(queue, block)
+}
+
+func dispatchAsyncAfterOn(queue: dispatch_queue_t, timeInSecs: Double, block: () -> ()) {
+    let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(timeInSecs * Double(NSEC_PER_SEC)))
+    dispatch_after(delayTime, queue, block)
+}
+
+
 func mainBundleURL() -> NSURL {
     return NSBundle.mainBundle().bundleURL
 }
@@ -37,3 +57,4 @@ func saveImage(image: UIImage, ToTmpDirWithName name) {
         [fileManager createFileAtPath:fullPath contents:data attributes:nil];
 }
 */
+
