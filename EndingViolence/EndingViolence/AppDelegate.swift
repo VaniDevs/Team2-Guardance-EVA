@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        ///// Use this to find the path to the realm file
+        print(documentPath())
+        
         ///// Reachability
         NSNotificationCenter.defaultCenter()
             .addObserver(self,
@@ -28,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // NOTE: Call this AFTER setting up notification handlers
         startReachability()
 
+        ClientMgr.raiseTheAlarm()
+        
         return true
     }
 
