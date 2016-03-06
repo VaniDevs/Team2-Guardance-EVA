@@ -79,6 +79,8 @@ class AlarmState: EVState {
             imageManager.begin()
         }
         homeViewController.enterAlarmState()
+        
+        
     }
     
     override func isValidNextState(stateClass: AnyClass) -> Bool {
