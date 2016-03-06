@@ -29,8 +29,11 @@ class HomeViewController: EVViewController {
         if let sm = stateMachine {
             if sm.currentState is AlarmState {
                 sm.enterState(InactiveState)
+                alertButton.selected = false
             } else {
                 sm.enterState(AlarmState)
+                alertButton.selected = true
+                alertButton.titleLabel?.text = "Disable"
             }
         }
     }
