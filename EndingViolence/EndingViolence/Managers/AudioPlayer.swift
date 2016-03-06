@@ -28,7 +28,6 @@ class AudioPlayer : NSObject {
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: soundFileURL)
             audioPlayer?.delegate = self
-            audioPlayer?.play()
         } catch let error as NSError {
             print("audioPlayer error: \(error.localizedDescription)")
         } catch {
@@ -44,7 +43,12 @@ class AudioPlayer : NSObject {
         }
 
         self.onComplete = onComplete
-        audioPlayer?.play()
+        
+        guard let audioPlayer = self.audioPlayer else { return }
+
+        if audioPlayer.play() {
+            print(__FUNCTION__, "Failed to play audiofile: \(audioPlayer.url)")
+        }
     }
     
     func stop() {
