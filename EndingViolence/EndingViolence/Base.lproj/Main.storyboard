@@ -18,15 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
-                                <rect key="frame" x="175" y="20" width="240" height="128"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
+                                <rect key="frame" x="175" y="20" width="250" height="40"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vNB-LB-euk">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="vNB-LB-euk">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="GuG-CZ-35Y"/>
+                                            <constraint firstAttribute="height" constant="40" id="om4-H4-ff6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cam_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="AFb-Qk-b6a">
+                                        <rect key="frame" x="70" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Pc5-dT-0Vq"/>
+                                            <constraint firstAttribute="width" constant="40" id="mpD-Yx-VVx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gps_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="2FU-T1-3Yr">
+                                        <rect key="frame" x="140" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="GAI-37-OLO"/>
+                                            <constraint firstAttribute="height" constant="40" id="NXA-87-7Vf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singal_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-gW-wbO">
+                                        <rect key="frame" x="210" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="6aD-1o-1mY"/>
+                                            <constraint firstAttribute="height" constant="40" id="Rhj-91-fUO"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
                                 <rect key="frame" x="220" y="126" width="160" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="BzG-1P-7tS"/>
@@ -86,6 +111,10 @@
                     <tabBarItem key="tabBarItem" title="Item" id="dWP-VH-FwK"/>
                     <connections>
                         <outlet property="alertButton" destination="YF6-he-qIr" id="iqQ-Ek-dZ3"/>
+                        <outlet property="cameraIV" destination="AFb-Qk-b6a" id="8xk-p8-wuF"/>
+                        <outlet property="locationIV" destination="2FU-T1-3Yr" id="ntp-KM-8Df"/>
+                        <outlet property="micIV" destination="vNB-LB-euk" id="z5Y-hr-Wp8"/>
+                        <outlet property="signalIV" destination="f1w-gW-wbO" id="EhB-Gk-2D5"/>
                         <outlet property="standbyButton" destination="sJn-Qf-gl2" id="gOz-WI-iLg"/>
                     </connections>
                 </viewController>
@@ -179,6 +208,10 @@
     <resources>
         <image name="alarm_normal" width="387" height="387"/>
         <image name="alarm_pressed" width="387" height="387"/>
+        <image name="cam_inactive" width="223" height="194"/>
+        <image name="gps_inactive" width="187" height="187"/>
+        <image name="mic_inactive" width="127" height="180"/>
         <image name="redsquare" width="10" height="10"/>
+        <image name="singal_inactive" width="214" height="190"/>
     </resources>
 </document>

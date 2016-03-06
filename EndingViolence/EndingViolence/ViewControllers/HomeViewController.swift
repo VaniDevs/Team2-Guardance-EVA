@@ -12,9 +12,10 @@ class HomeViewController: EVViewController {
     @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var standbyButton: UIButton!
     
-    @IBOutlet weak var microphoneButton: UIButton!
-    @IBOutlet weak var connectionButton: UIButton!
-    @IBOutlet weak var locationButton: UIButton!
+    @IBOutlet weak var micIV: UIImageView!
+    @IBOutlet weak var cameraIV: UIImageView!
+    @IBOutlet weak var locationIV: UIImageView!
+    @IBOutlet weak var signalIV: UIImageView!
     
     var stateMachine: StateMachine!
 
@@ -44,6 +45,8 @@ class HomeViewController: EVViewController {
 
         alertButton.setTitle("Disable\nAlarm", forState: .Selected)
         alertButton.setTitleColor(.evaRed(), forState: .Selected)
+        
+        
     }
 
     @IBAction func alertTapped(sender: AnyObject) {
