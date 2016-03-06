@@ -6,6 +6,6 @@ use_frameworks!
 
 target 'EndingViolence' do
 	pod 'RealmSwift'
-	#pod 'Alamofire', '~> 3.0'
+	pod 'Alamofire', '~> 3.0'
 	pod 'ReachabilitySwift'
 end
