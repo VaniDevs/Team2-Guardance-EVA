@@ -30,7 +30,7 @@ class CoreLocationController : NSObject {
     
     func requestLocation() -> CLLocation {
         print("Location returned")
-        return locationManager.location!
+        return locationManager.location ?? CLLocation()
     }
     
     class func isAuthorized() -> Bool {

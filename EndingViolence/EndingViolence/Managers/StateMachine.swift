@@ -54,8 +54,7 @@ class StateMachine: GKStateMachine {
         self.remainingSeconds--
         
         let timeString = self.setTime(self.remainingSeconds)
-        // homeViewController.countdownTimer.text = timeString
-        // add formatting?
+         homeViewController.countdownTimer.text = "\(timeString) until alarm activates"
         
         if (self.remainingSeconds < 60){
             // AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, nil)

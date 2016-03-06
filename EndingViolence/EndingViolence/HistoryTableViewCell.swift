@@ -29,7 +29,9 @@ class HistoryTableViewCell: UITableViewCell {
     func configureWith(session: MSession, historyViewController: HistoryViewController) {
         self.session = session
         self.delegate = historyViewController
-        sessionNameLabel.text = historyViewController.formatter.stringFromDate(session.rStartTime)
+        let date: NSDate = session.rStartTime
+        let string = historyViewController.formatter.stringFromDate(date)
+        sessionNameLabel.text = string
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -39,10 +41,10 @@ class HistoryTableViewCell: UITableViewCell {
     }
 
     @IBAction func imagesTapped(sender: AnyObject) {
-        delegate.showMap(session)
+        delegate.showImages(session)
     }
     
     @IBAction func mapTapped(sender: AnyObject) {
-        delegate.showImages(session)
+        delegate.showMap(session)
     }
 }

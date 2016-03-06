@@ -57,8 +57,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        countdownTimer = UILabel()
-        
         NSNotificationCenter.defaultCenter()
             .addObserver(self,
                          selector: "reachabilityChanged:",
@@ -122,10 +120,12 @@ class HomeViewController: UIViewController {
             cameraIV.addGestureRecognizer(gr)
         }
         
+        countdownTimer.textColor = .whiteColor()
+        countdownTimer.font = UIFont.LeagueGothic(20.0)
+        
+        offlineView.backgroundColor = .evaRed()
+        
         showOfflineView((reachability?.isReachable())!)
-        dispatchAsyncAfterOn(dispatch_get_main_queue(), timeInSecs: 3.0) {
-            self.showOfflineView(true)
-        }
     }
     
     func setIconsActive() {
@@ -169,7 +169,9 @@ class HomeViewController: UIViewController {
     func reachabilityChanged(note: NSNotification) {
         let reachability = note.object as! Reachability
         
-        showOfflineView(reachability.isReachable())
+        dispatchAsync { 
+            self.showOfflineView(reachability.isReachable())
+        }
     }
     
     private func startReachability() {
@@ -280,6 +282,14 @@ class HomeViewController: UIViewController {
         alarmWaves.startAnimating()
         
         setIconsActive()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DataBrowser" {
+            let nav = segue.destinationViewController as! UINavigationController
+            let vc = nav.viewControllers.first as! HistoryViewController
+            vc.modelManager = stateMachine.modelManager
+        }
     }
 
 }
