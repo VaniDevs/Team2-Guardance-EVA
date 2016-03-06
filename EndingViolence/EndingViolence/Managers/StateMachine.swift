@@ -17,6 +17,10 @@ class StateMachine: GKStateMachine {
     let homeViewController: HomeViewController
     
     var timer: NSTimer?
+    
+    var session: MSession {
+        return self.modelManager.currentSession ?? self.modelManager.newSession("teamteamdev")
+    }
 
     init(homeViewController: HomeViewController) {
         self.homeViewController = homeViewController
@@ -29,16 +33,12 @@ class StateMachine: GKStateMachine {
     
     func capture() {
         imageManager.captureImage {image in
-            if let ses = self.modelManager.currentSession {
-                ses.addImage(image)
-                ses.logLocation(self.coreLocationController.requestLocation())
-            } else {
-                let ses = self.modelManager.newSession("teamteamdev")
-                ses.addImage(image)
-                ses.logLocation(self.coreLocationController.requestLocation())
-            }
+            
+            let ses = self.session
+            ses.addImage(image)
+            ses.logLocation(self.coreLocationController.requestLocation())
         }
-        NSLog("Captured media")
+        print("Captured media")
     }
 }
 
@@ -89,11 +89,7 @@ class AlarmState: EVState {
         }
         homeViewController.enterAlarmState()
         
-        if let session = SM.modelManager.currentSession {
-            dispatchAsyncAfter(8) {
-                ClientMgr.raiseTheAlarm(session)
-            }
-        }
+        sendAlarm()
     }
     
     override func isValidNextState(stateClass: AnyClass) -> Bool {
@@ -102,6 +98,12 @@ class AlarmState: EVState {
         }
         
         return true
+    }
+    
+    private func sendAlarm() {
+        let ses = SM.session
+        ses.logLocation(SM.coreLocationController.requestLocation())
+        ClientMgr.raiseTheAlarm(ses)
     }
 }
 

@@ -18,8 +18,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
-                                <rect key="frame" x="175" y="20" width="250" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
+                                <rect key="frame" x="200" y="146" width="200" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BzG-1P-7tS"/>
+                                    <constraint firstAttribute="width" constant="200" id="Egk-Zt-H1X"/>
+                                </constraints>
+                                <state key="normal" title="Enter High Alert" backgroundImage="alert_normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="alert_pressed"/>
+                                <state key="highlighted" backgroundImage="alert_pressed"/>
+                                <connections>
+                                    <action selector="standbyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9f-ba-16d"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animation_alarm_1" translatesAutoresizingMaskIntoConstraints="NO" id="Sny-uX-KAp">
+                                <rect key="frame" x="140" y="315" width="320" height="159"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Url-2y-ej3"/>
+                                    <constraint firstAttribute="height" constant="159" id="X3e-Yk-S7f"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF6-he-qIr">
+                                <rect key="frame" x="202" y="296" width="197" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="9IQ-Lt-FWE"/>
+                                    <constraint firstAttribute="width" constant="197" id="pbT-nN-YMr"/>
+                                </constraints>
+                                <state key="normal" title="Alarm" backgroundImage="alarm_normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="alarm_pressed"/>
+                                <state key="highlighted" backgroundImage="alarm_pressed"/>
+                                <connections>
+                                    <action selector="alertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5P-d5-YSc"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="4v1-8l-6kw">
+                                <rect key="frame" x="175" y="40" width="250" height="40"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mic_inactive" translatesAutoresizingMaskIntoConstraints="NO" id="vNB-LB-euk">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -51,65 +89,22 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJn-Qf-gl2">
-                                <rect key="frame" x="220" y="126" width="160" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="BzG-1P-7tS"/>
-                                    <constraint firstAttribute="width" constant="160" id="Egk-Zt-H1X"/>
-                                </constraints>
-                                <state key="normal" title="Standby" backgroundImage="redsquare">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="standbyTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9f-ba-16d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nwz-wG-4d8">
-                                <rect key="frame" x="523" y="20" width="57" height="30"/>
-                                <state key="normal" title="Settings"/>
-                                <connections>
-                                    <segue destination="vEz-fS-Yo2" kind="presentation" id="MYn-iW-fcc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnO-ct-ogA">
-                                <rect key="frame" x="20" y="20" width="72" height="30"/>
-                                <state key="normal" title="Resources"/>
-                                <connections>
-                                    <segue destination="4bo-ji-2w5" kind="presentation" id="BHR-Ug-JY4"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YF6-he-qIr">
-                                <rect key="frame" x="202" y="296" width="197" height="197"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="197" id="9IQ-Lt-FWE"/>
-                                    <constraint firstAttribute="width" constant="197" id="pbT-nN-YMr"/>
-                                </constraints>
-                                <state key="normal" title="Alarm" backgroundImage="alarm_normal">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" backgroundImage="alarm_pressed"/>
-                                <state key="highlighted" backgroundImage="alarm_pressed"/>
-                                <connections>
-                                    <action selector="alertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B5P-d5-YSc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Sny-uX-KAp" firstAttribute="centerX" secondItem="YF6-he-qIr" secondAttribute="centerX" id="8RB-eU-xpd"/>
                             <constraint firstItem="4v1-8l-6kw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EPk-S3-LNp"/>
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EaG-oE-VMf"/>
-                            <constraint firstItem="DnO-ct-ogA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Gzt-Kt-rDJ"/>
-                            <constraint firstItem="Nwz-wG-4d8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ICt-aR-5qf"/>
-                            <constraint firstItem="DnO-ct-ogA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KMQ-HU-45M"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YF6-he-qIr" secondAttribute="bottom" constant="107" id="Kz6-k8-LcK"/>
-                            <constraint firstItem="Nwz-wG-4d8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZE5-oj-7lr"/>
-                            <constraint firstItem="4v1-8l-6kw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="g6y-LN-e2t"/>
+                            <constraint firstItem="4v1-8l-6kw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="g6y-LN-e2t"/>
                             <constraint firstItem="sJn-Qf-gl2" firstAttribute="top" secondItem="4v1-8l-6kw" secondAttribute="bottom" constant="66" id="o1h-Rh-yVq"/>
                             <constraint firstItem="YF6-he-qIr" firstAttribute="centerX" secondItem="sJn-Qf-gl2" secondAttribute="centerX" id="sQ3-cF-cD3"/>
+                            <constraint firstItem="Sny-uX-KAp" firstAttribute="centerY" secondItem="YF6-he-qIr" secondAttribute="centerY" id="xeB-hQ-MSP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="dWP-VH-FwK"/>
                     <connections>
+                        <outlet property="alarmWaves" destination="Sny-uX-KAp" id="cds-KO-DbE"/>
                         <outlet property="alertButton" destination="YF6-he-qIr" id="iqQ-Ek-dZ3"/>
                         <outlet property="cameraIV" destination="AFb-Qk-b6a" id="8xk-p8-wuF"/>
                         <outlet property="locationIV" destination="2FU-T1-3Yr" id="ntp-KM-8Df"/>
@@ -208,10 +203,12 @@
     <resources>
         <image name="alarm_normal" width="387" height="387"/>
         <image name="alarm_pressed" width="387" height="387"/>
+        <image name="alert_normal" width="1517" height="445"/>
+        <image name="alert_pressed" width="1525" height="453"/>
+        <image name="animation_alarm_1" width="620" height="310"/>
         <image name="cam_inactive" width="223" height="194"/>
         <image name="gps_inactive" width="187" height="187"/>
         <image name="mic_inactive" width="127" height="180"/>
-        <image name="redsquare" width="10" height="10"/>
         <image name="singal_inactive" width="214" height="190"/>
     </resources>
 </document>

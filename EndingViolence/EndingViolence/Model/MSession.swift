@@ -31,8 +31,6 @@ extension MSession {
     
     func logLocation(location: CLLocation) {
         
-        print(self, __FUNCTION__)
-        
         let newlocation = MLocation()
         newlocation.rLocation = location
         
@@ -60,8 +58,13 @@ extension MSession {
         
         xUpdate {
             self.rUser <- map["user"]
-            self.rStartTime <- map["startTime"]
-            self.rLocations <- map["locations"]
+            self.rStartTime <- (map["startTime"], DateTransform())
+        }
+    }
+    
+    func locationsToDictArray() -> [JSONDict] {
+        return rLocations.map {
+            $0.toJSON()
         }
     }
 }

@@ -14,6 +14,7 @@
 		41825B6F1C8B953B00641A1E /* MImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B6E1C8B953B00641A1E /* MImage.swift */; };
 		41825B711C8BA05B00641A1E /* ClientMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B701C8BA05B00641A1E /* ClientMgr.swift */; };
 		41825B731C8BA8C300641A1E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B721C8BA8C300641A1E /* Utils.swift */; };
+		41825B751C8BE51300641A1E /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41825B741C8BE51300641A1E /* DateConverter.swift */; };
 		41B158101C8B6F530076AF50 /* MSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B1580F1C8B6F530076AF50 /* MSession.swift */; };
 		41DFAF681C8B6CEA00706E68 /* MLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFAF671C8B6CEA00706E68 /* MLocation.swift */; };
 		86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */; };
@@ -26,6 +27,8 @@
 		B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */; };
 		B0E886391C8BD816000EA442 /* leaguegothic-italic-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886351C8BD816000EA442 /* leaguegothic-italic-webfont.ttf */; };
 		B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */; };
+		B0E8863C1C8BFEC9000EA442 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E8863B1C8BFEC9000EA442 /* Login.storyboard */; };
+		B0E8863E1C8BFF73000EA442 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */; };
 		B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */; };
 		B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */; };
 		B0EB9E861C8B8FB0004219E3 /* EVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */; };
@@ -44,6 +47,7 @@
 		41825B6E1C8B953B00641A1E /* MImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MImage.swift; path = Model/MImage.swift; sourceTree = "<group>"; };
 		41825B701C8BA05B00641A1E /* ClientMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClientMgr.swift; path = Managers/ClientMgr.swift; sourceTree = "<group>"; };
 		41825B721C8BA8C300641A1E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		41825B741C8BE51300641A1E /* DateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateConverter.swift; path = Model/DateConverter.swift; sourceTree = "<group>"; };
 		41B1580F1C8B6F530076AF50 /* MSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MSession.swift; path = Model/MSession.swift; sourceTree = "<group>"; };
 		41DFAF671C8B6CEA00706E68 /* MLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MLocation.swift; path = Model/MLocation.swift; sourceTree = "<group>"; };
 		5AF39ABA918607A71FE53872 /* Pods-EndingViolence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		B0E886341C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-condensed-regular-webfont.ttf"; sourceTree = "<group>"; };
 		B0E886351C8BD816000EA442 /* leaguegothic-italic-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-italic-webfont.ttf"; sourceTree = "<group>"; };
 		B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-regular-webfont.ttf"; sourceTree = "<group>"; };
+		B0E8863B1C8BFEC9000EA442 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
 		B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationMgr.swift; path = Managers/LocationMgr.swift; sourceTree = "<group>"; };
 		B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = Managers/StateMachine.swift; sourceTree = "<group>"; };
 		B0EB9E821C8B8FB0004219E3 /* EVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EVViewController.swift; path = ViewControllers/EVViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +96,7 @@
 				41B1580F1C8B6F530076AF50 /* MSession.swift */,
 				41825B6E1C8B953B00641A1E /* MImage.swift */,
 				41825B641C8B74C600641A1E /* ModelMgr.swift */,
+				41825B741C8BE51300641A1E /* DateConverter.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,11 +136,12 @@
 				B045C47B1C8B661400E47E3F /* AppDelegate.swift */,
 				B0EB9E7A1C8B8EFE004219E3 /* ViewControllers */,
 				B0EB9E7B1C8B8F06004219E3 /* Managers */,
+				41825B631C8B73D300641A1E /* Model */,
 				B045C47F1C8B661400E47E3F /* Main.storyboard */,
+				B0E8863B1C8BFEC9000EA442 /* Login.storyboard */,
 				B045C4841C8B661400E47E3F /* LaunchScreen.storyboard */,
 				B0E886321C8BD807000EA442 /* Resources */,
 				B045C4871C8B661400E47E3F /* Info.plist */,
-				41825B631C8B73D300641A1E /* Model */,
 			);
 			path = EndingViolence;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 				B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */,
 				B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */,
 				B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */,
+				B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 				41584D707C127D9026100CE4 /* Check Pods Manifest.lock */,
 				B045C4741C8B661400E47E3F /* Sources */,
 				B045C4751C8B661400E47E3F /* Frameworks */,
+				41825B761C8BE9CB00641A1E /* ShellScript */,
 				B045C4761C8B661400E47E3F /* Resources */,
 				4172B64733941C0874462C14 /* Embed Pods Frameworks */,
 				3A92695712133EDFD1C280F2 /* Copy Pods Resources */,
@@ -244,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E8863C1C8BFEC9000EA442 /* Login.storyboard in Resources */,
 				B045C4861C8B661400E47E3F /* LaunchScreen.storyboard in Resources */,
 				B0E886391C8BD816000EA442 /* leaguegothic-italic-webfont.ttf in Resources */,
 				B0E886381C8BD816000EA442 /* leaguegothic-condensed-regular-webfont.ttf in Resources */,
@@ -302,6 +313,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		41825B761C8BE9CB00641A1E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "    // Ref: https://gist.github.com/sekati/3172554#file-xcode-build-bump-sh\n# xcode-build-bump.sh\n# @desc Auto-increment the build number every time the project is run.\n# @usage\n# 1. Select: your Target in Xcode\n# 2. Select: Build Phases Tab\n# 3. Select: Add Build Phase -> Add Run Script\n# 4. Paste code below in to new \"Run Script\" section\n# 5. Drag the \"Run Script\" below \"Link Binaries With Libraries\"\n# 6. Insure that your starting build number is set to a whole integer and not a float (e.g. 1, not 1.0)\n\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -317,8 +341,10 @@
 				B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */,
 				B0EB9E8B1C8BA04B004219E3 /* ImageCaptureManager.swift in Sources */,
 				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,
+				B0E8863E1C8BFF73000EA442 /* LoginViewController.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
-				FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */,
+  				FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */,
+				41825B751C8BE51300641A1E /* DateConverter.swift in Sources */,
 				B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */,
 				41825B731C8BA8C300641A1E /* Utils.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,

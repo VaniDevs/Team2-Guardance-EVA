@@ -9,3 +9,4 @@
 import Foundation
 
 typealias User = String
+typealias JSONDict = [String : AnyObject]

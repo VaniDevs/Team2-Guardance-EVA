@@ -27,15 +27,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 name: ReachabilityChangedNotification,
                 object: reachability
         )
+        NSNotificationCenter.defaultCenter()
+            .addObserver(self, selector: "userLoggedIn", name: UserLoggedIn, object: nil)
         
         // NOTE: Call this AFTER setting up notification handlers
         startReachability()
         
         //ClientMgr.raiseTheAlarm()
         
+        let loggedIn = true
+        if loggedIn {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+            self.window?.rootViewController = vc
+        } else {
+            let vc = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController()
+            self.window?.rootViewController = vc
+        }
         return true
     }
-
+    
+    func userLoggedIn() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        self.window?.rootViewController = vc
+    }
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
