@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var hideOfflineViewConstrain: NSLayoutConstraint!
     @IBOutlet weak var showOfflineViewConstrain: NSLayoutConstraint!
 
+    @IBOutlet weak var settings: UIButton!
     @IBOutlet weak var micIV: UIImageView!
     var micAuthorized: Bool {
         return AVAudioSession.sharedInstance().recordPermission() == .Granted
@@ -130,6 +131,7 @@ class HomeViewController: UIViewController {
         countdownTimer.textColor = .whiteColor()
         countdownTimer.font = UIFont.LeagueGothic(20.0)
         
+        settings.tintColor = .evaYellowDull()
         offlineView.backgroundColor = .evaRed()
         
         showOfflineView((reachability?.isReachable())!)
@@ -319,6 +321,8 @@ class HomeViewController: UIViewController {
                 askForAudioPermission()
             case 4:
                 askForCameraPermission()
+                onboardingView.alpha = 0.8
+                onboardImageView.alpha = 0.8
             case 5,6:
                 onboardingView.alpha = 0.8
                 onboardImageView.alpha = 0.8
