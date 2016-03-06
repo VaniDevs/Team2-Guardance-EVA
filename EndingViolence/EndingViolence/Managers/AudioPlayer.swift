@@ -37,7 +37,12 @@ class AudioPlayer : NSObject {
     
     func play(onComplete: AudioPlayerOnCompleteHandler?) {
         self.onComplete = onComplete
-        audioPlayer?.play()
+        
+        guard let audioPlayer = self.audioPlayer else { return }
+
+        if audioPlayer.play() {
+            print(__FUNCTION__, "Failed to play audiofile: \(audioPlayer.url)")
+        }
     }
     
     func stop() {
