@@ -28,6 +28,7 @@ class AudioPlayer : NSObject {
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: soundFileURL)
             audioPlayer?.delegate = self
+            audioPlayer?.play()
         } catch let error as NSError {
             print("audioPlayer error: \(error.localizedDescription)")
         } catch {
@@ -36,6 +37,12 @@ class AudioPlayer : NSObject {
     }
     
     func play(onComplete: AudioPlayerOnCompleteHandler?) {
+        do {
+        try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+        } catch {
+            print("Error setting audio category")
+        }
+
         self.onComplete = onComplete
         audioPlayer?.play()
     }

@@ -167,6 +167,13 @@ class OnboardState: EVState {
 
         homeViewController.startOnboarding()
     }
+    
+    override func willExitWithNextState(nextState: GKState) {
+        super.willExitWithNextState(nextState)
+        
+        homeViewController.alertButton.userInteractionEnabled = true
+        homeViewController.standbyButton.userInteractionEnabled = true
+    }
 }
 
 class EVState: GKState {

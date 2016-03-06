@@ -306,6 +306,8 @@ class HomeViewController: UIViewController {
     func startOnboarding() {
         onboardImageView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "nextOnboard"))
         onboardImageView.userInteractionEnabled = true
+        alertButton.userInteractionEnabled = false
+        standbyButton.userInteractionEnabled = false
     }
     
     
@@ -331,6 +333,8 @@ class HomeViewController: UIViewController {
             }
         } else {
             stateMachine.enterState(InactiveState)
+            alertButton.userInteractionEnabled = true
+            standbyButton.userInteractionEnabled = true
         }
     }
     

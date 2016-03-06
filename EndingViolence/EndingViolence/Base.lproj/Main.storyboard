@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10115" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -11,7 +11,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="EndingViolence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Guardance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -96,7 +96,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are offline. Connect to a wifi or cellular connection to be able to send an alarm." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9av-bT-Omb" userLabel="You are offline. Connect to a wifi or cellular connection to be able to send an alarm.">
                                         <rect key="frame" x="101" y="20" width="479" height="80"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -221,7 +221,7 @@
         <!--Settings View Controller-->
         <scene sceneID="KQu-Y8-Ba3">
             <objects>
-                <viewController id="vEz-fS-Yo2" customClass="SettingsViewController" customModule="EndingViolence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vEz-fS-Yo2" customClass="SettingsViewController" customModule="Guardance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7tg-ki-L9b"/>
                         <viewControllerLayoutGuide type="bottom" id="5dD-Wv-V0G"/>
@@ -265,7 +265,7 @@
         <!--Resources View Controller-->
         <scene sceneID="nEx-tE-Lmk">
             <objects>
-                <viewController id="4bo-ji-2w5" customClass="ResourcesViewController" customModule="EndingViolence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4bo-ji-2w5" customClass="ResourcesViewController" customModule="Guardance" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MiH-AB-jgK"/>
                         <viewControllerLayoutGuide type="bottom" id="1eq-Xq-q1k"/>

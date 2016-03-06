@@ -20,6 +20,7 @@ class HistoryTableViewCell: UITableViewCell {
     let HistoryTableViewCellIdentifier = "HistoryTableViewCell"
     var delegate: HistoryTableViewCellDelegate!
 
+    @IBOutlet weak var gpsButton: UIButton!
     var session: MSession!
     
     override func awakeFromNib() {
@@ -33,6 +34,7 @@ class HistoryTableViewCell: UITableViewCell {
         let date: NSDate = session.rStartTime
         let string = historyViewController.formatter.stringFromDate(date)
         sessionNameLabel.text = string
+        gpsButton.tintColor = .evaYellowDull()
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
