@@ -8,6 +8,9 @@
 
 import UIKit
 import GameplayKit
+import AudioToolbox
+import AudioToolbox.AudioServices
+import AVFoundation
 
 class StateMachine: GKStateMachine {
     
@@ -20,7 +23,7 @@ class StateMachine: GKStateMachine {
     
     var timer: NSTimer?
     var standbyCountdown: NSTimer?
-    let numMinutes: Int = 3
+    let numMinutes: Int = 1
     var remainingSeconds: Int
     
     var session: MSession {
@@ -55,6 +58,8 @@ class StateMachine: GKStateMachine {
         // add formatting?
         
         if (self.remainingSeconds < 60){
+            // AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, nil)
+            AudioServicesPlaySystemSoundWithCompletion(1320, nil)
             // BUZZ BUZZ BUZZ
             // BEEP BEEP BEEP
         }
