@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "alert_normal.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "mic_active.png",
       "scale" : "2x"
     },
     {
