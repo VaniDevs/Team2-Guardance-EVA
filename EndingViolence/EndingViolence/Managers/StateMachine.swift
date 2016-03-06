@@ -63,9 +63,17 @@ class StandbyState: EVState {
         imageManager.begin()
 
         SM.timer = NSTimer.scheduledTimerWithTimeInterval(10.0, target: SM, selector: Selector("capture"), userInfo: nil, repeats: true)
-        SM.timer?.fire()
+        SM.timer?.fire() // session begins
         
         homeViewController.enterStandbyState()
+        
+        // nextState  = prompt login
+        
+        // start timer
+        // after X minutes, prompt user
+        // if correct password, prompt again
+        // have option to enter
+        // if incorrect, switch to alarm.
     }
 }
 

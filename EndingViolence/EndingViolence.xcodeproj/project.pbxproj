@@ -33,6 +33,7 @@
 		B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */; };
 		B0EB9E891C8B8FB0004219E3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E851C8B8FB0004219E3 /* SettingsViewController.swift */; };
 		B0EB9E8B1C8BA04B004219E3 /* ImageCaptureManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */; };
+		FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCaptureManager.swift; path = Managers/ImageCaptureManager.swift; sourceTree = "<group>"; };
 		C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.release.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.release.xcconfig"; sourceTree = "<group>"; };
 		EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndingViolence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 				41825B701C8BA05B00641A1E /* ClientMgr.swift */,
 				B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */,
 				B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */,
+				FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				B0EB9E8B1C8BA04B004219E3 /* ImageCaptureManager.swift in Sources */,
 				41825B651C8B74C600641A1E /* ModelMgr.swift in Sources */,
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
+				FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */,
 				B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */,
 				41825B731C8BA8C300641A1E /* Utils.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,

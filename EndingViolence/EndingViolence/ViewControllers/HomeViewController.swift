@@ -18,11 +18,13 @@ class HomeViewController: EVViewController {
     @IBOutlet weak var signalIV: UIImageView!
     
     var stateMachine: StateMachine!
+    var alertManager: AlertManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         stateMachine = StateMachine(homeViewController: self)
+        alertManager = AlertManager(homeViewController: self)
         stateMachine?.enterState(InactiveState)
     }
     
@@ -53,7 +55,8 @@ class HomeViewController: EVViewController {
 
         switch stateMachine.currentState {
             case is AlarmState:
-                stateMachine.enterState(InactiveState)
+                alertManager.promptDisable()
+            // stateMachine.enterState(InactiveState)
             default:
                 stateMachine.enterState(AlarmState)
         }
@@ -64,6 +67,8 @@ class HomeViewController: EVViewController {
         switch stateMachine.currentState {
         case is StandbyState:
             stateMachine.enterState(InactiveState)
+            // prompt to disable )
+            alertManager.promptDisable()
         default:
             stateMachine.enterState(StandbyState)
         }
@@ -82,4 +87,5 @@ class HomeViewController: EVViewController {
         view.backgroundColor = .evaRed()
         alertButton.selected = true
     }
+    
 }
