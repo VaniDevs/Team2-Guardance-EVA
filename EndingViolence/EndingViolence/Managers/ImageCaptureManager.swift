@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ImageCaptureManager: NSObject {
-    var session: AVCaptureSession!
+    var session: AVCaptureSession?
     var device: AVCaptureDevice?
     var input: AVCaptureDeviceInput?
     var output: AVCaptureStillImageOutput?
@@ -39,21 +39,26 @@ class ImageCaptureManager: NSObject {
         device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         do {
             session = AVCaptureSession()
-            session.beginConfiguration()
-            input = try AVCaptureDeviceInput.init(device: device)
-            session.addInput(input)
-            output = AVCaptureStillImageOutput()
-            session.addOutput(output)
-            session.commitConfiguration()
-        } catch let error as NSError { NSLog("\(error)") }
+            if let session = session {
+                session.beginConfiguration()
+                input = try AVCaptureDeviceInput.init(device: device)
+                session.addInput(input)
+                output = AVCaptureStillImageOutput()
+                session.addOutput(output)
+                session.commitConfiguration()
+            }
+        } catch let error as NSError {
+            NSLog("\(error)")
+            session = nil
+        }
     }
     
     func begin() {
-        session!.startRunning()
+        session?.startRunning()
     }
     
     func stop() {
-        session!.stopRunning()
+        session?.stopRunning()
     }
     
     func captureImage(completion: (image: UIImage) -> Void) {

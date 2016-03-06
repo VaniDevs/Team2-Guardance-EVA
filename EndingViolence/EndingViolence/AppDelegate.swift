@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // NOTE: Call this AFTER setting up notification handlers
         startReachability()
         
-        ClientMgr.raiseTheAlarm()
+        //ClientMgr.raiseTheAlarm()
         
         return true
     }
