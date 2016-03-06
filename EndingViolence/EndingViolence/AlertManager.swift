@@ -62,7 +62,7 @@ public class AlertManager {
                 homeViewController.presentViewController(alert, animated: true, completion: {})
                 break
             case is StandbyState:
-                print("Leaving standby")
+                self.homeViewController.stateMachine.standbyCountdown?.invalidate()
                 let alert = extendOrDisable()
                 homeViewController.presentViewController(alert, animated: true, completion: {})
                 break
@@ -113,7 +113,6 @@ public class AlertManager {
         let alert = UIAlertController(title: "Password Correct", message: "Would you like to disable or extend the timer?", preferredStyle:UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "Disable", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
-            self.homeViewController.stateMachine.standbyCountdown?.invalidate()
             self.homeViewController.stateMachine.enterState(InactiveState)}))
         alert.addAction(UIAlertAction(title: "Restart", style: UIAlertActionStyle.Default, handler:{ (UIAlertAction)in
             self.homeViewController.stateMachine.enterState(StandbyState)}))

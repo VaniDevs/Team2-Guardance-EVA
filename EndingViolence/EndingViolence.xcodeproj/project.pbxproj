@@ -36,7 +36,6 @@
 		B0E8863A1C8BD816000EA442 /* leaguegothic-regular-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */; };
 		B0E8863C1C8BFEC9000EA442 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0E8863B1C8BFEC9000EA442 /* Login.storyboard */; };
 		B0E8863E1C8BFF73000EA442 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */; };
-		B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */; };
 		B0EB9E811C8B8FA2004219E3 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */; };
 		B0EB9E871C8B8FB0004219E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */; };
 		B0EB9E881C8B8FB0004219E3 /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */; };
@@ -52,6 +51,7 @@
 		B0F6E1441C8CBB21001B6F0E /* SKPhotoBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E13B1C8CBB21001B6F0E /* SKPhotoBrowser.swift */; };
 		B0F6E1451C8CBB21001B6F0E /* SKZoomingScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F6E13C1C8CBB21001B6F0E /* SKZoomingScrollView.swift */; };
 		FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */; };
+		FEC6FC8F1C8CC66F00E00DB8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC6FC8E1C8CC66F00E00DB8 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,7 +86,6 @@
 		B0E886361C8BD816000EA442 /* leaguegothic-regular-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "leaguegothic-regular-webfont.ttf"; sourceTree = "<group>"; };
 		B0E8863B1C8BFEC9000EA442 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B0E8863D1C8BFF73000EA442 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ViewControllers/LoginViewController.swift; sourceTree = "<group>"; };
-		B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationMgr.swift; path = Managers/LocationMgr.swift; sourceTree = "<group>"; };
 		B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = Managers/StateMachine.swift; sourceTree = "<group>"; };
 		B0EB9E831C8B8FB0004219E3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		B0EB9E841C8B8FB0004219E3 /* ResourcesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResourcesViewController.swift; path = ViewControllers/ResourcesViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		C50045048CF20E2E0331EDBE /* Pods-EndingViolence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EndingViolence.release.xcconfig"; path = "Pods/Target Support Files/Pods-EndingViolence/Pods-EndingViolence.release.xcconfig"; sourceTree = "<group>"; };
 		EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EndingViolence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEC6FC8C1C8C08FD00E00DB8 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		FEC6FC8E1C8CC66F00E00DB8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC6FC8F1C8CC66F00E00DB8 /* AudioToolbox.framework in Frameworks */,
 				86FC335FD74A76B12D495B77 /* Pods_EndingViolence.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +136,7 @@
 		56A2E6D0FFF0A3A0E40CE855 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEC6FC8E1C8CC66F00E00DB8 /* AudioToolbox.framework */,
 				B0F6E1321C8CBB21001B6F0E /* SKPhotoBrowser */,
 				EEFC48C4A3AED8F184C1949B /* Pods_EndingViolence.framework */,
 			);
@@ -221,7 +223,6 @@
 				B0E886301C8BBEEA000EA442 /* LocationManager.swift */,
 				B0EB9E7E1C8B8FA2004219E3 /* StateMachine.swift */,
 				41825B701C8BA05B00641A1E /* ClientMgr.swift */,
-				B0EB9E7D1C8B8FA2004219E3 /* LocationMgr.swift */,
 				B0EB9E8A1C8BA04B004219E3 /* ImageCaptureManager.swift */,
 				41F4C03D1C8C994400BFC6E6 /* AudioRecorderMgr.swift */,
 				41F4C03F1C8CB37A00BFC6E6 /* AudioPlayer.swift */,
@@ -283,6 +284,7 @@
 				TargetAttributes = {
 					B045C4771C8B661400E47E3F = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Q4H2V7MJS9;
 					};
 				};
 			};
@@ -413,7 +415,6 @@
 				B045C47C1C8B661400E47E3F /* AppDelegate.swift in Sources */,
 				FEC6FC8D1C8C08FD00E00DB8 /* AlertManager.swift in Sources */,
 				41825B751C8BE51300641A1E /* DateConverter.swift in Sources */,
-				B0EB9E801C8B8FA2004219E3 /* LocationMgr.swift in Sources */,
 				41825B731C8BA8C300641A1E /* Utils.swift in Sources */,
 				B0F6E1411C8CBB21001B6F0E /* SKIndicatorView.swift in Sources */,
 				41825B691C8B7C0400641A1E /* Config.swift in Sources */,
@@ -536,10 +537,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -549,10 +552,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = EndingViolence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamteamtwo.EndingViolence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
